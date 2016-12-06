@@ -1,0 +1,2 @@
+# myrc
+My .xxxrc files
