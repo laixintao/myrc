@@ -1,8 +1,9 @@
-" Note:
+" ## Note:
+" 1. vim字体受终端的限制，所以如果不是gvim， set guifont是无效的
 " ## Ussage
 " 1. go in vim, do :BundleInstall
-" 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use
-" mac port python ,use system python
+" 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
+
     set nocompatible              " be iMproved  
     filetype  on                 " required!  
       
@@ -64,3 +65,4 @@
     " 设置缩进高亮显示
     Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
     " todo 开启vim自动加载
+    " todo
