@@ -1,10 +1,10 @@
-" Note:
+" ## Note:
+" 1. vim字体受终端的限制，所以如果不是gvim， set guifont是无效的
 " ## Ussage
 " 1. go in vim, do :BundleInstall
 " 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
 set nocompatible             " be iMproved  
 filetype  on                 " required!  
-
 set rtp+=~/.vim/bundle/vundle/  
 call vundle#rc()  
 let mapleader=','
