@@ -1,2 +1,2 @@
-alias sslocal_dem='sslocal -s s1.risent.net  -p 8964 -l 6489 -k ylan'
-alias p4='proxychains'
+alias v='vim'
+alias worknow='redis-server & workon bz; python -Wi manage.py runserver & gulp &'
