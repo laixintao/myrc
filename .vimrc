@@ -57,6 +57,7 @@ set ts=4
 set expandtab
 set autoindent " 以上三行，设置tab的作用是打印出4个空格
 set nu!
+set foldmethod=indent
 
 " 为不同的文件类型设置不同的空格数替换TAB
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ai
