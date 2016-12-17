@@ -81,4 +81,5 @@ imap <C-a> <HOME>
 imap <C-f> <Right>
 imap <C-b> <Left>
 
-
+command VV res
+command -nargs=? Vres vertical res <args>
