@@ -50,6 +50,12 @@ au BufNewFile,BufRead *.coffee set ft=coffee
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 " zen coding
 Plugin 'mattn/emmet-vim'
+" Gist
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+" autopep8
+Bundle 'tell-k/vim-autopep8'
+map <leader>p :Autopep8 <CR>
 "--------------------------------------Plugins End------------------------------
 
 " Global
@@ -74,3 +80,5 @@ imap <C-e> <END>
 imap <C-a> <HOME>
 imap <C-f> <Right>
 imap <C-b> <Left>
+
+
