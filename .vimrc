@@ -111,3 +111,8 @@ imap <C-b> <Left>
 
 " alias Vres to resize screen
 command -nargs=? Vres vertical res <args>
+
+" 支持鼠标
+" 设置之后鼠标可以在vim窗口里面选中一段文字
+" 不带行号
+set mouse=a

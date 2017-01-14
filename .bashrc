@@ -118,6 +118,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
