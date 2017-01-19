@@ -27,7 +27,6 @@ Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'The-NERD-tree'
 
-Bundle 'The-NERD-Commenter'
 " BundlDTree快捷键
 map <leader>t :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
@@ -116,3 +115,9 @@ command -nargs=? Vres vertical res <args>
 " 设置之后鼠标可以在vim窗口里面选中一段文字
 " 不带行号
 set mouse=a
+
+" for scheme
+
+let g:lisp_rainbow=1    "（这个是设置括号的颜色）
+let g:slime_target = "screen"
+
