@@ -5,6 +5,8 @@
 " 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
 set nocompatible             " be iMproved  
 filetype  on                 " required!  
+filetype plugin on
+filetype indent on
 set rtp+=~/.vim/bundle/vundle/  
 call vundle#rc()  
 let mapleader=','
@@ -26,6 +28,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'The-NERD-tree'
+
+Bundle 'git@github.com:kovisoft/slimv.git'
 
 " BundlDTree快捷键
 map <leader>t :NERDTreeToggle<CR>
@@ -121,3 +125,13 @@ set mouse=a
 let g:lisp_rainbow=1    "（这个是设置括号的颜色）
 let g:slime_target = "screen"
 
+" powerline
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" Always show statusline
+set laststatus=2
+
+" Use 256 colours (Use this setting only if your terminal supports j
+set t_Co=256
+let g:airline_powerline_fonts = 1
+set backspace=2 " 删除键的问题
