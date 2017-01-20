@@ -93,7 +93,7 @@ map <leader>p :Autopep8 <CR>
 set ts=4
 set expandtab
 set autoindent " 以上三行，设置tab的作用是打印出4个空格
-set nu!
+set nu
 set foldmethod=indent
 
 " 为不同的文件类型设置不同的空格数替换TAB
@@ -113,7 +113,8 @@ imap <C-f> <Right>
 imap <C-b> <Left>
 
 " alias Vres to resize screen
-command -nargs=? Vres vertical res <args>
+" command already exist error
+" command -nargs=? Vres vertical res <args>
 
 " 支持鼠标
 " 设置之后鼠标可以在vim窗口里面选中一段文字
@@ -135,3 +136,7 @@ set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
+
+" edit vimrc
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
