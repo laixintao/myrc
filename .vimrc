@@ -140,3 +140,5 @@ set backspace=2 " 删除键的问题
 " edit vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
+
+:autocmd BufNewFile,BufRead *.html setlocal nowrap
