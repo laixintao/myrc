@@ -135,3 +135,4 @@ set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
+let g:slimv_swank_cmd = '!osascript -e "tell application \"Terminal\" to do script \"sbcl --load ~/.vim/slime/start-swank.lisp\""'
