@@ -136,13 +136,9 @@ set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
-<<<<<<< HEAD
-let g:slimv_swank_cmd = '!osascript -e "tell application \"Terminal\" to do script \"sbcl --load ~/.vim/slime/start-swank.lisp\""'
-=======
 
 " edit vimrc
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 :autocmd BufNewFile,BufRead *.html setlocal nowrap
->>>>>>> 22566a3203d2449074ea3436c1e6ceffc0bb6ff4
