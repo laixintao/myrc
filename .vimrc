@@ -144,3 +144,14 @@ set backspace=2 " 删除键的问题
 :autocmd BufNewFile,BufRead *.html setlocal nowrap
 
 :onoremap in( :<c-u>normal! f(vi(<cr>
+
+" long comment
+:autocmd FileType python,coffee :iabbrev <buffer> #-- #-----------<left><left><left><left><left><left>
+
+" VimScript file settings --------------------{{{ 
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim :iabbrev <buffer> --- --------------------{{{
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
