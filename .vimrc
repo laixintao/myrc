@@ -1,5 +1,18 @@
 " ## Note:
 " 1. vim字体受终端的限制，所以如果不是gvim， set guifont是无效的
+" 2. 需要安装配色方案，还需要对终端进行配置，如果只安装了Vim的，Vim会看起来雾蒙蒙的一片
+"
+" 终端配色安装:
+" 1. 设置Termial配色：git clone git://github.com/seebi/dircolors-solarized.git
+" 2. 注意第二个参数是dircolor是的文件夹 
+"   cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
+"   eval 'dircolors .dircolors'
+" 3. 使设置生效
+"   export TERM=xterm-256color； source .vimrc
+" 4. git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+" cd gnome-terminal-colors-solarized 
+" ./set_dark.sh 或./set_light.sh
+"
 " ## Ussage
 " 1. go in vim, do :BundleInstall
 " 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
@@ -27,6 +40,8 @@ set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
+set background=dark
+colorscheme solarized
 " }}}
 
 " Plugins --------------------{{{ 
