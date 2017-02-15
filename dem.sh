@@ -14,6 +14,7 @@ tmux send-keys -t demlution:1.1 'vim' C-m
 
 # wondow for panel
 tmux send-keys -t demlution:2.1 'cd ~/program/bazaar4' C-m
+tmux send-keys -t demlution:2.1 'workon bz' C-m
 tmux send-keys -t demlution:2.2 'cd ~/program/bazaar4' C-m
 tmux send-keys -t demlution:2.2 'gulp' C-m
 
