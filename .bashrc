@@ -127,3 +127,19 @@ source /usr/local/bin/virtualenvwrapper.sh
 export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)
 export TERM=screen-256color       # for a tmux -2 session (also for screen)
 export TERM=rxvt-unicode-256color # for a colorful rxvt unicode session
+
+alias yiludandang='sh ~/program/myrc/dem.sh'
+# # auto load tmux, NOT GOOD ENOUGH
+# tmux_init()
+# {
+#     tmux new-session -s "laixintao" -d -n "panel"    # 开启一个会话
+#     tmux new-window -n "other"          # 开启一个窗口
+#     tmux split-window -h                # 开启一个竖屏
+#     tmux split-window -v "top"          # 开启一个横屏,并执行top命令
+#     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
+# }
+# 
+# # 判断是否已有开启的tmux会话，没有则开启
+# if which tmux 2>&1 >/dev/null; then
+#     test -z "$TMUX" && (tmux attach || tmux_init)
+# fi
