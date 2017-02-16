@@ -18,5 +18,7 @@ Now support:
 
 # todo list
 
-- [ ] shell script to delete the original rc files, and make softlinks to replace it .
+- [x] shell script to delete the original rc files, and make softlinks to replace it .
 - [ ] reorgainze the files
+- [ ] wttr.in auto run when first time to open shell
+
