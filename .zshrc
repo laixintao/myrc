@@ -84,16 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-
 DEFAULT_USER="laixintao"
 
 . /Users/laixintao/bin/z.sh
@@ -123,3 +113,17 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
 # curl wttr.in
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.common_aliases ]; then
+    . ~/.bash_aliases
+fi
+# sensitive_alias
+if [ -f ~/.sensitive_alias ]; then
+    . ~/.sensitive_alias
+fi
+

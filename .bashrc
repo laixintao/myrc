@@ -87,21 +87,13 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
+if [ -f ~/.common_aliases ]; then
     . ~/.bash_aliases
 fi
 # sensitive_alias
@@ -121,25 +113,9 @@ fi
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
 export TERM=xterm-256color        # for common 256 color terminals (e.g. gnome-terminal)
 export TERM=screen-256color       # for a tmux -2 session (also for screen)
 export TERM=rxvt-unicode-256color # for a colorful rxvt unicode session
 
-alias yiludandang='sh ~/program/myrc/dem.sh'
-# # auto load tmux, NOT GOOD ENOUGH
-# tmux_init()
-# {
-#     tmux new-session -s "laixintao" -d -n "panel"    # 开启一个会话
-#     tmux new-window -n "other"          # 开启一个窗口
-#     tmux split-window -h                # 开启一个竖屏
-#     tmux split-window -v "top"          # 开启一个横屏,并执行top命令
-#     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
-# }
-# 
-# # 判断是否已有开启的tmux会话，没有则开启
-# if which tmux 2>&1 >/dev/null; then
-#     test -z "$TMUX" && (tmux attach || tmux_init)
-# fi

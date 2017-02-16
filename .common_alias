@@ -1,0 +1,15 @@
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias v='vim'
+
+alias git-tree='git log --graph --decorate --pretty=oneline --abbrev-commit' 
+alias worknow='redis-server & workon bz; python -Wi manage.py runserver & gulp &'
+alias p4="proxychains"
+alias ifenglv="ssh root@139.196.242.76"
+alias yiludandang='sh ~/program/myrc/dem.sh'
