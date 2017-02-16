@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONFIG_FILES=(
-.bash_alias
+.common_alias
 .bashrc
 .tmux.conf
 .vimrc

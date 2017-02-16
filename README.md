@@ -13,8 +13,12 @@ Now support:
 
 
 # ussage
+
 0. You may need Solarized color scheme:git://github.com/altercation/solarized.git
-1. Some Installation please refer to .vimrc
+1. run install [myrc path]
+2. Some Installation please refer to .vimrc
+    1. BundleInstall
+    2. YouCompleteMe Install
 
 # todo list
 

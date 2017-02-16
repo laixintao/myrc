@@ -119,8 +119,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.common_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.common_alias ]; then
+    . ~/.common_alias
 fi
 # sensitive_alias
 if [ -f ~/.sensitive_alias ]; then
