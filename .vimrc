@@ -158,6 +158,7 @@ augroup iabbrevs
     autocmd!
     " long comment
     :autocmd FileType python,coffee :iabbrev <buffer> #-- #-----------<left><left><left><left><left><left>
+    :autocmd FileType coffee :iabbrev <buffer> cl console.log
 augroup END
 " }}}
 
