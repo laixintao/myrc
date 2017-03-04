@@ -84,6 +84,10 @@ map <leader>p :Autopep8 <CR>
 Plugin 'airblade/vim-gitgutter'
 " indent
 Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+" airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='simple'
 " }}}
 
 " NerdTree Settings --------------------{{{ 
