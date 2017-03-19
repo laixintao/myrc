@@ -14,6 +14,8 @@
 " ./set_dark.sh 或./set_light.sh
 "
 " ## Ussage
+" 0. Install Vundle: git clone https://github.com/gmarik/vundle.git
+" ~/.vim/bundle/vundle
 " 1. go in vim, do :BundleInstall
 " 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
 
