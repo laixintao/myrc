@@ -13,3 +13,4 @@ alias worknow='redis-server & workon bz; python -Wi manage.py runserver & gulp &
 alias p4="proxychains"
 alias ifenglv="ssh root@139.196.242.76"
 alias yiludandang='sh ~/program/myrc/dem.sh'
+alias tmux-ifenglv='sh ~/Documents/program/myrc/ifenglv.sh'
