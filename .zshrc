@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/laixintao/.oh-my-zsh
+export ZSH=/home/laixintao/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -54,7 +54,7 @@ plugins=(git,django,pip,python,virtualenv,z)
 
 # User configuration
 
-export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/laixintao/bin/:/Users/laixintao/bin/FDK/Tools/osx"
+# export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/laixintao/bin/:/Users/laixintao/bin/FDK/Tools/osx"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULT_USER="laixintao"
 
-. /Users/laixintao/bin/z.sh
+# . /Users/laixintao/bin/z.sh
 
 # laixintao setting
 export GRAILS_HOME=~/Documents/grails-3.0.10/
