@@ -43,7 +43,7 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
 set background=dark
-colorscheme solarized
+colorscheme molokai
 set cursorline " 高亮光标所在行
 " }}}
 
