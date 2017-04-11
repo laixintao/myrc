@@ -19,6 +19,7 @@ Now support:
 2. Some Installation please refer to .vimrc
     1. BundleInstall
     2. YouCompleteMe Install
+3. Install dircolors and solarized for terminal manually:https://www.kawabangga.com/posts/1887
 
 # todo list
 

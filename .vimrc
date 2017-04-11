@@ -43,8 +43,12 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
 set background=dark
-colorscheme solarized
+colorscheme molokai
 set cursorline " 高亮光标所在行
+" 括号颜色
+:highlight MatchParen ctermbg=blue ctermfg=white
+set incsearch
+
 " }}}
 
 " Indent --------------------{{{ 
@@ -80,8 +84,35 @@ autocmd BufNewFile,BufRead *.coffee set ft=coffee
 " zen coding
 Plugin 'mattn/emmet-vim'
 " autopep8
-Bundle 'tell-k/vim-autopep8'
-map <leader>p :Autopep8 <CR>
+" Bundle 'tell-k/vim-autopep8'
+" map <leader>p :Autopep8 <CR>
+Plugin 'scrooloose/syntastic'
+let g:syntastic_error_symbol='>>'
+let g:syntastic_warning_symbol='>'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_enable_highlighting=1
+let g:syntastic_python_checkers=['pylint'] " 使用pyflakes,速度比pylint快
+
+" to see error location list
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_loc_list_height = 5
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        Errors
+    endif
+endfunction
+nnoremap <Leader>s :call ToggleErrors()<cr>
+" nnoremap <Leader>sn :lnext<cr>
+" nnoremap <Leader>sp :lprevious<cr>
+
+
+Plugin 'nvie/vim-flake8'
 " git diff
 Plugin 'airblade/vim-gitgutter'
 " indent
@@ -147,6 +178,11 @@ imap <C-e> <END>
 imap <C-a> <HOME>
 imap <C-f> <Right>
 imap <C-b> <Left>
+augroup relative_numbser
+    autocmd!
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+augroup END
 " }}}
 
 " ShortCuts --------------------{{{ 
