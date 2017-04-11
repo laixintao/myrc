@@ -127,3 +127,4 @@ if [ -f ~/.sensitive_alias ]; then
     . ~/.sensitive_alias
 fi
 
+export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
