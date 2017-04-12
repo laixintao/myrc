@@ -60,7 +60,8 @@ let g:indent_guides_enable_on_vim_startup = 0
 " Plugins --------------------{{{ 
 " let Vundle manage Vundle  
 " 可以通过以下四种方式指定插件的来源  
-" a) 指定Github中vim-scripts仓库中的插件，直接指定插件名称即可，插件明中的空格使用“-”代替。      " Bundle 'L9'  
+" a) 指定Github中vim-scripts仓库中的插件，直接指定插件名称即可，插件明中的空格使用“-”代替。      
+" Bundle 'L9'  
 " b) 指定Github中其他用户仓库的插件，使用“用户名/插件名称”的方式指定  
 " Bundle 'tpope/vim-fugitive'  
 " Bundle 'Lokaltog/vim-easymotion'  
@@ -83,7 +84,7 @@ Bundle 'carlosvillu/coffeScript-VIM-Snippets'
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
 " zen coding
 Plugin 'mattn/emmet-vim'
-" autopep8
+" autopep8(use vim-flake8 and syntastic would be better
 " Bundle 'tell-k/vim-autopep8'
 " map <leader>p :Autopep8 <CR>
 Plugin 'scrooloose/syntastic'
@@ -107,7 +108,7 @@ function! ToggleErrors()
         Errors
     endif
 endfunction
-nnoremap <Leader>s :call ToggleErrors()<cr>
+nnoremap <Leader>l :call ToggleErrors()<cr>
 " nnoremap <Leader>sn :lnext<cr>
 " nnoremap <Leader>sp :lprevious<cr>
 
