@@ -87,7 +87,8 @@ Plugin 'mattn/emmet-vim'
 " autopep8(use vim-flake8 and syntastic would be better
 " Bundle 'tell-k/vim-autopep8'
 " map <leader>p :Autopep8 <CR>
-Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic' " pip install pylint
+Plugin 'nvie/vim-flake8' " pip install python-flake8
 let g:syntastic_error_symbol='>>'
 let g:syntastic_warning_symbol='>'
 let g:syntastic_check_on_open=1
@@ -112,8 +113,6 @@ nnoremap <Leader>l :call ToggleErrors()<cr>
 " nnoremap <Leader>sn :lnext<cr>
 " nnoremap <Leader>sp :lprevious<cr>
 
-
-Plugin 'nvie/vim-flake8'
 " git diff
 Plugin 'airblade/vim-gitgutter'
 " indent
