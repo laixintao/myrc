@@ -128,3 +128,6 @@ if [ -f ~/.sensitive_alias ]; then
 fi
 
 export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
+
+# git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+source ~/.autoenv/activate.sh
