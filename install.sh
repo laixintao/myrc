@@ -37,3 +37,8 @@ do
         ln -s $MY_RC_PATH/${file} ~/${file}
 done
 
+# install autoenv
+git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
+echo 'source ~/.autoenv/activate.sh' >> ~/.bashrc
+
+# manually install vim color
