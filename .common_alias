@@ -18,3 +18,7 @@ alias tmux='tmux -2'
 alias tmux-yorg='sh ~/program/myrc/tmux-yorg.sh'
 alias test-yorg='sudo ~/program/test-yorg/test.sh'
 alias vtest-yorg='vim ~/program/test-yorg/test.sh'
+
+# bitbucket shotcut
+alias bbpr='pwd | xargs basename | xargs -I PROJECT echo "https://bitbucket.org/deepanalyzer/PROJECT/pull-requests/new" | xargs google-chrome'
+
