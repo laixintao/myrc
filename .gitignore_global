@@ -1,2 +1,5 @@
 # Need to run: git config --global core.excludesfile ~/.gitignoreglobal
 dump.rdb
+
+# vim
+*.swo
