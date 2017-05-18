@@ -14,7 +14,7 @@ Now support:
 
 # ussage
 
-0. You may need Solarized color scheme:git://github.com/altercation/solarized.git
+0. molokai color scheme
 1. run install [myrc path]
 2. Some Installation please refer to .vimrc
     1. BundleInstall
@@ -24,6 +24,6 @@ Now support:
 # todo list
 
 - [x] shell script to delete the original rc files, and make softlinks to replace it .
-- [ ] reorgainze the files
-- [ ] wttr.in auto run when first time to open shell
+- [x] reorgainze the files
+- [x] wttr.in auto run when first time to open shell (by tmux)
 
