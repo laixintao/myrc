@@ -130,5 +130,3 @@ fi
 export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/wzc/:$PYTHONPATH
 
-# git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
-source ~/.autoenv/activate.sh
