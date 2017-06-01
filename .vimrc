@@ -48,6 +48,7 @@ set cursorline " 高亮光标所在行
 " 括号颜色
 :highlight MatchParen ctermbg=blue ctermfg=white
 set incsearch
+nnoremap <Leader>p :pc<cr>
 
 " }}}
 
@@ -229,3 +230,28 @@ augroup filetype_vim
     autocmd FileType vim :iabbrev <buffer> --- --------------------{{{
 augroup END
 " }}}
+"
+
+nnoremap <leader>f :call FoldColumnToggle()<cr>
+
+function! FoldColumnToggle()
+    if &foldcolumn
+        setlocal foldcolumn=0
+    else
+        setlocal foldcolumn=4
+    endif
+endfunction
+
+nnoremap <leader>q :call QuickFixToggle()<cr>
+
+let g:quickfix_is_open = 0
+
+function! QuickFixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+    else
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
