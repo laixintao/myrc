@@ -130,3 +130,4 @@ fi
 export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/wzc/:$PYTHONPATH
 
+export YORG_ENV=develop
