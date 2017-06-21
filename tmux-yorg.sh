@@ -4,16 +4,21 @@ cd ~/program/yorg/
 tmux new-session -s yorg-dev -n yorg-vim -d
 
 tmux new-window -n yorg-test -t yorg-dev
-tmux split-window -h -t yorg-dev:2 # 2.2 redis
 
 # vim window
 tmux send-keys -t yorg-dev:1.1 C-m
 tmux send-keys -t yorg-dev:1.1 'workon yorg' C-m
 tmux send-keys -t yorg-dev:1.1 'vim' C-m
 
+# yorg test
+tmux split-window -h -t yorg-dev:2
+tmux split-window -v -t yorg-dev:2
+tmux split-window -v -t yorg-dev:2.2
 tmux send-keys -t yorg-dev:2.1 'workon yorg' C-m
-
 tmux send-keys -t yorg-dev:2.2 'workon yorg' C-m
+tmux send-keys -t yorg-dev:2.2 'vtest-yorg' C-m
+tmux send-keys -t yorg-dev:2.4 'workon yorg' C-m
+tmux send-keys -t yorg-dev:2.3 'mongo' C-m
 
 # yorg-control
 tmux new-window -n yorg-control -t yorg-dev
@@ -32,6 +37,7 @@ tmux send-keys -t yorg-dev:4.2 'workon brm-index' C-m
 tmux send-keys -t yorg-dev:4.1 'cd ../brm-index/' C-m
 tmux send-keys -t yorg-dev:4.2 'cd ../brm-index/' C-m
 tmux send-keys -t yorg-dev:4.1 'source .env.testing' C-m
+tmux send-keys -t yorg-dev:4.1 'vim brm_index/datasource.py' C-m
 tmux send-keys -t yorg-dev:4.2 'source .env.testing' C-m
 
 
