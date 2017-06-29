@@ -9,7 +9,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias git-tree='git log --graph --decorate --pretty=oneline --abbrev-commit' 
 alias worknow='redis-server & workon bz; python -Wi manage.py runserver & gulp &'
-alias p4="proxychains"
+alias p4="proxychains4"
 alias ifenglv="ssh root@139.196.242.76"
 alias yiludandang='sh ~/program/myrc/dem.sh'
 alias tmux-ifenglv='sh ~/Documents/program/myrc/ifenglv.sh'

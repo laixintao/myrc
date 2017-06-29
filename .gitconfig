@@ -1,0 +1,9 @@
+[user]
+	email = glenn.lai@bosondata.com.cn
+	name = laixintao
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[alias]
