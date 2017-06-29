@@ -89,9 +89,9 @@ DEFAULT_USER="laixintao"
 # . /Users/laixintao/bin/z.sh
 
 # laixintao setting
-export GRAILS_HOME=~/Documents/grails-3.0.10/
 export PATH="$PATH:$GRAILS_HOME/bin"
 export PATH="$PATH:/usr/local/mysql/bin/"
+export PATH="$PATH:$HOME/bin"
 
 # don't check for new mail
 
@@ -129,5 +129,4 @@ fi
 
 export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/wzc/:$PYTHONPATH
-
 export YORG_ENV=develop
