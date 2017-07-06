@@ -129,4 +129,5 @@ fi
 
 export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/wzc/:$PYTHONPATH
+export PYTHONPATH=~/program/git-ext/:$PYTHONPATH
 export YORG_ENV=develop
