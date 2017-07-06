@@ -13,3 +13,6 @@
 	prompt = false
 [alias]
 	d = difftool
+	pr = pullrequest
+	br = branch
+	ck = checkout

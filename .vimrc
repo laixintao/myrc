@@ -213,6 +213,13 @@ augroup lisp_lang
 augroup END
 " }}}
 
+" Python --------------------{{{ 
+autocmd BufNewFile *.py exec ":call SetPythonEncoding()"
+func SetPythonEncoding()  
+   call setline(1, "# -*- coding: utf-8 -*-")
+endfunc 
+" }}}
+
 " HTML --------------------{{{ 
 augroup html_lang
     autocmd!
