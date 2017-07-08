@@ -131,3 +131,9 @@ export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/git-ext/:$PYTHONPATH
 export YORG_ENV=develop
+
+# Go-lang path
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
