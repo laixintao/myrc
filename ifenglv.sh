@@ -10,27 +10,27 @@ tmux split-window -v -t ifenglv-dev:2 # 2.4 celery
 
 # window for vim
 tmux send-keys -t ifenglv-dev:1.1 C-m # the first line usually is 'no session hint'
-tmux send-keys -t ifenglv-dev:1.1 'cd ~/Documents/program/ifenglv/ifenglv_onalo/' C-m
+tmux send-keys -t ifenglv-dev:1.1 'cd ~/Program/ifenglv/' C-m
 tmux send-keys -t ifenglv-dev:1.1 'workon ifenglv' C-m
 tmux send-keys -t ifenglv-dev:1.1 'mysql.server start' C-m
 tmux send-keys -t ifenglv-dev:1.1 'curl wttr.in' C-m
 # tmux send-keys -t ifenglv-dev:1.1 'vim' C-m
 
 # wondow for panel
-tmux send-keys -t ifenglv-dev:2.1 'cd ~/Documents/program/ifenglv/ifenglv_onalo/' C-m
+tmux send-keys -t ifenglv-dev:2.1 'cd ~/Program/ifenglv/' C-m
 tmux send-keys -t ifenglv-dev:2.1 'workon ifenglv' C-m
 
 
-tmux send-keys -t ifenglv-dev:2.4 'cd ~/Documents/program/ifenglv/ifenglv_onalo/' C-m
+tmux send-keys -t ifenglv-dev:2.4 'cd ~/Program/ifenglv/' C-m
 tmux send-keys -t ifenglv-dev:2.4 'workon ifenglv' C-m
 tmux send-keys -t ifenglv-dev:2.4 'redis-server' C-m
 
 
-tmux send-keys -t ifenglv-dev:2.3 'cd ~/Documents/program/ifenglv/ifenglv_onalo/' C-m
+tmux send-keys -t ifenglv-dev:2.3 'cd ~/Program/ifenglv/' C-m
 tmux send-keys -t ifenglv-dev:2.3 'workon ifenglv' C-m
 tmux send-keys -t ifenglv-dev:2.3 'celery -A ifenglv worker -l info' C-m
 
-tmux send-keys -t ifenglv-dev:2.2 'cd ~/Documents/program/ifenglv/ifenglv_onalo/' C-m
+tmux send-keys -t ifenglv-dev:2.2 'cd ~/Program/ifenglv/' C-m
 tmux send-keys -t ifenglv-dev:2.2 'workon ifenglv' C-m
 tmux send-keys -t ifenglv-dev:2.2 'python manage.py runserver' C-m
 
