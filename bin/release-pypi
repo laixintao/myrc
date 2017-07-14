@@ -1,0 +1,7 @@
+#!/bin/sh
+
+NEW_VERSION=`release-pypi.py`
+git tag v$NEW_VERSION
+git commit -a -m "release new version v${NEW_VERSION}"
+git push --tags
+python setup.py sdist upload
