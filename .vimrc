@@ -162,14 +162,14 @@ augroup END
 " Tab Set --------------------{{{ 
 augroup tab_set
     autocmd!
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ai
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sw=4
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ts=4
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sts=4
-    autocmd FileType coffee,javascript,html,css,xml set ai
-    autocmd FileType coffee,javascript,html,css,xml set sw=2
-    autocmd FileType coffee,javascript,html,css,xml set ts=2
-    autocmd FileType coffee,javascript,html,css,xml set sts=2
+    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set ai
+    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set sw=4
+    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set ts=4
+    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set sts=4
+    autocmd FileType coffee,html,css,xml set ai
+    autocmd FileType coffee,html,css,xml set sw=2
+    autocmd FileType coffee,html,css,xml set ts=2
+    autocmd FileType coffee,html,css,xml set sts=2
 augroup END
 " }}}
 
@@ -214,10 +214,13 @@ augroup END
 " }}}
 
 " Python --------------------{{{ 
-autocmd BufNewFile *.py exec ":call SetPythonEncoding()"
-func SetPythonEncoding()  
-   call setline(1, "# -*- coding: utf-8 -*-")
-endfunc 
+augroup python_lang
+    autocmd!
+    autocmd BufNewFile *.py exec ":call SetPythonEncoding()"
+    func SetPythonEncoding()  
+       call setline(1, "# -*- coding: utf-8 -*-")
+    endfunc 
+augroup END
 " }}}
 
 " HTML --------------------{{{ 
