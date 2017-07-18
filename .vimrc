@@ -32,6 +32,7 @@ set ts=4
 set expandtab
 set autoindent " 以上三行，设置tab的作用是打印出4个空格
 set nu
+set hlsearch
 set foldmethod=indent
 set mouse=a " 支持鼠标
 " powerline
