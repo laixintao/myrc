@@ -23,3 +23,5 @@ alias bbpr='pwd | xargs basename | xargs -I PROJECT echo "https://bitbucket.org/
 
 # code generator
 alias write-code='/usr/bin/python /home/laixintao/program/test-yorg/write_code.py'
+
+alias ctag='/usr/local/bin/ctags'
