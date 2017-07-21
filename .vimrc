@@ -134,6 +134,7 @@ augroup nerdtree_settings
     " NERDDTree快捷键
     map <leader>t :NERDTreeToggle<CR>
     map <C-n> :NERDTreeToggle<CR>
+    nnoremap <leader>r :NERDTreeFind<cr>
     " 显示行号
     " let NERDTreeShowLineNumbers=1
     " let NERDTreeAutoCenter=1
@@ -221,7 +222,7 @@ augroup END
 augroup python_lang
     autocmd!
     autocmd BufNewFile *.py exec ":call SetPythonEncoding()"
-    func SetPythonEncoding()  
+    function! SetPythonEncoding()  
        call setline(1, "# -*- coding: utf-8 -*-")
     endfunc 
 augroup END
