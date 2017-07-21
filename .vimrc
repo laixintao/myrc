@@ -126,6 +126,9 @@ let g:airline_theme='simple'
 " share clipboard with tmux and system
 Plugin 'tmux-plugins/vim-tmux-focus-events'
 Plugin 'roxma/vim-tmux-clipboard'
+
+" 注释
+Bundle 'scrooloose/nerdcommenter'
 " }}}
 
 " NerdTree Settings --------------------{{{ 
