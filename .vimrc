@@ -244,9 +244,9 @@ augroup filetype_vim
     :nnoremap <leader>sv :source $MYVIMRC<cr>
     autocmd FileType vim :iabbrev <buffer> --- --------------------{{{
 augroup END
-" }}}
-"
+" }}} }}}
 
+" Custome functions --------------------{{{ 
 nnoremap <leader>f :call FoldColumnToggle()<cr>
 
 function! FoldColumnToggle()
@@ -270,3 +270,50 @@ function! QuickFixToggle()
         let g:quickfix_is_open = 1
     endif
 endfunction
+
+function! MoveToPrevTab()
+  "there is only one window
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    return
+  endif
+  "preparing new window
+  let l:tab_nr = tabpagenr('$')
+  let l:cur_buf = bufnr('%')
+  if tabpagenr() != 1
+    close!
+    if l:tab_nr == tabpagenr('$')
+      tabprev
+    endif
+    sp
+  else
+    close!
+    exe "0tabnew"
+  endif
+  "opening current buffer in new window
+  exe "b".l:cur_buf
+endfunc
+
+function! MoveToNextTab()
+  "there is only one window
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    return
+  endif
+  "preparing new window
+  let l:tab_nr = tabpagenr('$')
+  let l:cur_buf = bufnr('%')
+  if tabpagenr() < tab_nr
+    close!
+    if l:tab_nr == tabpagenr('$')
+      tabnext
+    endif
+    sp
+  else
+    close!
+    tabnew
+  endif
+  "opening current buffer in new window
+  exe "b".l:cur_buf
+endfunc
+nnoremap mt :call MoveToNextTab()<cr>
+nnoremap mT :call MoveToPrevTab()<cr>
+" }}}
