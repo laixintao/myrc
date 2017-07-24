@@ -1,0 +1,8 @@
+#!/bin/sh
+
+WORKING_BRANCH=`git rev-parse --abbrev-ref HEAD`
+git ck $1
+echo rebase ${1} for ${WORKING_BRANCH}
+git pull
+git ck $WORKING_BRANCH
+git rebase $1
