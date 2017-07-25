@@ -22,6 +22,6 @@ alias vtest-yorg='vim ~/program/test-yorg/test.sh'
 alias bbpr='pwd | xargs basename | xargs -I PROJECT echo "https://bitbucket.org/deepanalyzer/PROJECT/pull-requests/new" | xargs google-chrome'
 
 # code generator
-alias write-code='/usr/bin/python /home/laixintao/program/test-yorg/write_code.py'
+alias write-code='/usr/bin/python /Users/laixintao/Program/test-yorg/write_code.py'
 
 alias ctag='/usr/local/bin/ctags'
