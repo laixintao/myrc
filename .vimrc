@@ -228,6 +228,9 @@ augroup python_lang
     function! SetPythonEncoding()  
        call setline(1, "# -*- coding: utf-8 -*-")
     endfunc 
+    " ------------------- 缩写 -----------------
+    " 使用ipdb自动设置断点
+    autocmd FileType python :iabbrev ipdb import ipdb<CR>ipdb.set_trace()<ESC>
 augroup END
 " }}}
 
