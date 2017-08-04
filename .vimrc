@@ -174,6 +174,8 @@ augroup jedi_settings
     let g:jedi#completions_enabled = 0
     let g:jedi#use_splits_not_buffers = "top"
     let g:jedi#rename_command = "<leader>R"
+    let g:ycm_autoclose_preview_window_after_insertion = 1
+    let g:ycm_autoclose_preview_window_after_completion = 1
 augroup END
 " }}}
 
