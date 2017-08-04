@@ -75,6 +75,7 @@ let g:indent_guides_enable_on_vim_startup = 0
 Bundle 'gmarik/vundle'  
 
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
 
 Bundle 'The-NERD-tree'
 Bundle 'majutsushi/tagbar'
@@ -164,6 +165,15 @@ augroup nerdtree_settings
     
     " 当vim中没有其他文件，值剩下nerdtree的时候，自动关闭窗口
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+augroup END
+" }}}
+
+" Jedi --------------------{{{ 
+augroup jedi_settings
+    autocmd!
+    let g:jedi#completions_enabled = 0
+    let g:jedi#use_splits_not_buffers = "top"
+    let g:jedi#rename_command = "<leader>R"
 augroup END
 " }}}
 
