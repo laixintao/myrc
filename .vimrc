@@ -132,6 +132,13 @@ Plugin 'roxma/vim-tmux-clipboard'
 Bundle 'scrooloose/nerdcommenter'
 " }}}
 
+" YCM Settings --------------------{{{ 
+augroup ycm_settings:
+    autocmd!
+    let g:ycm_autoclose_preview_window_after_insertion = 1
+    let g:ycm_autoclose_preview_window_after_completion = 1
+augroup END
+
 " NerdTree Settings --------------------{{{ 
 augroup nerdtree_settings
     autocmd!
@@ -172,10 +179,9 @@ augroup END
 augroup jedi_settings
     autocmd!
     let g:jedi#completions_enabled = 0
+    let g:jedi#show_call_signatures = 0
     let g:jedi#use_splits_not_buffers = "top"
     let g:jedi#rename_command = "<leader>R"
-    let g:ycm_autoclose_preview_window_after_insertion = 1
-    let g:ycm_autoclose_preview_window_after_completion = 1
 augroup END
 " }}}
 
