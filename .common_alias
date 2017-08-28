@@ -28,3 +28,8 @@ alias ctag='/usr/local/bin/ctags'
 
 
 alias formdata='python ~/Program/myrc/bin/formdata.py'
+
+# $ python -c "import urllib, sys; print urllib.unquote(sys.argv[1])" "%E6%B1%9F%E8%A5%BF%E5%BD%A9%E4%BA%91%E9%A3%9F%E5%93%81%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
+# 江西彩云食品有限公司
+
+alias unquote='python -c "import urllib, sys; print urllib.unquote(sys.argv[1])"'
