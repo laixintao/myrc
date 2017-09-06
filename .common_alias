@@ -33,3 +33,5 @@ alias formdata='python ~/Program/myrc/bin/formdata.py'
 # 江西彩云食品有限公司
 
 alias unquote='python -c "import urllib, sys; print urllib.unquote(sys.argv[1])"'
+alias h='htop'
+alias bt-status='/Users/laixintao/.virtualenvs/yorg/bin/python /Users/laixintao/Program/test-yorg/bt_stats.py'
