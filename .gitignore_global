@@ -3,3 +3,13 @@ dump.rdb
 
 # vim
 *.swo
+# vim
+*.swp
+*.swo
+*.DS_STORE
+.cache/*
+.idea/*
+.coverage
+package-lock.json
+tags
+*.orig
