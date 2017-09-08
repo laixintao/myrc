@@ -47,7 +47,7 @@ set background=dark
 colorscheme molokai
 set cursorline " 高亮光标所在行
 " 括号颜色
-:highlight MatchParen ctermbg=blue ctermfg=white
+:highlight MatchParen ctermbg=DarkGray ctermfg=black
 set incsearch
 nnoremap <Leader>p :pc<cr>
 
