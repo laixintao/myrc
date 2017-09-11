@@ -50,6 +50,9 @@ set cursorline " 高亮光标所在行
 :highlight MatchParen ctermbg=DarkGray ctermfg=black
 set incsearch
 nnoremap <Leader>p :pc<cr>
+" 80行 120行之后设置为灰色背景
+" let &colorcolumn="80,".join(range(120,999),",")
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " }}}
 
@@ -127,6 +130,9 @@ let g:airline_theme='simple'
 
 " 注释
 Bundle 'scrooloose/nerdcommenter'
+
+" start page
+"  git clone https://github.com/mhinz/vim-startify ~/.vim/bundle/vim-startify
 
 " }}}
 
