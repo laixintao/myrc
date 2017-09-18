@@ -12,7 +12,7 @@ Now support:
 - some shell scripts for my own work
 
 
-# ussage
+# usage
 
 0. molokai color scheme
 1. run install [myrc path]
