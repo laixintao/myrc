@@ -79,7 +79,7 @@ let g:indent_guides_enable_on_vim_startup = 0
 Bundle 'gmarik/vundle'  
 
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'davidhalter/jedi-vim'
+" Bundle 'davidhalter/jedi-vim'
 
 Bundle 'The-NERD-tree'
 Bundle 'majutsushi/tagbar'
