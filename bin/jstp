@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+在命令行将javascript timestamp转换成人类可读的时间
+
+Usage:
+jstp 1506589075352
+2017-09-28 16:57:55 +0800
+"""
+
+from __future__ import unicode_literals, division
+
+import sys
+import time
+
+
+if __name__ == '__main__':
+    timestamp = int(sys.argv[1]) / 1000  # js
+    print(time.strftime('%Y-%m-%d %H:%M:%S %z',time.localtime(timestamp)))
