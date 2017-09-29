@@ -89,34 +89,36 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'kchmck/vim-coffee-script'
 Bundle 'carlosvillu/coffeScript-VIM-Snippets'
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
+
 " zen coding
 Plugin 'mattn/emmet-vim'
+
 " autopep8(use vim-flake8 and syntastic would be better
 " Bundle 'tell-k/vim-autopep8'
 " map <leader>p :Autopep8 <CR>
-Plugin 'scrooloose/syntastic' " pip install pylint
-Plugin 'nvie/vim-flake8' " pip install python-flake8
-let g:syntastic_error_symbol='>>'
-let g:syntastic_warning_symbol='>'
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_enable_highlighting=1
-let g:syntastic_python_checkers=['pylint'] " 使用pyflakes,速度比pylint快
+" Plugin 'scrooloose/syntastic' " pip install pylint
+" Plugin 'nvie/vim-flake8' " pip install python-flake8
+" let g:syntastic_error_symbol='>>'
+" let g:syntastic_warning_symbol='>'
+" let g:syntastic_check_on_open=1
+" let g:syntastic_enable_signs=1
+" let g:syntastic_check_on_wq=0
+" let g:syntastic_enable_highlighting=1
+" let g:syntastic_python_checkers=['pylint'] " 使用pyflakes,速度比pylint快
 
 " to see error location list
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_loc_list_height = 5
-function! ToggleErrors()
-    let old_last_winnr = winnr('$')
-    lclose
-    if old_last_winnr == winnr('$')
-        " Nothing was closed, open syntastic error location panel
-        Errors
-    endif
-endfunction
-nnoremap <Leader>l :call ToggleErrors()<cr>
+" let g:syntastic_always_populate_loc_list = 0
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_loc_list_height = 5
+" function! ToggleErrors()
+"     let old_last_winnr = winnr('$')
+"     lclose
+"     if old_last_winnr == winnr('$')
+"         " Nothing was closed, open syntastic error location panel
+"         Errors
+"     endif
+" endfunction
+" nnoremap <Leader>l :call ToggleErrors()<cr>
 " nnoremap <Leader>sn :lnext<cr>
 " nnoremap <Leader>sp :lprevious<cr>
 
@@ -136,6 +138,20 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 let g:gist_open_browser_after_post = 1
+
+" for code style!
+Plugin 'neomake/neomake'
+" function! MyOnBattery()
+"   return readfile('/sys/class/power_supply/AC/online') == ['0']
+" endfunction
+" 
+" if MyOnBattery()
+"   call neomake#configure#automake('w')
+" else
+"   call neomake#configure#automake('nw', 1000)
+" endif
+
+call neomake#configure#automake('nw', 100)
 
 
 " start page
