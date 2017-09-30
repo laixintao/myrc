@@ -1,8 +1,3 @@
-# Need to run: git config --global core.excludesfile ~/.gitignoreglobal
-dump.rdb
-
-# vim
-*.swo
 # vim
 *.swp
 *.swo
@@ -13,3 +8,5 @@ dump.rdb
 package-lock.json
 tags
 *.orig
+.env.chico
+*@neomake*
