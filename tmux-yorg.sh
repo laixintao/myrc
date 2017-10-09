@@ -54,5 +54,27 @@ tmux send-keys -t yorg-dev:5.4 'mongod' C-m
 tmux new-window -n mongo-ol -t yorg-dev
 # do not use password in this file!
 
+# brm-website :7
+tmux new-window -n website -t yorg-dev
+tmux send-keys -t yorg-dev:7.1 'cd ../brm-website' C-m
+
+# brm-api :8
+tmux new-window -n api -t yorg-dev
+tmux send-keys -t yorg-dev:8.1 'cd ../brm-api' C-m
+tmux send-keys -t yorg-dev:8.1 'workon brm-api' C-m
+
+# run :9
+tmux new-window -n run-onebox -t yorg-dev
+tmux split-window -h -t yorg-dev:9
+tmux split-window -v -t yorg-dev:9
+tmux split-window -v -t yorg-dev:9
+tmux send-keys -t yorg-dev:9.1 'cd ../brm-api' C-m
+tmux send-keys -t yorg-dev:9.4 'redis-server --port 6388' C-m
+tmux send-keys -t yorg-dev:9.3 'cd ../brm-website' C-m
+tmux send-keys -t yorg-dev:9.3 'npm run onebox' C-m
+tmux send-keys -t yorg-dev:9.2 'workon brm-api' C-m
+tmux send-keys -t yorg-dev:9.2 'cd ../brm-api' C-m
+tmux send-keys -t yorg-dev:9.2 'python manage.py runserver --threaded' C-m
+
 
 tmux -2 attach -t yorg-dev:1
