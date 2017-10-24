@@ -131,9 +131,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='simple'
 
-" 注释
-Bundle 'scrooloose/nerdcommenter'
-
 " Gist
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
@@ -153,9 +150,12 @@ Plugin 'neomake/neomake'
 
 call neomake#configure#automake('nw', 100)
 
-
 " start page
 "  git clone https://github.com/mhinz/vim-startify ~/.vim/bundle/vim-startify
+
+Bundle 'scrooloose/nerdcommenter'
+" 注释的时候自动加个空格, 强迫症必配
+let g:NERDSpaceDelims=1
 
 " }}}
 
@@ -184,7 +184,7 @@ augroup nerdtree_settings
     " 在终端启动vim时，共享NERDTree
     let g:nerdtree_tabs_open_on_console_startup=1
     " 忽略一下文件的显示
-    let NERDTreeIgnore=['\.pyc','\~$','\.swp','.DS_Store']
+    let NERDTreeIgnore=['\.pyc','\~$','\.swp','.DS_Store', '@neomake_', '__pycache__$[[dir]]','.git[[dir]]','.cache[[dir]]','.idea[[dir]]']
     " 显示书签列表
     let NERDTreeShowBookmarks=1
     " 改变nerdtree的箭头
