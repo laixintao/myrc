@@ -187,6 +187,7 @@ augroup nerdtree_settings
     let NERDTreeIgnore=['\.pyc','\~$',
                 \ '\.swp',
                 \ '.DS_Store',
+                \ '\.orig$',
                 \ '@neomake_',
                 \ '__pycache__$[[dir]]',
                 \ '.git[[dir]]',
