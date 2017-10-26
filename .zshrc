@@ -145,3 +145,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
+
+# need brew install z.sh
+# https://github.com/rupa/z
+. /usr/local/etc/profile.d/z.sh
