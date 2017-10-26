@@ -149,3 +149,10 @@ export EDITOR=vim
 # need brew install z.sh
 # https://github.com/rupa/z
 . /usr/local/etc/profile.d/z.sh
+
+
+# --------------------------------
+# Install awesome tools!
+# 1. brew install z
+# 2. brew install fpp
+# 3. brew install autojump *
