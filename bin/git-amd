@@ -1,5 +1,5 @@
 #!/bin/sh
 
-git add -A
+git add -a
 git commit --amend --no-edit
 git push -f
