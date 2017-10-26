@@ -127,6 +127,12 @@ if [ -f ~/.sensitive_alias ]; then
     . ~/.sensitive_alias
 fi
 
+# sensitive url and token
+# Do not track by git
+if [ -f ~/.secret ]; then
+    . ~/.secret
+fi
+
 export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/wzc/:$PYTHONPATH
 export PYTHONPATH=~/program/git-ext/:$PYTHONPATH
