@@ -157,6 +157,9 @@ Bundle 'scrooloose/nerdcommenter'
 " 注释的时候自动加个空格, 强迫症必配
 let g:NERDSpaceDelims=1
 
+" 快速在bitbucket打开代码
+Plugin 'laixintao/vim-bb-line'
+
 " }}}
 
 " YCM Settings --------------------{{{ 
