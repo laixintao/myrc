@@ -158,7 +158,7 @@ Bundle 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims=1
 
 " 快速在bitbucket打开代码
-Plugin 'laixintao/vim-gh-line'
+Plugin 'ruanyl/vim-gh-line'
 
 " }}}
 
