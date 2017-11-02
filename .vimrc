@@ -160,6 +160,10 @@ let g:NERDSpaceDelims=1
 " 快速在bitbucket打开代码
 Plugin 'ruanyl/vim-gh-line'
 
+" 快速查找
+" https://kien.github.io/ctrlp.vim/
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " }}}
 
 " YCM Settings --------------------{{{ 
