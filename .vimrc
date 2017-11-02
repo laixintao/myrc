@@ -294,6 +294,11 @@ augroup python_lang
     " ------------------- 缩写 -----------------
     " 使用ipdb自动设置断点
     autocmd FileType python :iabbrev ipdb import ipdb<CR>ipdb.set_trace()<ESC>
+    func! RunPython()
+        exec 'w'
+        exec '!python' shellescape(@%, 1)
+    endfunc
+    autocmd FileType python nnoremap <buffer> <F5> :call RunPython() <cr>
 augroup END
 " }}}
 
