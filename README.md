@@ -1,3 +1,6 @@
+# 勤快的程序员不是好的程序员。
+
+
 # myrc
 
 My config files in Linux.
