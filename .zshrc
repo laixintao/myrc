@@ -143,6 +143,7 @@ export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PATH=$HOME/.local/bin:$PATH:
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
