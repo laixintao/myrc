@@ -124,6 +124,7 @@ Plugin 'mattn/emmet-vim'
 
 " git diff
 Plugin 'airblade/vim-gitgutter'
+
 " indent
 Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
 " airline
