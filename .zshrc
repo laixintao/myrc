@@ -143,11 +143,14 @@ export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# pipsi
+# https://github.com/mitsuhiko/pipsi
 export PATH=$HOME/.local/bin:$PATH:
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
-# need brew install z.sh
+# brew install z.sh
 # https://github.com/rupa/z
 . /usr/local/etc/profile.d/z.sh
 
