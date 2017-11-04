@@ -9,9 +9,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias git-tree='git log --graph --decorate --pretty=oneline --abbrev-commit' 
 alias p4="proxychains4"
-alias tmux-ifenglv='sh ~/Program/myrc/ifenglv.sh'
+
+# tmux alias
 alias tmux='tmux -2'
-alias tmux-yorg='sh ~/program/myrc/tmux-yorg.sh'
+alias tmux-yorg='sh ~/Program/myrc/tmux-yorg.sh'
+alias tmux-ifenglv='sh ~/Program/myrc/ifenglv.sh'
+alias tmux-tools='sh ~/Program/myrc/tmux-tools.sh'
 alias test-yorg='sudo ~/program/test-yorg/test.sh'
 alias vtest-yorg='vim ~/program/test-yorg/test.sh'
 
