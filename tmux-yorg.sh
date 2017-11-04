@@ -46,15 +46,9 @@ tmux new-window -n tools -t yorg-dev
 tmux split-window -h -t yorg-dev:5
 tmux split-window -v -t yorg-dev:5.1 
 tmux split-window -h -t yorg-dev:5.2 
-tmux split-window -v -t yorg-dev:5.4 
-tmux split-window -v -t yorg-dev:5.5 
-tmux send-keys -t yorg-dev:5.2 'cd ~/Program/jupyter_notes' C-m
-tmux send-keys -t yorg-dev:5.2 'workon python3' C-m
-tmux send-keys -t yorg-dev:5.2 'jupyter notebook' C-m
-tmux send-keys -t yorg-dev:5.3 'cd ~/Program/shadowsocks-heroku' C-m
-tmux send-keys -t yorg-dev:5.5 'cd ~' C-m
-tmux send-keys -t yorg-dev:5.5 'redis-server;if [ $? -eq 0 ];then echo success;else exit;fi' C-m
-tmux send-keys -t yorg-dev:5.4 'mongod;if [ $? -eq 0 ];then echo success;else exit;fi' C-m
+tmux send-keys -t yorg-dev:5.2 'cd ~/Program/jupyter_notes; workon python3; jupyter notebook' C-m
+tmux send-keys -t yorg-dev:5.3 'cd ~; redis-server;if [ $? -eq 0 ];then echo success;else exit;fi' C-m
+tmux send-keys -t yorg-dev:5.4 'mongod' C-m
 
 # mongo :6
 tmux new-window -n mongo-ol -t yorg-dev
@@ -78,9 +72,6 @@ tmux send-keys -t yorg-dev:9.1 'cd ../brm-api' C-m
 tmux send-keys -t yorg-dev:9.4 'redis-server --port 6388;if [ $? -eq 0 ];then echo success;else exit;fi' C-m
 tmux send-keys -t yorg-dev:9.3 'cd ../brm-website' C-m
 tmux send-keys -t yorg-dev:9.3 'npm run onebox' C-m
-tmux send-keys -t yorg-dev:9.2 'workon brm-api' C-m
-tmux send-keys -t yorg-dev:9.2 'cd ../brm-api' C-m
-tmux send-keys -t yorg-dev:9.2 'python manage.py runserver --threaded' C-m
-
+tmux send-keys -t yorg-dev:9.2 'workon brm-api; modified:   .common_alias; python manage.py runserver --threaded' C-m
 
 tmux -2 attach -t yorg-dev:1
