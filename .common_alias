@@ -12,9 +12,6 @@ alias p4="proxychains4"
 
 # tmux alias
 alias tmux='tmux -2'
-alias tmux-yorg='sh ~/Program/myrc/tmux-yorg.sh'
-alias tmux-ifenglv='sh ~/Program/myrc/tmux-ifenglv.sh'
-alias tmux-tools='sh ~/Program/myrc/tmux-tools.sh'
 alias test-yorg='sudo ~/program/test-yorg/test.sh'
 alias vtest-yorg='vim ~/program/test-yorg/test.sh'
 
