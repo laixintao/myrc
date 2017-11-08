@@ -46,7 +46,7 @@ tmux new-window -n tools -t yorg-dev
 tmux split-window -h -t yorg-dev:5
 tmux split-window -v -t yorg-dev:5.1 
 tmux split-window -h -t yorg-dev:5.2 
-tmux send-keys -t yorg-dev:5.2 'cd ~/Program/jupyter_notes; workon python3; jupyter notebook' C-m
+tmux send-keys -t yorg-dev:5.2 'cd ~/Program/jupyter_notes; workon python3' C-m
 tmux send-keys -t yorg-dev:5.3 'cd ~; redis-server;if [ $? -eq 0 ];then echo success;else exit;fi' C-m
 tmux send-keys -t yorg-dev:5.4 'mongod' C-m
 

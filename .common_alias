@@ -34,3 +34,5 @@ alias h='htop'
 alias bt-status='/Users/laixintao/.virtualenvs/yorg/bin/python /Users/laixintao/Program/test-yorg/bt_stats.py'
 
 # git alias
+# git pr create
+alias gpc='git pullrequest create `git rev-parse --abbrev-ref HEAD` master'
