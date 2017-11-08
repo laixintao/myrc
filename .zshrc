@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="agnoster_laixintao"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -44,6 +44,8 @@ export UPDATE_ZSH_DAYS=13
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+
+ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -133,9 +135,6 @@ if [ -f ~/.secret ]; then
     . ~/.secret
 fi
 
-export PYTHONPATH=/Users/laixintao/Documents/wzc/:$PYTHONPATH
-export PYTHONPATH=~/program/wzc/:$PYTHONPATH
-export PYTHONPATH=~/program/git-ext/:$PYTHONPATH
 export YORG_ENV=develop
 
 # Go-lang path
