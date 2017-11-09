@@ -1,5 +1,7 @@
 # 勤快的程序员不是好的程序员。
 
+![My work bench](./screenshoots/work-bench-20171109b.png)
+
 
 # myrc
 
@@ -13,6 +15,8 @@ Now support:
 - vim
 - tmux
 - some shell scripts for my own work
+- custom zsh theme
+- automatic load dev enviroment via tmux
 
 
 # usage
