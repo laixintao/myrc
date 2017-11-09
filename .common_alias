@@ -36,3 +36,4 @@ alias bt-status='/Users/laixintao/.virtualenvs/yorg/bin/python /Users/laixintao/
 # git alias
 # git pr create
 alias gpc='git pullrequest create `git rev-parse --abbrev-ref HEAD` master'
+alias ge='git diff master --name-only | fpp'  # TODO support branch arg
