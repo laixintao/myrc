@@ -51,7 +51,7 @@ ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git django pip python virtualenv z osx sudo web-search)
+plugins=(git django pip python virtualenv z osx sudo web-search chucknorris)
 
 
 # User configuration
