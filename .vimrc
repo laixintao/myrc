@@ -1,3 +1,6 @@
+" 我对vimrc文件的态度是：
+" 1. 只配置可以让你少按键的东西（例如不要配置自动格式化代码）
+" 2. Don't put anything in your .vimrc you don't understand! (check :help)
 " ## Note:
 " 1. vim字体受终端的限制，所以如果不是gvim， set guifont是无效的
 " 2. 需要安装配色方案，还需要对终端进行配置，如果只安装了Vim的，Vim会看起来雾蒙蒙的一片
