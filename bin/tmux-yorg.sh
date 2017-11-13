@@ -24,10 +24,8 @@ tmux send-keys -t yorg-dev:2.3 'mongo' C-m
 tmux new-window -n yorg-control -t yorg-dev
 tmux split-window -h -t yorg-dev:3
 
-tmux send-keys -t yorg-dev:3.1 'cd ../yorg-control/' C-m
-tmux send-keys -t yorg-dev:3.2 'cd ../yorg-control/' C-m
-tmux send-keys -t yorg-dev:3.1 'workon yorg' C-m
-tmux send-keys -t yorg-dev:3.2 'workon yorg' C-m
+tmux send-keys -t yorg-dev:3.1 'cd ../yorg-control/ ; workon yorg-control' C-m
+tmux send-keys -t yorg-dev:3.2 'cd ../yorg-control/ ; workon yorg-control' C-m
 
 # yorg-control
 tmux new-window -n brm-index -t yorg-dev
