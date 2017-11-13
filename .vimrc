@@ -165,6 +165,10 @@ Plugin 'ruanyl/vim-gh-line'
 " https://kien.github.io/ctrlp.vim/
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" Gundo
+Bundle 'sjl/gundo.vim'
+nnoremap <F5> :GundoToggle<CR>
+
 " }}}
 
 " YCM Settings --------------------{{{ 
