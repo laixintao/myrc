@@ -172,6 +172,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
 
+Plugin 'terryma/vim-multiple-cursors'
+
 " }}}
 
 " YCM Settings --------------------{{{ 
