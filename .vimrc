@@ -81,7 +81,7 @@ let g:indent_guides_enable_on_vim_startup = 0
 
 Bundle 'gmarik/vundle'  
 
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'davidhalter/jedi-vim'
 
 Bundle 'The-NERD-tree'
@@ -173,6 +173,16 @@ Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
 
 Plugin 'terryma/vim-multiple-cursors'
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:snips_trigger_key = '<C-j>'
 
 " }}}
 
@@ -401,3 +411,6 @@ endfunc
 nnoremap mt :call MoveToNextTab()<cr>
 nnoremap mT :call MoveToPrevTab()<cr>
 " }}}
+"
+let g:snips_trigger_key = '<tab>'
+let g:snips_trigger_key_backwards = '<s-tab>'
