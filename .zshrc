@@ -145,7 +145,7 @@ export PATH=$PATH:$GOROOT/bin
 
 # pipsi
 # https://github.com/mitsuhiko/pipsi
-export PATH=$HOME/.local/bin:$PATH:
+export PATH=$PATH:$HOME/.local/bin:
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
