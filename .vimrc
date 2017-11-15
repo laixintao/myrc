@@ -174,8 +174,6 @@ nnoremap <F5> :GundoToggle<CR>
 
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'metakirby5/codi.vim'
-
 " }}}
 
 " YCM Settings --------------------{{{ 
