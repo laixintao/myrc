@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 # stash current work first
 git add -A
 git stash
