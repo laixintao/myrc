@@ -27,7 +27,7 @@ tmux split-window -h -t yorg-dev:3
 tmux send-keys -t yorg-dev:3.1 'cd ../yorg-control/ ; workon yorg-control' C-m
 tmux send-keys -t yorg-dev:3.2 'cd ../yorg-control/ ; workon yorg-control' C-m
 
-# yorg-control
+# brm-index
 tmux new-window -n brm-index -t yorg-dev
 tmux split-window -h -t yorg-dev:4
 tmux send-keys -t yorg-dev:4.1 'workon brm-index' C-m
@@ -66,10 +66,10 @@ tmux new-window -n run-onebox -t yorg-dev
 tmux split-window -h -t yorg-dev:9
 tmux split-window -v -t yorg-dev:9
 tmux split-window -v -t yorg-dev:9
-tmux send-keys -t yorg-dev:9.1 'cd ../brm-api' C-m
+tmux send-keys -t yorg-dev:9.1 'cd /Users/laixintao/Program/brm-api' C-m
 tmux send-keys -t yorg-dev:9.4 'redis-server --port 6388;if [ $? -eq 0 ];then echo success;else exit;fi' C-m
 tmux send-keys -t yorg-dev:9.3 'cd ../brm-website' C-m
 tmux send-keys -t yorg-dev:9.3 'npm run onebox' C-m
-tmux send-keys -t yorg-dev:9.2 'workon brm-api; modified:   .common_alias; python manage.py runserver --threaded' C-m
+tmux send-keys -t yorg-dev:9.2 'cd /Users/laixintao/Program/brm-api; workon brm-api; credentials-to-env python manage.py runserver --threaded' C-m
 
 tmux -2 attach -t yorg-dev:1
