@@ -166,3 +166,5 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse'
 # 3. brew install autojump *
 # 4. brew install fd
 # 5. brew install fzf
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
