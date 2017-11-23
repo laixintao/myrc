@@ -120,3 +120,5 @@ export TERM=screen-256color       # for a tmux -2 session (also for screen)
 export TERM=rxvt-unicode-256color # for a colorful rxvt unicode session
 
 source ~/.autoenv/activate.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
