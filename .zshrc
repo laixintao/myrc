@@ -153,9 +153,13 @@ export EDITOR=vim
 # https://github.com/rupa/z
 . /usr/local/etc/profile.d/z.sh
 
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
+export FZF_DEFAULT_OPTS='--height 40% --reverse'
 
 # --------------------------------
 # Install awesome tools!
 # 1. brew install z
 # 2. brew install fpp
 # 3. brew install autojump *
+# 4. brew install fd
+# 5. brew install fzf
