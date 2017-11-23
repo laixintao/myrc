@@ -159,8 +159,6 @@ export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-setopt hist_ignore_dups
-
 # --------------------------------
 # Install awesome tools!
 # 1. brew install z
