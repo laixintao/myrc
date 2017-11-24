@@ -401,3 +401,11 @@ endfunc
 nnoremap mt :call MoveToNextTab()<cr>
 nnoremap mT :call MoveToPrevTab()<cr>
 " }}}
+
+" .tmux.conf --------------------{{{
+augroup filetype_tmux_conf
+    autocmd!
+    autocmd FileType tmux setlocal foldmethod=marker
+    autocmd FileType tmux :iabbrev <buffer> --- --------------------{{{
+augroup END
+" }}}
