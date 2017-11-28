@@ -110,7 +110,6 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
 
-export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 
 # curl wttr.in
@@ -145,8 +144,6 @@ export PATH=$PATH:$GOROOT/bin
 # pipsi
 # https://github.com/mitsuhiko/pipsi
 export PATH=$PATH:$HOME/.local/bin:
-# Python virtualenv wrapper
-VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/venvs/virtualenvwrapper/bin/python
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
