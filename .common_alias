@@ -1,4 +1,4 @@
-
+#!/bin/sh
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -44,4 +44,4 @@ alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)
 # Python virtualenv wrapper
 VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/venvs/virtualenvwrapper/bin/python
 source /Users/laixintao/.local/bin/virtualenvwrapper.sh
-export VIRTUAL_ENV=/usr/bin/python  # default
+unset VIRTUAL_ENV
