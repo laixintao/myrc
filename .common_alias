@@ -40,3 +40,8 @@ alias ge='git diff master --name-only | fpp'  # TODO support branch arg
 
 # vim $(fzf)
 alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)'
+
+# Python virtualenv wrapper
+VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/venvs/virtualenvwrapper/bin/python
+source /Users/laixintao/.local/bin/virtualenvwrapper.sh
+export VIRTUAL_ENV=/usr/bin/python  # default
