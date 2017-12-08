@@ -172,6 +172,9 @@ nnoremap <F5> :GundoToggle<CR>
 
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'tpope/vim-fugitive'
+nnoremap <leader>b :Gblame<CR>
+
 " }}}
 
 " YCM Settings --------------------{{{ 
