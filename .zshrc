@@ -166,3 +166,4 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse'
 # 5. brew install fzf
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/usr/local/opt/curl/bin:$PATH"

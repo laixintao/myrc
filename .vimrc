@@ -11,8 +11,7 @@
 "   cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 "   eval 'dircolors .dircolors'
 " 3. 使设置生效
-"   export TERM=xterm-256color； source .vimrc
-" 4. git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+
 " cd gnome-terminal-colors-solarized 
 " ./set_dark.sh 或./set_light.sh
 "
@@ -82,7 +81,6 @@ let g:indent_guides_enable_on_vim_startup = 0
 Bundle 'gmarik/vundle'  
 
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'davidhalter/jedi-vim'
 
 Bundle 'The-NERD-tree'
 Bundle 'majutsushi/tagbar'
@@ -181,6 +179,8 @@ augroup ycm_settings:
     autocmd!
     let g:ycm_autoclose_preview_window_after_insertion = 1
     let g:ycm_autoclose_preview_window_after_completion = 1
+    let g:ycm_goto_buffer_command = 'horizontal-split'
+    nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 augroup END
 " }}}
 
@@ -230,15 +230,6 @@ augroup nerdtree_settings
 augroup END
 " }}}
 
-" Jedi --------------------{{{ 
-augroup jedi_settings
-    autocmd!
-    let g:jedi#completions_enabled = 0
-    let g:jedi#show_call_signatures = 0
-    let g:jedi#use_splits_not_buffers = "top"
-    let g:jedi#rename_command = "<leader>R"
-augroup END
-" }}}
 
 " Tab Set --------------------{{{ 
 augroup tab_set
