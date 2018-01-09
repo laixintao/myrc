@@ -228,6 +228,8 @@ augroup nerdtree_settings
     " 当vim打开一个目录时，nerdtree自动使用
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+    " 打开新的窗口，focus在buffer里而不是NerdTree里
+    autocmd VimEnter * :wincmd l
     
     " 当vim中没有其他文件，值剩下nerdtree的时候，自动关闭窗口
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
@@ -245,6 +247,7 @@ augroup tab_set
     autocmd FileType coffee,html,css,xml set sw=2
     autocmd FileType coffee,html,css,xml set ts=2
     autocmd FileType coffee,html,css,xml set sts=2
+    autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 augroup END
 " }}}
 
@@ -297,7 +300,7 @@ augroup python_lang
     endfunc 
     " ------------------- 缩写 -----------------
     " 使用ipdb自动设置断点
-    autocmd FileType python :iabbrev ipdb import ipdb<CR>ipdb.set_trace()<ESC>
+    autocmd FileType python :iabbrev ipdb import ipdb<CR>ipdb.set_trace()<ESC>:w<CR>
     func! RunPython()
         exec 'w'
         exec '!python' shellescape(@%, 1)
@@ -403,3 +406,5 @@ augroup filetype_tmux_conf
     autocmd FileType tmux :iabbrev <buffer> --- --------------------{{{
 augroup END
 " }}}
+
+

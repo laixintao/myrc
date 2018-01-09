@@ -51,7 +51,7 @@ ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git django pip python virtualenv z osx sudo web-search chucknorris zsh-syntax-highlighting)
+plugins=(git django python virtualenv z osx sudo web-search chucknorris zsh-syntax-highlighting)
 
 
 # User configuration
@@ -166,4 +166,15 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse'
 # 5. brew install fzf
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/usr/local/opt/curl/bin:$PATH"
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
