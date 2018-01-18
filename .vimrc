@@ -247,7 +247,7 @@ augroup tab_set
     autocmd FileType coffee,html,css,xml set sw=2
     autocmd FileType coffee,html,css,xml set ts=2
     autocmd FileType coffee,html,css,xml set sts=2
-    autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+    autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2 smarttab
 augroup END
 " }}}
 
