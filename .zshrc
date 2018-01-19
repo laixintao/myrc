@@ -182,3 +182,11 @@ compctl -K _pip_completion pip
 
 # tmuxp
 export DISABLE_AUTO_TITLE='true'
+
+# vscode
+# Then from Terminal you can type:
+
+# code – opens Visual Studio Code
+# code . – opens current directory in Visual Studio Code
+# code somefile – opens somefile in Visual Studio Code
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
