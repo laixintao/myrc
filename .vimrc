@@ -175,6 +175,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 nnoremap <leader>b :Gblame<CR>
 
+" UltiSnips triggering
+Plugin 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<c-j>"
+
+
 " }}}
 
 " YCM Settings --------------------{{{ 
@@ -406,5 +411,3 @@ augroup filetype_tmux_conf
     autocmd FileType tmux :iabbrev <buffer> --- --------------------{{{
 augroup END
 " }}}
-
-
