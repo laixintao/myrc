@@ -178,7 +178,8 @@ nnoremap <leader>b :Gblame<CR>
 " UltiSnips triggering
 Plugin 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
-
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " }}}
 

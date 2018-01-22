@@ -9,11 +9,17 @@ from tests.utils import read_bytes
 
 def test_parse_detail_page_success(mongo):
     db_coll = mongo('$1', 'case_detail')
-    from yorg.contrib.court.yunnan import parse_content_page
-    with patch("yorg.utils.download") as mock_download:
-        mock_download.return_value = read_bytes("$2")
-        parse_content_page("$3")
+    from $2 import parse_content_page
+    with patch("$2") as mock_download:
+        mock_download.return_value = read_bytes("$3")
+        parse_content_page("$4")
         data = db_coll.find_one({'hash': "4d72e935b746cced7be03fa44bdb78b1"})
         assert data is not None
         assert data == $4
+endsnippet
+
+snippet with "with" b
+with ${1:expr}`!p snip.rv = " as " if t[2] else ""`${2:var}:
+    ${3:${VISUAL:pass}}
+$0
 endsnippet
