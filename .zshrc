@@ -51,7 +51,7 @@ ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git django python virtualenv z osx sudo web-search chucknorris zsh-syntax-highlighting)
+plugins=(git python virtualenv z osx sudo)
 
 
 # User configuration
@@ -61,34 +61,19 @@ plugins=(git django python virtualenv z osx sudo web-search chucknorris zsh-synt
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+export ARCHFLAGS="-arch x86_64"
 
 DEFAULT_USER="laixintao"
-
-# . /Users/laixintao/bin/z.sh
 
 # laixintao setting
 export PATH="$PATH:$GRAILS_HOME/bin"
@@ -96,12 +81,7 @@ export PATH="$PATH:/usr/local/mysql/bin/"
 export PATH="$PATH:$HOME/bin"
 
 # don't check for new mail
-
 MAILCHECK=0
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/laixintao/.sdkman"
-[[ -s "/Users/laixintao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/laixintao/.sdkman/bin/sdkman-init.sh"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
@@ -109,10 +89,6 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
-
-export PROJECT_HOME=$HOME/Devel
-
-# curl wttr.in
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -132,8 +108,6 @@ fi
 if [ -f ~/.secret ]; then
     . ~/.secret
 fi
-
-export YORG_ENV=develop
 
 # Go-lang path
 export GOPATH=$HOME/Go
