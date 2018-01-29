@@ -1,0 +1,16 @@
+session_name: cron-python
+windows:
+  - window_name: vim
+    shell_command_before:
+      - workon cron-python
+      - cd /Users/laixintao/Program/cron-python
+    panes:
+      -
+  - window_name: control-panel
+    layout: main-vertical
+    shell_command_before:
+      - workon cron-python
+      - cd /Users/laixintao/Program/cron-python
+    panes:
+      - honcho -e .env run python manage.py runserver
+      - cd cron_python_web && npm start
