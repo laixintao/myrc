@@ -16,6 +16,8 @@ def test_parse_detail_page_success(mongo):
         assert db_coll.count() == 1
         data = db_coll.find_one({'hash': "4d72e935b746cced7be03fa44bdb78b1"})
         assert data is not None
+        data.pop("_id")
+        data.pop("updated_at")
         assert data == $4
 endsnippet
 
