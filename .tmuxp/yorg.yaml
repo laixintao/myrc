@@ -1,6 +1,7 @@
 session_name: yorg-dev
 windows:
   - window_name: vim
+    focus: true
     shell_command_before:
       - cd ~/Program/yorg
       - workon yorg
