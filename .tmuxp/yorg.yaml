@@ -1,0 +1,43 @@
+session_name: yorg-dev
+windows:
+  - window_name: vim
+    shell_command_before:
+      - cd ~/Program/yorg
+      - workon yorg
+      - vim
+    panes:
+      -
+  - window_name: test_window
+    layout: tiled
+    shell_command_before:
+      - cd ~/Program/yorg
+      - workon yorg
+    panes:
+      - vtest-yorg
+      - mongo
+      - beanstalkd
+  - window_name: yorg_control    
+    layout: even-horizontal
+    shell_command_before:
+      - cd ~/Program/yorg-control
+      - workon yorg-control
+    panes:
+      - 
+      -
+  - window_name: brm_index
+    layout: even-horizontal
+    shell_command_before:
+      - cd ~/Program/brm-index
+      - credentials-to-env zsh
+      - workon brm-index
+    panes:
+      -
+  - window_name: website&api
+    panes:
+      -
+  - window_name: website_edit
+    panes:
+      -
+  - window_name: api_edit
+    panes:
+      -
