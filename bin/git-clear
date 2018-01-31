@@ -3,6 +3,5 @@
 # clear all changes since last commit
 # DANGEROUS
 
-git add -A
-git stash
+git stash save --include-untracked
 git stash drop
