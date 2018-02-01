@@ -42,3 +42,9 @@ windows:
   - window_name: api_edit
     panes:
       -
+  - window_name: mongo_online
+    shell_command_before:
+      - cd ~/Documents
+      - workon yorg
+    panes:
+      - 
