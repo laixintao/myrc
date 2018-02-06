@@ -403,6 +403,28 @@ function! MoveToNextTab()
 endfunc
 nnoremap mt :call MoveToNextTab()<cr>
 nnoremap mT :call MoveToPrevTab()<cr>
+
+function! FormatMongodoc2Python() range
+    " 将mongo复制过来的doc修改成Python的代码
+    let l:delete_lines = []
+    for line in range(a:firstline, a:lastline)
+        let l:oldline = getline(line)
+
+        if l:oldline =~ "updated_at" || l:oldline =~ "ObjectId"
+            let l:delete_lines = add(l:delete_lines, line)
+        else
+            let l:oldline = substitute(l:oldline, ' :', ':', "g")  " 删除:前面的空格
+            let l:oldline = substitute(l:oldline, 'true', 'True', "g")  " true替换
+            call setline(line, l:oldline)
+        endif
+            " execute line 'delete _'
+    endfor
+    for line in l:delete_lines
+        execute line 'delete _'
+    endfor
+endfunction
+
+nnoremap <leader>m :.,$call FormatMongodoc2Python()<cr>
 " }}}
 
 " .tmux.conf --------------------{{{
