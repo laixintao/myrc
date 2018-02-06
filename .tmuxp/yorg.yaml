@@ -19,7 +19,7 @@ windows:
     panes:
       - vtest-yorg
       - mongo
-      - beanstalkd
+      - beanstalkd &
   - window_name: yorg_control    
     layout: even-horizontal
     shell_command_before:
