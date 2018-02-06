@@ -13,6 +13,9 @@ windows:
     shell_command_before:
       - cd ~/Program/yorg
       - workon yorg
+      - export LUMINATI_ZONE=zh
+      - export LUMINATI_PASSWORD=foo
+      - export LUMINATI_USERNAME=bar
     panes:
       - vtest-yorg
       - mongo
