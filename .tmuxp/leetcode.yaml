@@ -1,0 +1,14 @@
+session_name: leetcode
+windows:
+  - window_name: jupyter
+    shell_command_before:
+      - cd ~/Program/leetcode
+      - workon python3
+    panes:
+      - jupyter notebook
+  - window_name: shell
+    shell_command_before:
+      - cd ~/Program/leetcode
+      - workon python3
+    panes:
+      - 

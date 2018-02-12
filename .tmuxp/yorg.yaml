@@ -12,10 +12,11 @@ windows:
     layout: tiled
     shell_command_before:
       - cd ~/Program/yorg
+      - credentials-to-env zsh
       - workon yorg
-      - export LUMINATI_ZONE=zh
-      - export LUMINATI_PASSWORD=foo
-      - export LUMINATI_USERNAME=bar
+      # - export LUMINATI_ZONE=zh
+      # - export LUMINATI_PASSWORD=foo
+      # - export LUMINATI_USERNAME=bar
     panes:
       - vtest-yorg
       - mongo
