@@ -1,19 +1,27 @@
-[user]
-	email = glenn.lai@bosondata.com.cn
-	name = laixintao
-[push]
-	default = simple
 [core]
+	editer = "/usr/local/bin/vim"
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
+[user]
+	name = laixintao
+	email = glenn.lai@bosondata.com.cn
+	username = laixintao
 [alias]
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
-[alias]
-	d = difftool
 	pr = pullrequest
-	br = branch
 	ck = checkout
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	br = branch
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[pull]
+    rebase = true
+[mergetool]
+	prompt = false
+[github]
+	user = laixintao1995@163.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
