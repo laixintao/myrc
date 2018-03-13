@@ -306,7 +306,7 @@ augroup python_lang
     endfunc 
     " ------------------- 缩写 -----------------
     " 使用ipdb自动设置断点
-    autocmd FileType python :iabbrev ipdb import ipdb<CR>ipdb.set_trace()<ESC>:w<CR>
+    autocmd FileType python :iabbrev ipdb import ipdb; ipdb.set_trace()<ESC>:w<CR>
     func! RunPython()
         exec 'w'
         exec '!python' shellescape(@%, 1)
