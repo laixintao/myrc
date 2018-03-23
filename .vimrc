@@ -36,6 +36,7 @@ set autoindent " 以上三行，设置tab的作用是打印出4个空格
 set nu
 set hlsearch
 set foldmethod=indent
+set nofoldenable    " disable folding
 set mouse=a " 支持鼠标
 " powerline
 set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
