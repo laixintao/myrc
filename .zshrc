@@ -79,6 +79,13 @@ DEFAULT_USER="laixintao"
 export PATH="$PATH:$GRAILS_HOME/bin"
 export PATH="$PATH:/usr/local/mysql/bin/"
 export PATH="$PATH:$HOME/bin"
+# postgres path
+export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+# Go-lang path
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 # don't check for new mail
 MAILCHECK=0
@@ -108,12 +115,6 @@ fi
 if [ -f ~/.secret ]; then
     . ~/.secret
 fi
-
-# Go-lang path
-export GOPATH=$HOME/Go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 
 # pipsi
 # https://github.com/mitsuhiko/pipsi
