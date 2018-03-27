@@ -437,3 +437,11 @@ augroup filetype_tmux_conf
     autocmd FileType tmux :iabbrev <buffer> --- --------------------{{{
 augroup END
 " }}}
+
+
+" brm-index mapping file
+autocmd BufNewFile,BufRead *.mapping set ft=json
+autocmd BufNewFile,BufRead *.mapping set ai
+autocmd BufNewFile,BufRead *.mapping set sw=2
+autocmd BufNewFile,BufRead *.mapping set ts=2
+autocmd BufNewFile,BufRead *.mapping set sts=2
