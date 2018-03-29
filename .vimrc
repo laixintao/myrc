@@ -30,9 +30,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()  
 let mapleader=','
 syntax enable
-set ts=4
+set tabstop=4
+set shiftwidth=4
+set autoindent
 set expandtab
-set autoindent " 以上三行，设置tab的作用是打印出4个空格
+set softtabstop=0  " 关闭softtabstop 永远不要将空格和tab混合输入
 set nu
 set hlsearch
 set foldmethod=indent
@@ -248,15 +250,7 @@ augroup END
 " Tab Set --------------------{{{ 
 augroup tab_set
     autocmd!
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set ai
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set sw=4
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set ts=4
-    autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp,javascript set sts=4
-    autocmd FileType coffee,html,css,xml set ai
-    autocmd FileType coffee,html,css,xml set sw=2
-    autocmd FileType coffee,html,css,xml set ts=2
-    autocmd FileType coffee,html,css,xml set sts=2
-    autocmd FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2 smarttab
+    autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
 augroup END
 " }}}
 
@@ -439,9 +433,5 @@ augroup END
 " }}}
 
 
-" brm-index mapping file
+
 autocmd BufNewFile,BufRead *.mapping set ft=json
-autocmd BufNewFile,BufRead *.mapping set ai
-autocmd BufNewFile,BufRead *.mapping set sw=2
-autocmd BufNewFile,BufRead *.mapping set ts=2
-autocmd BufNewFile,BufRead *.mapping set sts=2
