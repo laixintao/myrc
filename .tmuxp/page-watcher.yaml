@@ -1,0 +1,26 @@
+session_name: page-watcher
+windows:
+- layout: dbe8,238x61,0,0,29
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/page_watcher
+  window_name: zsh
+- layout: 5be0,238x61,0,0,30
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/page_watcher
+  window_name: test-run
+- focus: 'true'
+  layout: 5be1,238x61,0,0,31
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: db
