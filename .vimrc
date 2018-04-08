@@ -135,7 +135,8 @@ Plugin 'airblade/vim-gitgutter'
 Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
 
 " salt sandbox .sls file
-Bundle 'git://github.com/saltstack/salt-vim.git'
+"Bundle 'git://github.com/saltstack/salt-vim.git'
+
 " airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -438,3 +439,4 @@ augroup END
 
 
 autocmd BufNewFile,BufRead *.mapping set ft=json
+autocmd BufNewFile,BufRead *.sls set ft=yaml
