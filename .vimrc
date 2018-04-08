@@ -133,6 +133,9 @@ Plugin 'airblade/vim-gitgutter'
 
 " indent
 Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+
+" salt sandbox .sls file
+Bundle 'git://github.com/saltstack/salt-vim.git'
 " airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
