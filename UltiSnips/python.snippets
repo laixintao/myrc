@@ -51,3 +51,9 @@ class Task(Task):
         yield NextTask(...)
         yield UpdateMongo(...)
 endsnippet
+
+snippet task_meta
+task_meta = {
+    'max_retries': TASK_MAX_RETRIES
+}
+endsnippet
