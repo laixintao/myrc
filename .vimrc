@@ -108,7 +108,13 @@ Plugin 'godlygeek/tabular'                                    " 自动根据某�
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
+
 call neomake#configure#automake('nw', 100)
+nnoremap <leader>l :lopen<CR>
+nnoremap <leader>lc :lclose<CR>
+nnoremap <Leader>ln :lnext<CR>
+nnoremap <Leader>lp :lprev<CR>
+
 " 注释的时候自动加个空格, 强迫症必配
 let g:NERDSpaceDelims=1
 
