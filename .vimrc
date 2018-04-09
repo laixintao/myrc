@@ -64,12 +64,6 @@ set wildignore+=*.swp,*.pyc
 
 " }}}
 
-" Indent --------------------{{{ 
-let g:indent_guides_auto_colors = 1
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 0
-" }}}
-
 " Plugins --------------------{{{ 
 " let Vundle manage Vundle  
 " 可以通过以下四种方式指定插件的来源  
@@ -83,70 +77,46 @@ let g:indent_guides_enable_on_vim_startup = 0
 " d) 指定本地Git仓库中的插件  
 " Bundle 'file:///Users/gmarik/path/to/plugin'  
 
-Bundle 'gmarik/vundle'  
-
+Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
-
 Bundle 'The-NERD-tree'
-Bundle 'majutsushi/tagbar'
-nmap <F8> :TagbarToggle<CR>
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'kchmck/vim-coffee-script'
-Bundle 'carlosvillu/coffeScript-VIM-Snippets'
+Plugin 'mattn/emmet-vim'                                      " zen coding
+Plugin 'airblade/vim-gitgutter'                               " git diff
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Plugin 'neomake/neomake'
+Bundle 'scrooloose/nerdcommenter'
+Plugin 'ruanyl/vim-gh-line'                                   " 在Bitbucket或github快速打开当前代码行
+Plugin 'ctrlpvim/ctrlp.vim'                                   " 模糊查找
+Bundle 'sjl/gundo.vim'
+Plugin 'terryma/vim-multiple-cursors'                         " 多光标编辑
+Plugin 'tpope/vim-fugitive'                                   " git插件 （Blame)
+Plugin 'SirVer/ultisnips'                                     " 代码片段
+Plugin 'godlygeek/tabular'                                    " 自动根据某个符号对其，用于json 字典 表格等
 
-" zen coding
-Plugin 'mattn/emmet-vim'
 
-" git diff
-Plugin 'airblade/vim-gitgutter'
-
-" indent
-Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                   Unused Awesome Plugins                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " salt sandbox .sls file
 "Bundle 'git://github.com/saltstack/salt-vim.git'
 
-" airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-let g:airline_theme='simple'
-
-" Gist
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-let g:gist_open_browser_after_post = 1
-
-" for code style!
-Plugin 'neomake/neomake'
-
-call neomake#configure#automake('nw', 100)
-
 " start page
-"  git clone https://github.com/mhinz/vim-startify ~/.vim/bundle/vim-startify
+" git clone https://github.com/mhinz/vim-startify ~/.vim/bundle/vim-startify
 
-Bundle 'scrooloose/nerdcommenter'
+
+let g:airline_theme='simple'
+let g:gist_open_browser_after_post = 1
+call neomake#configure#automake('nw', 100)
 " 注释的时候自动加个空格, 强迫症必配
 let g:NERDSpaceDelims=1
 
-" 快速在bitbucket打开代码
-Plugin 'ruanyl/vim-gh-line'
-
-" 快速查找
-" https://kien.github.io/ctrlp.vim/
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" Gundo
-Bundle 'sjl/gundo.vim'
 nnoremap <F5> :GundoToggle<CR>
-
-Plugin 'terryma/vim-multiple-cursors'
-
-Plugin 'tpope/vim-fugitive'
 nnoremap <leader>b :Gblame<CR>
-
 " UltiSnips triggering
-Plugin 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
