@@ -12,7 +12,7 @@ alias p4="proxychains4"
 
 # tmux alias
 alias tmux='tmux -2'
-alias test-yorg='sudo ~/program/test-yorg/test.sh'
+alias ty='sudo ~/program/test-yorg/test.sh'
 alias vtest-yorg='vim ~/program/test-yorg/test.sh'
 
 # bitbucket shotcut

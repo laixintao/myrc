@@ -39,17 +39,11 @@ class Task(Task):
         super().__init__()
 
     def download(self):
-        res = download(self.url)
-        return DownloadResult(res, url=url)
+
+        return DownloadResult()
 
     @staticmethod
     def extract(download_result):
-        url = download_result.url
-        resp = download_result.response
-        lxml_page = lxml.html.fromstring(resp.content.decode())
-
-        yield NextTask(...)
-        yield UpdateMongo(...)
 endsnippet
 
 snippet task_meta
