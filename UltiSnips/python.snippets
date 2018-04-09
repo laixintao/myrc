@@ -57,3 +57,27 @@ task_meta = {
     'max_retries': TASK_MAX_RETRIES
 }
 endsnippet
+
+snippet yorg.base
+from yorg.base import DownloadResult, Operation, UpdateMongo, UpdateOpt, Task
+endsnippet
+
+
+snippet yieldUpdateMongo
+yield UpdateMongo(collection=db_coll,
+                  data=[
+                      Operation(
+                          method=UpdateOpt.UpdateOne,
+                          args=[
+                              {'hash': data['hash']},
+                              {
+                                  '$set': data,
+                                  '$setOnInsert': {'is_indexed': False}
+                              },
+                          ],
+                          kwargs={
+                              'upsert': True
+                          }
+                      )
+                  ])
+endsnippet
