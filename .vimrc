@@ -7,12 +7,12 @@
 "
 " 终端配色安装:
 " 1. 设置Termial配色：git clone git://github.com/seebi/dircolors-solarized.git
-" 2. 注意第二个参数是dircolor是的文件夹 
+" 2. 注意第二个参数是dircolor是的文件夹
 "   cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
 "   eval 'dircolors .dircolors'
 " 3. 使设置生效
 
-" cd gnome-terminal-colors-solarized 
+" cd gnome-terminal-colors-solarized
 " ./set_dark.sh 或./set_light.sh
 "
 " ## Ussage
@@ -21,32 +21,29 @@
 " 1. go in vim, do :BundleInstall
 " 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
 
-" General settings --------------------{{{ 
-set nocompatible             " be iMproved  
-filetype  on                 " required!  
+" General settings --------------------{{{
+set nocompatible               " be iMproved
+filetype  on                   " required!
 filetype plugin on
 filetype indent on
-set rtp+=~/.vim/bundle/vundle/  
-call vundle#rc()  
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 let mapleader=','
 syntax enable
 set tabstop=4
 set shiftwidth=4
 set autoindent
 set expandtab
-set softtabstop=0  " 关闭softtabstop 永远不要将空格和tab混合输入
+set softtabstop=0              " 关闭softtabstop 永远不要将空格和tab混合输入
 set nu
 set hlsearch
 set foldmethod=indent
-set nofoldenable    " disable folding
-set mouse=a " 支持鼠标
-" powerline
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set nofoldenable               " disable folding
+set mouse=a                    " 支持鼠标
 " Always show statusline
 set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports j
 set t_Co=256
-let g:airline_powerline_fonts = 1
 set backspace=2 " 删除键的问题
 set background=dark
 colorscheme molokai
@@ -64,18 +61,18 @@ set wildignore+=*.swp,*.pyc
 
 " }}}
 
-" Plugins --------------------{{{ 
-" let Vundle manage Vundle  
-" 可以通过以下四种方式指定插件的来源  
-" a) 指定Github中vim-scripts仓库中的插件，直接指定插件名称即可，插件明中的空格使用“-”代替。      
-" Bundle 'L9'  
-" b) 指定Github中其他用户仓库的插件，使用“用户名/插件名称”的方式指定  
-" Bundle 'tpope/vim-fugitive'  
-" Bundle 'Lokaltog/vim-easymotion'  
-" c) 指定非Github的Git仓库的插件，需要使用git地址  
-" Bundle 'git://git.wincent.com/command-t.git'  
-" d) 指定本地Git仓库中的插件  
-" Bundle 'file:///Users/gmarik/path/to/plugin'  
+" Plugins --------------------{{{
+" let Vundle manage Vundle
+" 可以通过以下四种方式指定插件的来源
+" a) 指定Github中vim-scripts仓库中的插件，直接指定插件名称即可，插件明中的空格使用“-”代替。
+" Bundle 'L9'
+" b) 指定Github中其他用户仓库的插件，使用“用户名/插件名称”的方式指定
+" Bundle 'tpope/vim-fugitive'
+" Bundle 'Lokaltog/vim-easymotion'
+" c) 指定非Github的Git仓库的插件，需要使用git地址
+" Bundle 'git://git.wincent.com/command-t.git'
+" d) 指定本地Git仓库中的插件
+" Bundle 'file:///Users/gmarik/path/to/plugin'
 
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
@@ -109,6 +106,7 @@ Plugin 'godlygeek/tabular'                                    " 自动根据某�
 
 
 let g:airline_theme='simple'
+let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
 call neomake#configure#automake('nw', 100)
 " 注释的时候自动加个空格, 强迫症必配
@@ -123,7 +121,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " }}}
 
-" YCM Settings --------------------{{{ 
+" YCM Settings --------------------{{{
 augroup ycm_settings:
     autocmd!
     let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -134,7 +132,7 @@ augroup ycm_settings:
 augroup END
 " }}}
 
-" NerdTree Settings --------------------{{{ 
+" NerdTree Settings --------------------{{{
 augroup nerdtree_settings
     autocmd!
     " NERDDTree快捷键
@@ -170,26 +168,26 @@ augroup nerdtree_settings
     " vim不指定具体文件打开是，自动使用nerdtree
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree |endif
-    
+
     " 当vim打开一个目录时，nerdtree自动使用
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
     " 打开新的窗口，focus在buffer里而不是NerdTree里
     autocmd VimEnter * :wincmd l
-    
+
     " 当vim中没有其他文件，值剩下nerdtree的时候，自动关闭窗口
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 augroup END
 " }}}
 
-" Tab Set --------------------{{{ 
+" Tab Set --------------------{{{
 augroup tab_set
     autocmd!
     autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
 augroup END
 " }}}
 
-" InsertMode Quick Edit --------------------{{{ 
+" InsertMode Quick Edit --------------------{{{
 " use emacs shortcut in INSERT mode
 imap <C-e> <END>
 imap <C-a> <HOME>
@@ -202,7 +200,7 @@ augroup relative_numbser
 augroup END
 " }}}
 
-" ShortCuts --------------------{{{ 
+" ShortCuts --------------------{{{
 augroup shortcuts
     autocmd!
     " alias Vres to resize screen
@@ -212,7 +210,7 @@ augroup shortcuts
 augroup END
 " }}}
 
-" Iabbrev --------------------{{{ 
+" Iabbrev --------------------{{{
 augroup iabbrevs
     autocmd!
     " long comment
@@ -221,7 +219,7 @@ augroup iabbrevs
 augroup END
 " }}}
 
-" Lisp --------------------{{{ 
+" Lisp --------------------{{{
 augroup lisp_lang
     autocmd!
     " for scheme
@@ -229,13 +227,13 @@ augroup lisp_lang
 augroup END
 " }}}
 
-" Python --------------------{{{ 
+" Python --------------------{{{
 augroup python_lang
     autocmd!
     autocmd BufNewFile *.py exec ":call SetPythonEncoding()"
-    function! SetPythonEncoding()  
+    function! SetPythonEncoding()
        call setline(1, "# -*- coding: utf-8 -*-")
-    endfunc 
+    endfunc
     " ------------------- 缩写 -----------------
     " 使用ipdb自动设置断点
     autocmd FileType python :iabbrev ipdb import ipdb; ipdb.set_trace()<ESC>:w<CR>
@@ -247,14 +245,14 @@ augroup python_lang
 augroup END
 " }}}
 
-" HTML --------------------{{{ 
+" HTML --------------------{{{
 augroup html_lang
     autocmd!
     :autocmd BufNewFile,BufRead *.html setlocal nowrap
 augroup END
 " }}}
 
-" VimScript file settings --------------------{{{ 
+" VimScript file settings --------------------{{{
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
@@ -265,7 +263,7 @@ augroup filetype_vim
 augroup END
 " }}} }}}
 
-" Custome functions --------------------{{{ 
+" Custome functions --------------------{{{
 nnoremap <leader>f :call FoldColumnToggle()<cr>
 
 function! FoldColumnToggle()
