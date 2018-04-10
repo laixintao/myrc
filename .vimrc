@@ -59,6 +59,9 @@ set pastetoggle=<F2>
 
 set wildignore+=*.swp,*.pyc
 
+" 文件编码的猜测顺序
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
+
 " }}}
 
 " Plugins --------------------{{{
@@ -93,6 +96,7 @@ Plugin 'terryma/vim-multiple-cursors'                         " 多光标编辑
 Plugin 'tpope/vim-fugitive'                                   " git插件 （Blame)
 Plugin 'SirVer/ultisnips'                                     " 代码片段
 Plugin 'godlygeek/tabular'                                    " 自动根据某个符号对其，用于json 字典 表格等
+Plugin 'vimwiki/vimwiki'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
