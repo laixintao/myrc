@@ -33,14 +33,15 @@ snippet noqa
 endsnippet
 
 
-snippet Task
-class Task(Task):
-    def __init__(self):
+snippet DetailTask
+class DetailTask(Task):
+    def __init__(self, url):
+        self.url = url
         super().__init__()
 
     def download(self):
-
-        return DownloadResult()
+        resp = download(self.url, return_content=False)
+        return DownloadResult(resp)
 
     @staticmethod
     def extract(download_result):
@@ -51,6 +52,41 @@ task_meta = {
     'max_retries': TASK_MAX_RETRIES
 }
 endsnippet
+
+
+snippet ListTask
+class ListTask(Task):
+
+    def __init__(self, url):
+        self.url = url
+        super().__init__()
+
+    def download(self):
+        resp = download(self.url, return_content=False)
+        return DownloadResult(resp)
+
+    @staticmethod
+    def extract(download_result):
+        page_lxml = lxml.html.fromstring(download_result.response.content)
+
+        yield DetailTask()
+endsnippet
+
+
+snippet StartJobTask 
+class StartJobTask(Task):
+
+    def download(self):
+
+        return DownloadResult()
+
+    @staticmethod
+    def extract(download_result):
+        page_lxml = lxml.html.fromstring(download_result.response.content)
+
+        yield ListTask()
+endsnippet
+
 
 snippet yorg.base
 from yorg.base import DownloadResult, Operation, UpdateMongo, UpdateOpt, Task
