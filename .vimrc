@@ -381,7 +381,10 @@ autocmd BufNewFile,BufRead *.sls set ft=yaml
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
 
 let g:vimwiki_list = [{
-            \'path': '/Users/laixintao/Program/laixintao-wikibot.github.io/wiki',
-            \'path_html': '/Users/laixintao/Program/laixintao-wikibot.github.io/html',
-            \}]
+            \ 'path'             : '/Users/laixintao/Program/laixintao-wikibot.github.io/wiki',
+            \ 'path_html'        : '/Users/laixintao/Program/laixintao-wikibot.github.io/html',
+            \ 'template_path'    : '/Users/laixintao/Program/laixintao-wikibot.github.io/html/assets',
+            \ 'template_default' : 'default',
+            \ 'template_ext'     : '.tpl',
+            \ 'auto_export'      : 0}]
 autocmd SwapExists * let v:swapchoice = "o"
