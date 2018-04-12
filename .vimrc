@@ -379,3 +379,9 @@ augroup END
 autocmd BufNewFile,BufRead *.mapping set ft=json
 autocmd BufNewFile,BufRead *.sls set ft=yaml
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
+
+let g:vimwiki_list = [{
+            \'path': '/Users/laixintao/Program/laixintao-wikibot.github.io/wiki',
+            \'path_html': '/Users/laixintao/Program/laixintao-wikibot.github.io/html',
+            \}]
+autocmd SwapExists * let v:swapchoice = "o"
