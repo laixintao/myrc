@@ -3,22 +3,21 @@ snippet yorg.test
 # pylint: disable=line-too-long
 
 
-from unittest.mock import patch
-from tests.utils import read_bytes
+from tests.utils import run_task
 
 
 def test_parse_detail_page_success(mongo):
     db_coll = mongo('$1', 'case_detail')
-    from $2 import parse_content_page
-    with patch("$2") as mock_download:
-        mock_download.return_value = read_bytes("$3")
-        parse_content_page("$4")
-        assert db_coll.count() == 1
-        data = db_coll.find_one({'hash': "4d72e935b746cced7be03fa44bdb78b1"})
-        assert data is not None
-        data.pop("_id")
-        data.pop("updated_at")
-        assert data == $4
+    from $2 import DetailTask
+    run_task(DetailTask(""),
+             "$2",
+             "$4")
+    assert db_coll.count() == 1
+    data = db_coll.find_one({'hash': "4d72e935b746cced7be03fa44bdb78b1"})
+    assert data is not None
+    data.pop("_id")
+    data.pop("updated_at")
+    assert data == {}
 endsnippet
 
 snippet with "with" b
