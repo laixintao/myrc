@@ -76,8 +76,6 @@ export ARCHFLAGS="-arch x86_64"
 DEFAULT_USER="laixintao"
 
 # laixintao setting
-export PATH="$PATH:$GRAILS_HOME/bin"
-export PATH="$PATH:/usr/local/mysql/bin/"
 export PATH="$PATH:$HOME/bin"
 # postgres path
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
