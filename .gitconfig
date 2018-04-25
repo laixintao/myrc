@@ -25,7 +25,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[http "http://bitbucket.org"]
-    proxy = http://10.209.81.32:8080
-[http "https://bitbucket.org"]
-    proxy = http://10.209.81.32:8080
+[https]
+	proxy = http://127.0.0.1:1086
+[http]
+	proxy = http://127.0.0.1:1086

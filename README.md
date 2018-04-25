@@ -34,3 +34,8 @@ Now support:
 - [x] reorgainze the files
 - [x] wttr.in auto run when first time to open shell (by tmux)
 
+1. install `xcode-select --install`
+2. install `brew`
+3. install zsh
+4. install oh-my-zsh
+5. install pip
