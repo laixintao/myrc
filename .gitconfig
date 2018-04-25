@@ -25,7 +25,3 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[https]
-	proxy = http://127.0.0.1:1086
-[http]
-	proxy = http://127.0.0.1:1086
