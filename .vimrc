@@ -26,7 +26,7 @@ set nocompatible               " be iMproved
 filetype  on                   " required!
 filetype plugin on
 filetype indent on
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=/Users/laixintao/.vim/bundle/Vundle.vim
 call vundle#rc()
 let mapleader=','
 syntax enable
