@@ -165,5 +165,6 @@ export DISABLE_AUTO_TITLE='true'
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 # pyenv
-export PATH="/Users/username/.pyenv:$PATH"
+export PATH="/Users/laixintao/.pyenv:$PATH"
+export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
