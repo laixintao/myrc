@@ -163,3 +163,7 @@ export DISABLE_AUTO_TITLE='true'
 # code . – opens current directory in Visual Studio Code
 # code somefile – opens somefile in Visual Studio Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+# pyenv
+export PATH="/Users/username/.pyenv:$PATH"
+eval "$(pyenv init -)"

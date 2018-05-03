@@ -4,7 +4,7 @@
 	excludesfile = ~/.gitignore_global
 [user]
 	name = laixintao
-	email = laixintao1995@163.com
+	email = nanshi.lxt@alipay.com
 	username = laixintao
 [alias]
 	pr = pullrequest

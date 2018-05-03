@@ -194,7 +194,7 @@ augroup END
 " Tab Set --------------------{{{
 augroup tab_set
     autocmd!
-    autocmd FileType coffee,html,css,xml,yaml,json set sw=2 ts=2
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript set sw=2 ts=2
 augroup END
 " }}}
 
@@ -389,3 +389,4 @@ let g:vimwiki_list = [{
             \ 'template_ext'     : '.tpl',
             \ 'auto_export'      : 0}]
 autocmd SwapExists * let v:swapchoice = "o"
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
