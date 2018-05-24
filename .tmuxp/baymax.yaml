@@ -1,0 +1,60 @@
+session_name: baymax-dev
+windows:
+- layout: cd60,238x57,0,0,3
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/ibaymax
+  window_name: vim
+- layout: cc7d,238x57,0,0{119x57,0,0,4,118x57,120,0,5}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  - zsh
+  start_directory: /Users/laixintao/Program/ibaymax
+  window_name: ibaymax
+- layout: cc80,238x57,0,0{119x57,0,0,6,118x57,120,0,7}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - zsh
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/ibaymax-static
+  window_name: static
+- layout: cd65,238x57,0,0,8
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/ibaymax
+  window_name: static-control
+- layout: cd66,238x57,0,0,9
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/ibaymax
+  window_name: online
+- layout: 66df,238x57,0,0,10
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/ibaymax
+  window_name: staging
+- focus: 'true'
+  layout: 66e0,238x57,0,0,11
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pane
+  start_directory: /Users/laixintao/Program/ibaymax
+  window_name: mysql
