@@ -390,3 +390,9 @@ let g:vimwiki_list = [{
             \ 'auto_export'      : 0}]
 autocmd SwapExists * let v:swapchoice = "o"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+
+augroup vagrant
+  au!
+  au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
