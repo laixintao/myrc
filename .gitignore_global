@@ -11,5 +11,5 @@ tags
 .env.chico
 *@neomake*
 
-# gitlab ci
-.gitlab-ci.yml
+
+*.lock

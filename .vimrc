@@ -217,7 +217,7 @@ augroup shortcuts
     " alias Vres to resize screen
     command! -nargs=? Vres vertical res <args>
     nnoremap <leader>a ggvG
-    :onoremap in( :<c-u>normal! f(vi(<cr>
+    onoremap in( :<c-u>normal! f(vi(<cr>
 augroup END
 " }}}
 
@@ -396,3 +396,6 @@ augroup vagrant
   au!
   au BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
+
+
+
