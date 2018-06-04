@@ -1,0 +1,52 @@
+session_name: takachiho
+windows:
+- focus: 'true'
+  layout: 05dd,238x57,0,0{119x57,0,0,11,118x57,120,0[118x28,120,0,38,118x28,120,29,39]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: cd /Users/laixintao/Program/takachiho
+  window_name: edit
+- layout: 019e,238x57,0,0[238x28,0,0,12,238x28,0,29{119x28,0,29,27,118x28,120,29,33}]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - cd /Users/laixintao/Program/takachiho
+    - workon takachiho
+    - python manage.py runserver
+  - focus: 'true'
+    shell_command:
+    - cd /Users/laixintao/Program/takachiho
+    - workon takachiho
+  window_name: work-bench
+- layout: 9fac,238x57,0,0[238x28,0,0,13,238x28,0,29{59x28,0,29,34,59x28,60,29,37,59x28,120,29,35,58x28,180,29,36}]
+  shell_command_before: cd /Users/laixintao/Program/takachiho && workon takachiho && export DJANGO_SETTINGS_MODULE=takachiho.settings.develop
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - brew services start mysql
+    - brew services start redis
+    - brew services list
+  - focus: 'true'
+  - shell_command: celery -A takachiho worker -l info
+  - shell_command: celery -A takachiho beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+  start_directory: /Users/laixintao/Program/takachiho
+  window_name: runserver
+- layout: 66e3,238x57,0,0,14
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: mycli -u root
+  start_directory: /Users/laixintao
+  window_name: local-db
+- layout: 4198,238x57,0,0[238x28,0,0,20,238x28,0,29{119x28,0,29,24,118x28,120,29,26}]
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: vim
+  start_directory: /Users/laixintao/Program/gist
+  window_name: note
