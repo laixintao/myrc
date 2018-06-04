@@ -33,6 +33,7 @@ windows:
   - focus: 'true'
   - shell_command: celery -A takachiho worker -l info
   - shell_command: celery -A takachiho beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+  - shell_command: celery flower -A takachiho
   start_directory: /Users/laixintao/Program/takachiho
   window_name: runserver
 - layout: 66e3,238x57,0,0,14
