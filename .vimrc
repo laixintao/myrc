@@ -398,4 +398,4 @@ augroup vagrant
 augroup END
 
 
-
+let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
