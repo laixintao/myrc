@@ -13,31 +13,8 @@ alias p4="proxychains4"
 
 # tmux alias
 alias tmux='tmux -2'
-alias ty='sudo ~/program/test-yorg/test.sh'
-alias vy='vim ~/program/test-yorg/test.sh'
 
-# bitbucket shotcut
-alias bbpr='pwd | xargs basename | xargs -I PROJECT echo "https://bitbucket.org/deepanalyzer/PROJECT/pull-requests/new" | xargs google-chrome'
-
-# code generator
-alias write-code='/usr/bin/python /Users/laixintao/Program/test-yorg/write_code.py'
-
-alias ctag='/usr/local/bin/ctags'
-
-
-alias formdata='python ~/Program/myrc/bin/formdata.py'
-
-# $ python -c "import urllib, sys; print urllib.unquote(sys.argv[1])" "%E6%B1%9F%E8%A5%BF%E5%BD%A9%E4%BA%91%E9%A3%9F%E5%93%81%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8"
-# 江西彩云食品有限公司
-
-alias unquote='python -c "import urllib, sys; print urllib.unquote(sys.argv[1])"'
 alias h='htop'
-alias bt-status='/Users/laixintao/.virtualenvs/yorg/bin/python /Users/laixintao/Program/test-yorg/bt_stats.py'
-
-# git alias
-# git pr create
-alias gpc='git pullrequest create `git rev-parse --abbrev-ref HEAD` master'
-alias ge='git diff master --name-only | fpp'  # TODO support branch arg
 
 # vim $(fzf)
 alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)'
@@ -46,3 +23,6 @@ alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)
 VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/venvs/virtualenvwrapper/bin/python
 source /Users/laixintao/.local/bin/virtualenvwrapper.sh
 unset VIRTUAL_ENV
+
+# open typora note
+alias note="open -a typora /Users/laixintao/Program/gist"
