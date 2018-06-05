@@ -6,7 +6,7 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: cd /Users/laixintao/Program/takachiho
+    shell_command: cd /Users/laixintao/Program/takachiho && workon takachiho
   window_name: edit
 - layout: 019e,238x57,0,0[238x28,0,0,12,238x28,0,29{119x28,0,29,27,118x28,120,29,33}]
   options:
