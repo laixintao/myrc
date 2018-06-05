@@ -1,0 +1,18 @@
+#!/bin/sh
+
+week_of_month=$((($(date +%-d)-1)/7+1))
+current_month=$(date +%m)
+current_year=$(date +%Y)
+report_filename="${current_year}年${current_month}月第${week_of_month}周-赖信涛的周报.md"
+
+echo "本周周报文件：$report_filename"
+
+cd /Users/laixintao/Program/gist/weekly/
+if [ -f $report_filename ]
+then
+    echo "$report_filename 文件已存在。 正在通过GUI编辑器编辑……"
+else
+    cp /Users/laixintao/Program/myrc/fixture/weekly_report_template.md $report_filename && "$report_filename 文件已创建。 正在通过GUI编辑器打开……"
+fi
+
+open -a typora $report_filename
