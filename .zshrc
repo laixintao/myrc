@@ -167,3 +167,6 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 export PATH="/Users/laixintao/.pyenv:$PATH"
 export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
+
+# shadowsocks proxy
+export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;
