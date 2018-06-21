@@ -5,7 +5,6 @@
 .cache/*
 .idea/*
 .coverage
-package-lock.json
 tags
 *.orig
 .env.chico
