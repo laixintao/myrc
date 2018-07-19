@@ -99,6 +99,7 @@ Plugin 'SirVer/ultisnips'                                     " 代码片段
 Plugin 'godlygeek/tabular'                                    " 自动根据某个符号对其，用于json 字典 表格等
 Plugin 'vimwiki/vimwiki'
 Plugin 'ambv/black'
+Plugin 'mechatroner/rainbow_csv'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
