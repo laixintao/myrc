@@ -2,6 +2,7 @@
 	editer = "/usr/local/bin/vim"
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	quotepath = false
 [user]
 	name = laixintao
 	email = nanshi.lxt@alipay.com
