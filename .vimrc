@@ -103,6 +103,7 @@ Plugin 'ambv/black'
 Plugin 'mechatroner/rainbow_csv'
 Plugin 'tweekmonster/django-plus.vim'
 Plugin 'wannesm/wmgraphviz.vim'
+Plugin 'tweekmonster/startuptime.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
