@@ -33,6 +33,7 @@ syntax enable
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set smartindent
 set expandtab
 set softtabstop=0              " 关闭softtabstop 永远不要将空格和tab混合输入
 set nu
@@ -100,7 +101,8 @@ Plugin 'godlygeek/tabular'                                    " 自动根据某�
 Plugin 'vimwiki/vimwiki'
 Plugin 'ambv/black'
 Plugin 'mechatroner/rainbow_csv'
-
+Plugin 'tweekmonster/django-plus.vim'
+Plugin 'wannesm/wmgraphviz.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
@@ -196,7 +198,7 @@ augroup END
 " Tab Set --------------------{{{
 augroup tab_set
     autocmd!
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript set sw=2 ts=2
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv set sw=2 ts=2
 augroup END
 " }}}
 
@@ -375,6 +377,25 @@ augroup filetype_tmux_conf
     autocmd!
     autocmd FileType tmux setlocal foldmethod=marker
     autocmd FileType tmux :iabbrev <buffer> --- --------------------{{{
+augroup END
+" }}}
+
+" graphviz --------------------{{{
+augroup graphviz
+    autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>dp :call OpenGraphviz()<cr>
+    autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>dc :call CompileGraphviz()<cr>
+    function CompileGraphviz()
+        execute ":w"
+        execute "Compile dot file and then open it."
+        execute ":silent !dot -Tsvg -o %:r.svg %"
+        execute "redraw!"
+    endfunction
+
+    function! OpenGraphviz()
+        call CompileGraphviz()
+        execute ":silent !open %:r.svg"
+        execute "redraw!"
+    endfunction
 augroup END
 " }}}
 
