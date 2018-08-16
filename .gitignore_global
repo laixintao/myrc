@@ -13,3 +13,4 @@ tags
 
 *.lock
 *.pid
+dump.rdb

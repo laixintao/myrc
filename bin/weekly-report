@@ -1,6 +1,6 @@
 #!/bin/sh
 
-week_of_month=$((($(date +%-d)-1)/7 + 1))
+week_of_month=$((($(date +%-d))/7 + 1))
 current_month=$(date +%m)
 current_year=$(date +%Y)
 report_filename="${current_year}年${current_month}月第${week_of_month}周-赖信涛的周报.md"

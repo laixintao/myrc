@@ -1,0 +1,29 @@
+session_name: gate
+windows:
+- layout: 66e8,238x57,0,0,38
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/gate
+  window_name: main
+- focus: 'true'
+  layout: d486,238x57,0,0[238x28,0,0,39,238x28,0,29,45]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - cd /Users/laixintao
+    - zsh
+  - focus: 'true'
+    shell_command: cd /Users/laixintao/Program/myrc
+  window_name: run
+- layout: e6e0,238x57,0,0,40
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /private/tmp
+  window_name: shell
