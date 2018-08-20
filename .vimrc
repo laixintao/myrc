@@ -104,6 +104,7 @@ Plugin 'mechatroner/rainbow_csv'
 Plugin 'tweekmonster/django-plus.vim'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'tweekmonster/startuptime.vim'
+Plugin 'spacewander/openresty-vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
@@ -144,6 +145,7 @@ augroup ycm_settings:
     let g:ycm_autoclose_preview_window_after_completion = 1
     let g:ycm_goto_buffer_command = 'horizontal-split'
     let g:ycm_python_binary_path = 'python'
+    let g:ycm_seed_identifiers_with_syntax = 1
     nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 augroup END
 " }}}
@@ -397,6 +399,12 @@ augroup graphviz
         execute ":silent !open %:r.svg"
         execute "redraw!"
     endfunction
+augroup END
+" }}}
+
+" nginx --------------------{{{
+augroup nginx
+    autocmd BufRead,BufNewFile nginx*.conf set filetype=nginx
 augroup END
 " }}}
 
