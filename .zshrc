@@ -167,3 +167,6 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 export PATH="/Users/laixintao/.pyenv:$PATH"
 export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
+
+#cargo
+export PATH="/Users/laixintao/.cargo/bin:$PATH"

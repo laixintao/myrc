@@ -53,7 +53,6 @@ set cursorline " 高亮光标所在行
 " 括号颜色
 :highlight MatchParen ctermbg=DarkGray ctermfg=black
 set incsearch
-nnoremap <Leader>p :pc<cr>
 set pastetoggle=<F2>
 " 80行 120行之后设置为灰色背景
 " let &colorcolumn="80,".join(range(120,999),",")
@@ -105,6 +104,7 @@ Plugin 'tweekmonster/django-plus.vim'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'tweekmonster/startuptime.vim'
 Plugin 'spacewander/openresty-vim'
+Plugin 'dyng/ctrlsf.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
@@ -119,6 +119,13 @@ Plugin 'spacewander/openresty-vim'
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
+
+" CtrlSF
+nmap <leader>p <Plug>CtrlSFPrompt
+nnoremap <leader>po :CtrlSFOpen<CR>
+let g:ctrlsf_auto_focus = {
+    \ "at": "start",
+    \ }
 
 call neomake#configure#automake('nw', 100)
 nnoremap <leader>l :lopen<CR>
