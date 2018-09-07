@@ -20,9 +20,11 @@ alias h='htop'
 alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)'
 
 # Python virtualenv wrapper
-VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/venvs/virtualenvwrapper/bin/python
-source /Users/laixintao/.local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
 unset VIRTUAL_ENV
 
 # open typora note
 alias note="open -a typora /Users/laixintao/Program/gist"
+
+alias cat="bat"
