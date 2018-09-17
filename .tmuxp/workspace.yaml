@@ -1,0 +1,44 @@
+session_name: workspace
+windows:
+- focus: 'true'
+  layout: 66e3,238x57,0,0,14
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pane
+  start_directory: /Users/laixintao/Program
+  window_name: vim
+- layout: a5de,238x57,0,0{119x57,0,0,15,118x57,120,0[118x28,120,0,19,118x28,120,29,20]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  - zsh
+  - zsh
+  start_directory: /Users/laixintao
+  window_name: operation
+- layout: 66e5,238x57,0,0,16
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
+- layout: 66e6,238x57,0,0,17
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
+- layout: 66e7,238x57,0,0,18
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
