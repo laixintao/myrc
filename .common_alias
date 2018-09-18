@@ -28,5 +28,6 @@ unset VIRTUAL_ENV
 alias note="open -a typora /Users/laixintao/Program/gist"
 
 alias cat="bat"
+alias ping="prettyping"
 
 alias a=ansible
