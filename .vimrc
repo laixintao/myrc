@@ -105,6 +105,7 @@ Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'tweekmonster/startuptime.vim'
 Plugin 'spacewander/openresty-vim'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'majutsushi/tagbar'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
@@ -438,3 +439,8 @@ augroup END
 
 
 let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
+
+
+" Ref
+" For C/C++ https://gist.github.com/rocarvaj/2513367
+"
