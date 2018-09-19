@@ -144,6 +144,9 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
+" tagbar
+nnoremap <F8> :TagbarToggle<CR>
+
 " }}}
 
 " YCM Settings --------------------{{{
@@ -395,7 +398,7 @@ augroup END
 augroup graphviz
     autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>dp :call OpenGraphviz()<cr>
     autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>dc :call CompileGraphviz()<cr>
-    function CompileGraphviz()
+    function! CompileGraphviz()
         execute ":w"
         execute "Compile dot file and then open it."
         execute ":silent !dot -Tsvg -o %:r.svg %"
