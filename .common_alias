@@ -14,8 +14,6 @@ alias p4="proxychains4"
 # tmux alias
 alias tmux='tmux -2'
 
-alias h='htop'
-
 # vim $(fzf)
 alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)'
 
@@ -31,3 +29,6 @@ alias cat="bat"
 alias ping="prettyping"
 
 alias a=ansible
+alias h=htop
+alias d=docker
+alias v=vagrant
