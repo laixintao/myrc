@@ -170,3 +170,6 @@ eval "$(pyenv init -)"
 
 #cargo
 export PATH="/Users/laixintao/.cargo/bin:$PATH"
+
+# opam configuration
+test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
