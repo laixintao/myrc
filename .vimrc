@@ -137,7 +137,6 @@ nnoremap <Leader>lp :lprev<CR>
 " 注释的时候自动加个空格, 强迫症必配
 let g:NERDSpaceDelims=1
 
-nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>b :Gblame<CR>
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -417,6 +416,10 @@ augroup END
 augroup nginx
     autocmd BufRead,BufNewFile nginx*.conf set filetype=nginx
 augroup END
+" }}}
+
+" clang --------------------{{{
+map <F9> : !gcc % && ./a.out <CR>
 " }}}
 
 
