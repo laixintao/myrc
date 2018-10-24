@@ -81,7 +81,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
 Plugin 'gmarik/vundle'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'The-NERD-tree'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 Plugin 'mattn/emmet-vim'                                      " zen coding
 Plugin 'airblade/vim-gitgutter'                               " git diff
 Plugin 'vim-airline/vim-airline'
