@@ -1,0 +1,90 @@
+# Recent settings file for Wireshark 2.6.0.
+#
+# This file is regenerated each time Wireshark is quit.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: /private/tmp/test
+
+######## Recent capture filters (latest last), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: ip.src==45.113.40.211 or ip.dst==45.113.40.211
+recent.display_filter: ip.src == 218.247.91.78 or ip.dst==218.247.91.78
+recent.display_filter: ip.dst==1.1.1.1 or ip.src == 1.1.1.1
+recent.display_filter: ip.dst==1.1.1.1
+recent.display_filter: ip.dst==100.88.20.167
+recent.display_filter: tcp.port == 3333
+recent.display_filter: tcp.port==3333
+recent.display_filter: ip.dst==127.0.0.1
+recent.display_filter: ip.ds
+recent.display_filter: tcp.po
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: 176
+gui.geometry_main_y: 61
+gui.gtk.geometry_main_x: 20
+gui.gtk.geometry_main_y: 20
+gui.geometry_main_width: 1206
+gui.geometry_main_height: 812
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: FALSE
+
+# Statusbar left pane size.
+# Decimal number.
+gui.geometry_status_pane: 250
+
+# Statusbar middle pane size.
+# Decimal number.
+gui.geometry_status_pane_right: 250
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if npf.sys isn't loaded on Windows >= 6.0.
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_no_npf: TRUE
+
+# Geometry and maximized state of SequenceDialog window.
+# Decimal integers.
+gui.geom.SequenceDialog.x: 1848
+gui.geom.SequenceDialog.y: 44
+gui.geom.SequenceDialog.width: 1407
+gui.geom.SequenceDialog.height: 769
+# TRUE or FALSE (case-insensitive).
+gui.geom.SequenceDialog.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 338
+gui.geom.PacketDialog.y: 119
+gui.geom.PacketDialog.width: 768
+gui.geom.PacketDialog.height: 614
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"
