@@ -114,9 +114,14 @@ if [ -f ~/.secret ]; then
     . ~/.secret
 fi
 
+# pyenv
+export PATH="/Users/laixintao/.pyenv:$PATH"
+export PYENV_ROOT=/usr/local/var/pyenv
+eval "$(pyenv init -)"
+
 # pipsi
 # https://github.com/mitsuhiko/pipsi
-export PATH=$PATH:$HOME/.local/bin:/Users/laixintao/.local/venvs/pipsi/bin
+export PATH=$HOME/.local/bin:/Users/laixintao/.local/venvs/pipsi/bin:$PATH
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
@@ -163,10 +168,6 @@ export DISABLE_AUTO_TITLE='true'
 # code somefile – opens somefile in Visual Studio Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
-# pyenv
-export PATH="/Users/laixintao/.pyenv:$PATH"
-export PYENV_ROOT=/usr/local/var/pyenv
-eval "$(pyenv init -)"
 
 #cargo
 export PATH="/Users/laixintao/.cargo/bin:$PATH"
