@@ -1,2 +1,3 @@
-
+.config/configstore/update-notifier-npm.json
 .sensitive_alias
+.config/configstore/npm_updater.json
