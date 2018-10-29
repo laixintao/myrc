@@ -1,3 +1,6 @@
 .config/configstore/update-notifier-npm.json
 .sensitive_alias
 .config/configstore/npm_updater.json
+.config/configstore/
+.config/wireshark/recent
+.config/wireshark/recent_common
