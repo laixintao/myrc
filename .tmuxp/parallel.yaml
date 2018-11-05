@@ -1,0 +1,16 @@
+session_name: parallel
+windows:
+- layout: c53d,130x37,0,0,0
+  options:
+    automatic-rename: 'off'
+  panes:
+    - shell_command: workon parallel
+  start_directory: /Users/laixintao/Program/python-parallel-programming-cookbook-cn
+  window_name: edit
+- layout: c53e,130x37,0,0,1
+  options:
+    automatic-rename: 'off'
+  panes:
+    - shell_command: workon parallel
+  start_directory: /Users/laixintao/Program/python-parallel-programming-cookbook-cn
+  window_name: make_pane
