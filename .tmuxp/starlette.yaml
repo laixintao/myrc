@@ -1,0 +1,26 @@
+session_name: starlette
+windows:
+- focus: 'true'
+  layout: 62d4,130x37,0,0,34
+  options:
+    automatic-rename: 'off'
+  panes:
+  - workon starlette
+  start_directory: /Users/laixintao/Program/starlette
+  window_name: edit
+- layout: 62d5,130x37,0,0,35
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: workon starlette
+  start_directory: /Users/laixintao/Program/starlette
+  window_name: git
+- layout: 62d6,130x37,0,0,36
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: workon starlette
+  start_directory: /Users/laixintao/Program/starlette_sample
+  window_name: sample
