@@ -21,6 +21,8 @@
 	prompt = false
 [github]
 	user = laixintao1995@163.com
+	username = laixintao
+    name = laixintao
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
