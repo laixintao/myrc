@@ -3,7 +3,7 @@ windows:
   - window_name: jupyter
     shell_command_before:
       - cd ~/Program/leetcode
-      - workon python3
+      - workon python37
     panes:
       - jupyter notebook
   - window_name: shell
