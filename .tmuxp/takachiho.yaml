@@ -32,6 +32,16 @@ windows:
     - brew services list
   start_directory: /Users/laixintao/Program/takachiho
   window_name: runserver
+- layout: 9fac,238x57,0,0[238x28,0,0,13,238x28,0,29{59x28,0,29,34,59x28,60,29,37,59x28,120,29,35,58x28,180,29,36}]
+  shell_command_before: cd /Users/laixintao/Program/newbaymax
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - tnpm run dev
+  - shell_command:
+    -
+  window_name: front
 - layout: 66e3,238x57,0,0,14
   options:
     automatic-rename: 'off'
