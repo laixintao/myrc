@@ -9,6 +9,6 @@ windows:
   - window_name: shell
     shell_command_before:
       - cd ~/Program/leetcode
-      - workon python3
+      - workon python37
     panes:
       - 
