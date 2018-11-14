@@ -122,7 +122,7 @@ let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
 
 " CtrlSF
-nmap <leader>p <Plug>CtrlSFPrompt
+nnoremap <leader>p <Plug>CtrlSFPrompt
 nnoremap <leader>po :CtrlSFOpen<CR>
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
