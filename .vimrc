@@ -65,6 +65,13 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
 
 " }}}
 
+" Key bindings --------------------{{{ 
+nnoremap <leader>sp :split<CR>
+nnoremap <leader>vs :vsplit<CR>
+nnoremap <leader>st :tab split<CR>
+"
+" }}}
+
 " Plugins --------------------{{{
 " let Vundle manage Vundle
 " 可以通过以下四种方式指定插件的来源
@@ -116,10 +123,12 @@ Plugin 'majutsushi/tagbar'
 " start page
 " git clone https://github.com/mhinz/vim-startify ~/.vim/bundle/vim-startify
 
-
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
+
+" NerdComment
+let g:NERDSpaceDelims = 0  " if set 1, there will be two spaces
 
 " CtrlSF
 nnoremap <leader>p <Plug>CtrlSFPrompt
