@@ -115,7 +115,7 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mxw/vim-jsx'
 Plugin 'epilande/vim-react-snippets'
-Plugin 'maksimr/vim-jsbeautify'
+Plugin 'chemzqm/vim-jsx-improve'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
@@ -157,18 +157,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " tagbar
 nnoremap <F8> :TagbarToggle<CR>
-
-" ====== jsbeautify ====== 
-" autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for json
-autocmd FileType json nnoremap <buffer> <leader>= :call JsonBeautify()<cr>
-" " for jsx
-autocmd FileType javascript,jsx nnoremap <buffer> <leader>= :call JsxBeautify()<cr>
-" " for html
-autocmd FileType html nnoremap <buffer> <leader>= :call HtmlBeautify()<cr>
-" " for css or scss
-autocmd FileType css nnoremap <buffer> <leader>= :call CSSBeautify()<cr>
-
 " }}}
 
 " YCM Settings --------------------{{{
