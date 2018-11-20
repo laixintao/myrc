@@ -135,7 +135,7 @@ let g:NERDSpaceDelims = 0  " if set 1, there will be two spaces
 
 " CtrlSF
 nnoremap <leader>p <Plug>CtrlSFPrompt
-nnoremap <leader>po :CtrlSFOpen<CR>
+nnoremap <leader>o :CtrlSFOpen<CR>
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
