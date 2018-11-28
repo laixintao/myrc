@@ -134,7 +134,7 @@ let g:gist_open_browser_after_post = 1
 let g:NERDSpaceDelims = 0  " if set 1, there will be two spaces
 
 " CtrlSF
-nnoremap <leader>p <Plug>CtrlSFPrompt
+nnoremap <leader>f :CtrlSF 
 nnoremap <leader>o :CtrlSFOpen<CR>
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
@@ -303,7 +303,6 @@ augroup END
 " }}} }}}
 
 " Custome functions --------------------{{{
-nnoremap <leader>f :call FoldColumnToggle()<cr>
 
 function! FoldColumnToggle()
     if &foldcolumn
