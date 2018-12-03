@@ -174,3 +174,9 @@ export PATH="/Users/laixintao/.cargo/bin:$PATH"
 
 # opam configuration
 test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# -------------------
+# My own functions
+
+# https://github.com/lf94/peek-for-tmux
+peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
