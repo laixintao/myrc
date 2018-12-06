@@ -35,3 +35,4 @@ alias v=vagrant
 alias ap=ansible-playbook
 
 alias pub-repo='git config user.name "laixintao" && git config user.email laixintao1995@163.com'
+alias gpc="git pullrequest create $(git branch | grep \* | cut -d ' ' -f2) master"
