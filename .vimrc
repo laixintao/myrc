@@ -195,7 +195,6 @@ augroup nerdtree_settings
                 \ '@neomake_',
                 \ '__pycache__$[[dir]]',
                 \ '.git[[dir]]',
-                \ '.cache[[dir]]',
                 \ '.idea[[dir]]',
                 \ '.vscode[[dir]]',
                 \ '.egg-info$[[dir]]']
