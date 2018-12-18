@@ -14,3 +14,6 @@ tags
 *.lock
 *.pid
 dump.rdb
+.classpath
+.project
+*.prefs

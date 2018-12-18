@@ -194,6 +194,7 @@ augroup nerdtree_settings
                 \ '\.orig$',
                 \ '@neomake_',
                 \ '__pycache__$[[dir]]',
+                \ '.pytest_cache$[[dir]]',
                 \ '.git[[dir]]',
                 \ '.idea[[dir]]',
                 \ '.vscode[[dir]]',
