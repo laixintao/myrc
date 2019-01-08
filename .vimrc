@@ -110,6 +110,7 @@ Plugin 'tweekmonster/startuptime.vim'   " Vim start up time debug (figure out wh
 Plugin 'spacewander/openresty-vim'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'majutsushi/tagbar'              " show tags of codes
+Plugin 'Vimjas/vim-python-pep8-indent'  " auto indent ()
 
 " Unused Plugins
 " Plugin 'vimwiki/vimwiki' " Quick key to create/view/edit wiki
