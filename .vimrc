@@ -85,37 +85,35 @@ nnoremap <leader>st :tab split<CR>
 " d) 指定本地Git仓库中的插件
 " Plugin 'file:///Users/gmarik/path/to/plugin'
 
-Plugin 'gmarik/vundle'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'The-NERD-tree'
-" Plugin 'plasticboy/vim-markdown'
-Plugin 'mattn/emmet-vim'                                      " zen coding
-Plugin 'airblade/vim-gitgutter'                               " git diff
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'gmarik/vundle'                  " Vim Package management
+Plugin 'Valloric/YouCompleteMe'         " auto complete
+Plugin 'The-NERD-tree'                  " file tree
+Plugin 'mattn/emmet-vim'                " zen coding
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'neomake/neomake'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ruanyl/vim-gh-line'                                   " 在Bitbucket或github快速打开当前代码行
-Plugin 'ctrlpvim/ctrlp.vim'                                   " 模糊查找
+Plugin 'airblade/vim-gitgutter'         " git diff
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'neomake/neomake'                " lint async check
+Plugin 'scrooloose/nerdcommenter'       " Quick comment
+Plugin 'ruanyl/vim-gh-line'             " 在Bitbucket或github快速打开当前代码行
+Plugin 'ctrlpvim/ctrlp.vim'             " 模糊查找
 Plugin 'sjl/gundo.vim'
-Plugin 'terryma/vim-multiple-cursors'                         " 多光标编辑
-Plugin 'tpope/vim-fugitive'                                   " git插件 （Blame)
-Plugin 'SirVer/ultisnips'                                     " 代码片段
-Plugin 'godlygeek/tabular'                                    " 自动根据某个符号对其，用于json 字典 表格等
-Plugin 'vimwiki/vimwiki'
-Plugin 'ambv/black'
+Plugin 'terryma/vim-multiple-cursors'   " 多光标编辑
+Plugin 'tpope/vim-fugitive'             " git插件 （Blame)
+Plugin 'SirVer/ultisnips'               " 代码片段
+Plugin 'godlygeek/tabular'              " 自动根据某个符号对其，用于json 字典 表格等
+Plugin 'ambv/black'                     " Python code formatter
 Plugin 'mechatroner/rainbow_csv'
 Plugin 'tweekmonster/django-plus.vim'
-Plugin 'wannesm/wmgraphviz.vim'
-Plugin 'tweekmonster/startuptime.vim'
+Plugin 'tweekmonster/startuptime.vim'   " Vim start up time debug (figure out which script is slow)
 Plugin 'spacewander/openresty-vim'
 Plugin 'dyng/ctrlsf.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'mxw/vim-jsx'
-Plugin 'epilande/vim-react-snippets'
-Plugin 'chemzqm/vim-jsx-improve'
+Plugin 'majutsushi/tagbar'              " show tags of codes
+
+" Unused Plugins
+" Plugin 'vimwiki/vimwiki' " Quick key to create/view/edit wiki
+" Plugin 'plasticboy/vim-markdown'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                   Unused Awesome Plugins                              "
@@ -131,7 +129,8 @@ let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
 
 " NerdComment
-let g:NERDSpaceDelims = 0  " if set 1, there will be two spaces
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
@@ -145,9 +144,6 @@ nnoremap <leader>l :lopen<CR>
 nnoremap <leader>lc :lclose<CR>
 nnoremap <Leader>ln :lnext<CR>
 nnoremap <Leader>lp :lprev<CR>
-
-" 注释的时候自动加个空格, 强迫症必配
-let g:NERDSpaceDelims=1
 
 nnoremap <leader>b :Gblame<CR>
 " UltiSnips triggering
