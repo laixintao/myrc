@@ -7,3 +7,4 @@
 fixture/weekly_report_template.md
 */log
 .config/pgcli/log
+.config/htop/htoprc
