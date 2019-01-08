@@ -131,6 +131,11 @@ let g:gist_open_browser_after_post = 1
 " NerdComment
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
+" vim 8 / neovim HEAD runtime: when ft==python, cms:=#\ %s
+" "   -- when g:NERDSpaceDelims==1, then NERDComment results in double space
+let g:NERDCustomDelimiters = {
+            \ 'python': { 'left': '#', 'right': '' }
+            \ }
 
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
