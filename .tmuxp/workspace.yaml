@@ -14,8 +14,8 @@ windows:
   panes:
   - focus: 'true'
     shell_command: zsh
-  - zsh
-  - zsh
+  -
+  -
   start_directory: /Users/laixintao
   window_name: operation
 - layout: 66e5,238x57,0,0,16
