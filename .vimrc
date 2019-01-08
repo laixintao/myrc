@@ -105,12 +105,17 @@ Plugin 'SirVer/ultisnips'               " 代码片段
 Plugin 'godlygeek/tabular'              " 自动根据某个符号对其，用于json 字典 表格等
 Plugin 'ambv/black'                     " Python code formatter
 Plugin 'mechatroner/rainbow_csv'
-Plugin 'tweekmonster/django-plus.vim'
 Plugin 'tweekmonster/startuptime.vim'   " Vim start up time debug (figure out which script is slow)
-Plugin 'spacewander/openresty-vim'
-Plugin 'dyng/ctrlsf.vim'
+Plugin 'dyng/ctrlsf.vim'  " Ascyn use rg to find
 Plugin 'majutsushi/tagbar'              " show tags of codes
 Plugin 'Vimjas/vim-python-pep8-indent'  " auto indent ()
+Plugin 'tweekmonster/django-plus.vim'
+Plugin 'spacewander/openresty-vim'
+Plugin 'mxw/vim-jsx'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plugin 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 " Unused Plugins
 " Plugin 'vimwiki/vimwiki' " Quick key to create/view/edit wiki
@@ -251,6 +256,18 @@ augroup shortcuts
 augroup END
 " }}}
 
+" Code format --------------------{{{
+augroup code_format
+    autocmd!
+    " Javascript Prettier
+    " default <leader>p
+    let g:prettier#config#parser = 'babylon'
+
+    autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
+    autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
+augroup END
+" }}}
+
 " Iabbrev --------------------{{{
 augroup iabbrevs
     autocmd!
@@ -286,10 +303,11 @@ augroup python_lang
 augroup END
 " }}}
 
-" HTML --------------------{{{
+" HTML Javascript --------------------{{{
 augroup html_lang
     autocmd!
-    :autocmd BufNewFile,BufRead *.html setlocal nowrap
+    autocmd BufNewFile,BufRead *.html setlocal nowrap
+    autocmd FileType javascript set filetype=javascript.jsx
 augroup END
 " }}}
 
