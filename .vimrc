@@ -479,4 +479,3 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
-"
