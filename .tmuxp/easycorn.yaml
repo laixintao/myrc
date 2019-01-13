@@ -24,18 +24,21 @@ windows:
   panes:
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-backend
+    - workon easycron-backend
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-backend
     - workon easycron-backend
     - python manage.py runserver 8004
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-beat
+    - workon easycron-beat
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-beat
     - workon easycron-beat
     - celery beat -S redbeat.RedBeatScheduler --config config -l info
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-worker
+    - workon easycron-worker
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-worker
     - workon easycron-worker
@@ -48,4 +51,12 @@ windows:
   - focus: 'true'
     shell_command: redis-cli
   start_directory: /Users/laixintao
-  window_name: shell
+  window_name: redis
+- layout: 6314,173x46,0,0,53
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: mycli -u root easycron
+  start_directory: /Users/laixintao
+  window_name: db
