@@ -42,7 +42,7 @@ windows:
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-worker
     - workon easycron-worker
-    - celery worker -A main -l info --config=config
+    - celery worker -A main -l info --config=config -E
   window_name: running-shell
 - layout: 6314,173x46,0,0,53
   options:
