@@ -22,7 +22,13 @@ windows:
     - workon takachiho
   window_name: work-bench
 - layout: 9fac,238x57,0,0[238x28,0,0,13,238x28,0,29{59x28,0,29,34,59x28,60,29,37,59x28,120,29,35,58x28,180,29,36}]
-  shell_command_before: cd /Users/laixintao/Program/takachiho/newbaymax
+  start_directory: /Users/laixintao/Program/takachiho/newbaymax
+  window_name: edit-newbaymax
+  options:
+    automatic-rename: 'off'
+  panes:
+    - 
+- layout: 9fac,238x57,0,0[238x28,0,0,13,238x28,0,29{59x28,0,29,34,59x28,60,29,37,59x28,120,29,35,58x28,180,29,36}]
   options:
     automatic-rename: 'off'
   panes:
@@ -32,7 +38,7 @@ windows:
     - brew services start mysql
     - brew services start redis
     - brew services list
-  start_directory: /Users/laixintao/Program/takachiho
+  start_directory: /Users/laixintao/Program/takachiho/newbaymax
   window_name: newbaymax
 - layout: 66e3,238x57,0,0,14
   options:
