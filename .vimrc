@@ -1,6 +1,8 @@
 " 我对vimrc文件的态度是：
 " 1. 只配置可以让你少按键的东西（例如不要配置自动格式化代码）
 " 2. Don't put anything in your .vimrc you don't understand! (check :help)
+" 3. 记下来痛点，随后解决
+"
 " ## Note:
 " 1. vim字体受终端的限制，所以如果不是gvim， set guifont是无效的
 " 2. 需要安装配色方案，还需要对终端进行配置，如果只安装了Vim的，Vim会看起来雾蒙蒙的一片
@@ -32,10 +34,10 @@ let mapleader=','
 syntax enable
 set tabstop=4
 set shiftwidth=4
+set softtabstop=0              " 关闭softtabstop 永远不要将空格和tab混合输入
 set autoindent
 set smartindent
 set expandtab
-set softtabstop=0              " 关闭softtabstop 永远不要将空格和tab混合输入
 set nu
 set hlsearch
 set foldmethod=indent
@@ -69,6 +71,8 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
 nnoremap <leader>sp :split<CR>
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>st :tab split<CR>
+" ,作为了leader key, 将\映射成反向查找
+noremap \ ,
 "
 " }}}
 
