@@ -41,3 +41,6 @@ function manswitch () { man $1 | less -p "^ +$2"; }
 # convert milliseconds to verbose datetime
 # https://stackoverflow.com/questions/12362562/convert-milliseconds-timestamp-to-date-from-unix-command-line
 milliseconds() { echo $(date -d @$(($1 / 1000))) }
+
+
+# alias iredis="/Users/laixintao/.virtualenvs/iredis/bin/iredis"

@@ -97,6 +97,8 @@ Plugin 'prabirshrestha/asyncomplete-file.vim'
 Plugin 'laixintao/asyncomplete-gitcommit'
 Plugin 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
 Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
+Plugin 'mzlogin/vim-markdown-toc'
+Plugin 'plasticboy/vim-markdown'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
