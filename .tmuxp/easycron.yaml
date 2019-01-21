@@ -74,6 +74,6 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: mycli -u root easycron
-  start_directory: /Users/laixintao
+    shell_command: mycli -u root easycron --auto-vertical-output
+    start_directory: /Users/laixintao
   window_name: db
