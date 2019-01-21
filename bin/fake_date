@@ -1,0 +1,15 @@
+# vi: set ft=python :
+#/usr/bin/env python3
+
+import time
+from datetime import date, timedelta
+
+
+yesterday = date.today() - timedelta(days=1)
+last_fake_time = None
+
+with open("~/.config/last_fake_commit_time", "r") as last_file:
+    last_fake_time = last_file.read()
+
+if last_fake_time is None:
+    last_fake_time = yesterday
