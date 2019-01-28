@@ -43,7 +43,6 @@ set hlsearch
 set foldmethod=indent
 set nofoldenable               " disable folding
 set mouse=a                    " 支持鼠标
-set clipboard=unnamed          " 使用 Mac 系统的剪切板
 " Always show statusline
 set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports j
