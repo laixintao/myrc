@@ -1,0 +1,46 @@
+session_name: easycontrol
+windows:
+- focus: 'true'
+  layout: c4fe,120x37,0,0,1
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pane
+  start_directory: /Users/laixintao/Program/myansible
+  window_name: vim
+- layout: 67c1,120x37,0,0{60x37,0,0,2,59x37,61,0,3}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - cd /Users/laixintao/Program/myansible
+    - zsh
+  - shell_command:
+    - cd /Users/laixintao
+    - zsh
+  window_name: operation
+- layout: c502,120x37,0,0,5
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
+- layout: c503,120x37,0,0,6
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
+- layout: c504,120x37,0,0,7
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
