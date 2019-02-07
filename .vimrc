@@ -267,7 +267,6 @@ augroup code_format
     let g:prettier#config#parser = 'babylon'
 
     autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
-    autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
 augroup END
 " }}}
 
