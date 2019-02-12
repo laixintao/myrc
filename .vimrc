@@ -115,6 +115,8 @@ Plugin 'Vimjas/vim-python-pep8-indent'  " auto indent ()
 Plugin 'tweekmonster/django-plus.vim'
 Plugin 'spacewander/openresty-vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'kien/rainbow_parentheses.vim'   " Rainbow Parentheses
+
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -165,8 +167,28 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
-" tagbar
 nnoremap <F8> :TagbarToggle<CR>
+
+" Rainbow Parenthese --------------------{{{
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
 " }}}
 
 " YCM Settings --------------------{{{
@@ -274,8 +296,8 @@ augroup END
 augroup iabbrevs
     autocmd!
     " long comment
-    :autocmd FileType python,coffee :iabbrev <buffer> #-- #-----------<left><left><left><left><left><left>
-    :autocmd FileType coffee :iabbrev <buffer> cl console.log
+    autocmd FileType python,coffee :iabbrev <buffer> #-- #-----------<left><left><left><left><left><left>
+    autocmd FileType coffee :iabbrev <buffer> cl console.log
 augroup END
 " }}}
 
@@ -284,6 +306,7 @@ augroup lisp_lang
     autocmd!
     " for scheme
     let g:lisp_rainbow=1   "（这个是设置括号的颜色）
+    autocmd FileType scheme RainbowParenthesesToggle
 augroup END
 " }}}
 
