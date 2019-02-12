@@ -446,7 +446,7 @@ augroup END
 
 " nginx --------------------{{{
 augroup nginx
-    autocmd BufRead,BufNewFile nginx*.conf set filetype=nginx
+    autocmd BufRead,BufNewFile *nginx*.conf* set filetype=nginx
 augroup END
 " }}}
 
