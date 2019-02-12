@@ -156,7 +156,7 @@ let g:ctrlsf_auto_focus = {
     \ }
 
 call neomake#configure#automake('nw', 100)
-nnoremap <leader>l :lopen<CR>
+nnoremap <leader>lo :lopen<CR>
 nnoremap <leader>lc :lclose<CR>
 nnoremap <Leader>ln :lnext<CR>
 nnoremap <Leader>lp :lprev<CR>
