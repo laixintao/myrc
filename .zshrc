@@ -181,3 +181,6 @@ test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/op
 # https://github.com/lf94/peek-for-tmux
 peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# bat conf
+export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
