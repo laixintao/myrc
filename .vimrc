@@ -25,6 +25,7 @@
 
 " General settings --------------------{{{
 set nocompatible               " be iMproved
+set encoding=utf-8
 filetype  on                   " required!
 filetype plugin on
 filetype indent on
