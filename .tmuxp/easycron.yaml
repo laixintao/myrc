@@ -48,20 +48,19 @@ windows:
         - npm start
   start_directory: /Users/laixintao/Program/easycron/easycron-frontend
   window_name: frontend-shell
-- layout: 9909,173x46,0,0[173x12,0,0{86x12,0,0,55,86x12,87,0,60},173x14,0,13{86x14,0,13,58,86x14,87,13,61},173x18,0,28{86x18,0,28,59,86x18,87,28,62}]
-  options:
+- options:
     automatic-rename: 'off'
+  layout: even-vertical
   panes:
-  - shell_command:
-    - cd /Users/laixintao/Program/easycron/easycron-beat
-    - workon easycron-beat
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-beat
     - workon easycron-beat
     - celery beat -S redbeat.RedBeatScheduler --config config -l info
   - shell_command:
-    - cd /Users/laixintao/Program/easycron/easycron-worker
-    - workon easycron-worker
+    - cd backend
+    - cd /Users/laixintao/Program/easycron/easycron-backend
+    - workon easycron-backend
+    - python manage.py celery_event_handler
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-worker
     - workon easycron-worker
