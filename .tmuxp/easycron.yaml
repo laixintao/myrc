@@ -38,7 +38,7 @@ windows:
   - focus: 'true'
   start_directory: /Users/laixintao/Program/easycron/easycron-frontend
   window_name: frontend-dev
-- layout: e319,173x46,0,0,49
+- layout: even-horizontal
   options:
     automatic-rename: 'off'
   panes:
@@ -46,6 +46,7 @@ windows:
       shell_command:
         - export PORT=3002
         - npm start
+    - 
   start_directory: /Users/laixintao/Program/easycron/easycron-frontend
   window_name: frontend-shell
 - options:
