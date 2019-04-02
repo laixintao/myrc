@@ -42,3 +42,10 @@ windows:
     shell_command: zsh
   start_directory: /Users/laixintao
   window_name: shell
+- layout: main-vertical
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: clash
+  window_name: <clash>

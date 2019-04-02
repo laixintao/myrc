@@ -184,3 +184,6 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # bat conf
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
+
+# ALL SOCK5 PROXY
+export ALL_PROXY=socks5://127.0.0.1:7891
