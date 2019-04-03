@@ -14,6 +14,7 @@ windows:
   panes:
   - shell_command:
     - cd /Users/laixintao/Program/takachiho
+    - unset ALL_PROXY
     - workon takachiho
     - python manage.py runserver
   - focus: 'true'
