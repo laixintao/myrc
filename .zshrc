@@ -62,6 +62,7 @@ plugins=(git python virtualenv z osx sudo extract)
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -186,4 +187,4 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
 
 # ALL SOCK5 PROXY
-export ALL_PROXY=socks5://127.0.0.1:7891
+# export ALL_PROXY=socks5://127.0.0.1:7891
