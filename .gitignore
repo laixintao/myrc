@@ -9,3 +9,4 @@ fixture/weekly_report_template.md
 .config/pgcli/log
 .config/htop/htoprc
 .config/clash
+.config/asciinema
