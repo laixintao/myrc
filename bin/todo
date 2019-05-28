@@ -1,0 +1,6 @@
+#!/bin/sh
+
+filename=TODO.md
+cd /Users/laixintao/Program/gist/
+
+open -a typora $filename
