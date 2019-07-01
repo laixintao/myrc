@@ -17,3 +17,5 @@ dump.rdb
 .classpath
 .project
 *.prefs
+*/logs/*
+*.log.*
