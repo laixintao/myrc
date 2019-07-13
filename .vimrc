@@ -231,6 +231,8 @@ augroup nerdtree_settings
                 \ '.git[[dir]]',
                 \ '.idea[[dir]]',
                 \ '.vscode[[dir]]',
+                \ 'htmlcov[[dir]]',
+                \ 'test-reports[[dir]]',
                 \ '.egg-info$[[dir]]']
     " 显示书签列表
     let NERDTreeShowBookmarks=1
@@ -491,7 +493,7 @@ let g:vimwiki_list = [{
             \ 'template_ext'     : '.tpl',
             \ 'auto_export'      : 0}]
 autocmd SwapExists * let v:swapchoice = "o"
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|test-reports\|htmlcov\'
 
 
 augroup vagrant
