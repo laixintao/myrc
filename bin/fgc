@@ -6,6 +6,8 @@ import http.client
 import datetime
 import subprocess
 
+username = 'laixintao'
+
 
 def download_stat():
     start = (datetime.datetime.now() - datetime.timedelta(days=3 * 365)).strftime(
@@ -26,13 +28,13 @@ def download_stat():
         "sec-fetch-site": "same-origin",
         "sec-fetch-mode": "cors",
         "sec-fetch-dest": "empty",
-        "referer": "https://github.com/laixintao/",
+        "referer": "https://github.com/{}/".format(username),
         "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,ja;q=0.6,de;q=0.5,ko;q=0.4,mt;q=0.3",
     }
 
     conn.request(
         "GET",
-        "/users/laixintao/contributions?from=2020-07-01&to=2020-07-14",
+        "/users/{}/contributions?from={}&to={}".format(username, start, end),
         payload,
         headers,
     )
