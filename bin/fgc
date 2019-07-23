@@ -6,7 +6,8 @@ import http.client
 import datetime
 import subprocess
 
-username = 'laixintao'
+# Please change this to your username:
+username = "laixintao"
 
 
 def download_stat():
