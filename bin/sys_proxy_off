@@ -1,0 +1,1 @@
+networksetup -setsocksfirewallproxystate wi-fi off
