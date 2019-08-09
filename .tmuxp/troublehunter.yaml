@@ -13,6 +13,16 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: zsh
+    shell_command: sys_proxy_off
   start_directory: /Users/laixintao/Program/alipay/troublehunter
+  window_name: shell
+- layout: 650f,173x47,0,0,10
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+      - workon noiselabs
+      - jupyter notebook
+  start_directory: /Users/laixintao/Program/noiselabs
   window_name: shell

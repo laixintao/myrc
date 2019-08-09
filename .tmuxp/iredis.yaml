@@ -1,0 +1,38 @@
+session_name: iredis
+windows:
+- focus: 'true'
+  layout: e6f4,129x38,0,0,44
+  options:
+    automatic-rename: 'off'
+  panes:
+  - workon iredis 
+  start_directory: /Users/laixintao/Program/iredis
+  window_name: iredis
+- layout: 4758,129x38,0,0[129x19,0,0,45,129x18,0,20,48]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - workon iredis
+  - focus: 'true'
+    shell_command:
+    - workon iredis
+    - tail -f iredis.log
+  start_directory: /Users/laixintao/Program/iredis
+  window_name: redis-cli
+- layout: e6f6,129x38,0,0,46
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/iredis
+  window_name: redis-cli
+- layout: e6f7,129x38,0,0,47
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao
+  window_name: shell
