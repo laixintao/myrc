@@ -1,0 +1,18 @@
+session_name: troublehunter
+windows:
+- focus: 'true'
+  layout: c9c6,173x47,0,0,9
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pane
+  start_directory: /Users/laixintao/Program/alipay/troublehunter
+  window_name: git
+- layout: 650f,173x47,0,0,10
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/alipay/troublehunter
+  window_name: shell
