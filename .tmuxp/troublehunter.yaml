@@ -13,9 +13,12 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: sys_proxy_off
+    shell_command:
+      - sys_proxy_off
+      - docker run --name mysql57 -v /Users/laixintao/Program/mysql57_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -p 3308:3306 mysql:5.7 || docker start mysql57
+      - mycli -u root -P3308 -p123 --auto-vertical-output troublehunter
   start_directory: /Users/laixintao/Program/alipay/troublehunter
-  window_name: shell
+  window_name: database
 - layout: 650f,173x47,0,0,10
   options:
     automatic-rename: 'off'
