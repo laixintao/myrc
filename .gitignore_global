@@ -11,7 +11,6 @@ tags
 *@neomake*
 
 
-*.lock
 *.pid
 dump.rdb
 .classpath
