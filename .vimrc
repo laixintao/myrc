@@ -117,6 +117,7 @@ Plugin 'tweekmonster/django-plus.vim'
 Plugin 'spacewander/openresty-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'kien/rainbow_parentheses.vim'   " Rainbow Parentheses
+Plugin 'cespare/vim-toml'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -484,6 +485,7 @@ map <F9> : !gcc % && ./a.out <CR>
 autocmd BufNewFile,BufRead *.mapping set ft=json
 autocmd BufNewFile,BufRead *.sls set ft=yaml
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
+autocmd BufNewFile,BufRead *.toml set ft=TOML
 
 let g:vimwiki_list = [{
             \ 'path'             : '/Users/laixintao/Program/laixintao-wikibot.github.io/wiki',
