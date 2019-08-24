@@ -118,11 +118,12 @@ Plugin 'spacewander/openresty-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'kien/rainbow_parentheses.vim'   " Rainbow Parentheses
 Plugin 'cespare/vim-toml'
+Plugin 'stephpy/vim-yaml'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] }
 
 " Unused Plugins
 " Plugin 'vimwiki/vimwiki' " Quick key to create/view/edit wiki
