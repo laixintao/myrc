@@ -162,9 +162,9 @@ let g:ctrlsf_auto_focus = {
 " When writing a buffer.
 call neomake#configure#automake('w')
 " When writing a buffer, and on normal mode changes (after 750ms).
-call neomake#configure#automake('nw', 750)
+call neomake#configure#automake('nw', 300)
 " When reading a buffer (after 1s), and when writing.
-call neomake#configure#automake('rw', 1000)
+call neomake#configure#automake('rw', 300)
 nnoremap <leader>lo :lopen<CR>
 nnoremap <leader>lc :lclose<CR>
 nnoremap <Leader>ln :lnext<CR>
