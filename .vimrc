@@ -119,6 +119,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'kien/rainbow_parentheses.vim'   " Rainbow Parentheses
 Plugin 'cespare/vim-toml'
 Plugin 'stephpy/vim-yaml'
+Plugin 'nvie/vim-flake8'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -158,11 +159,17 @@ let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
 
-call neomake#configure#automake('nw', 100)
+" When writing a buffer.
+call neomake#configure#automake('w')
+" When writing a buffer, and on normal mode changes (after 750ms).
+call neomake#configure#automake('nw', 750)
+" When reading a buffer (after 1s), and when writing.
+call neomake#configure#automake('rw', 1000)
 nnoremap <leader>lo :lopen<CR>
 nnoremap <leader>lc :lclose<CR>
 nnoremap <Leader>ln :lnext<CR>
 nnoremap <Leader>lp :lprev<CR>
+let g:neomake_tempfile_dir = '/tmp/neomake%:p:h'
 
 nnoremap <leader>b :Gblame<CR>
 " UltiSnips triggering
