@@ -120,9 +120,8 @@ export PATH="/Users/laixintao/.pyenv:$PATH"
 export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
 
-# pipsi
-# https://github.com/mitsuhiko/pipsi
-export PATH=$HOME/.local/bin:/Users/laixintao/.local/venvs/pipsi/bin:$PATH
+# pipx
+export PATH=$HOME/.local/bin:$PATH
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
