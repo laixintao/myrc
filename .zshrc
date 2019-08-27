@@ -1,3 +1,4 @@
+echo "zsh config run..."
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -56,9 +57,6 @@ plugins=(git python virtualenv z osx sudo extract)
 
 # User configuration
 
-# export PATH="/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/laixintao/bin/:/Users/laixintao/bin/FDK/Tools/osx"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
@@ -76,7 +74,12 @@ export ARCHFLAGS="-arch x86_64"
 
 DEFAULT_USER="laixintao"
 
-# laixintao setting
+# ______     _   _     
+# | ___ \   | | | |    
+# | |_/ /_ _| |_| |__  
+# |  __/ _` | __| '_ \ 
+# | | | (_| | |_| | | |
+# \_|  \__,_|\__|_| |_|
 export PATH="$PATH:$HOME/bin"
 # postgres path
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
@@ -85,11 +88,26 @@ export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+# GNU coreutils path
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# pipx
+export PATH=$HOME/.local/bin:$PATH
+#cargo
+export PATH="/Users/laixintao/.cargo/bin:$PATH"
+# opam configuration
+test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# Wasmer
+export WASMER_DIR="/Users/laixintao/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
+# pyenv
+export PATH="/Users/laixintao/.pyenv:$PATH"
+export PYENV_ROOT=/usr/local/var/pyenv
+eval "$(pyenv init -)"
+# ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # don't check for new mail
 MAILCHECK=0
-
-export PATH="$HOME/.yarn/bin:$PATH"
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -115,13 +133,7 @@ if [ -f ~/.secret ]; then
     . ~/.secret
 fi
 
-# pyenv
-export PATH="/Users/laixintao/.pyenv:$PATH"
-export PYENV_ROOT=/usr/local/var/pyenv
-eval "$(pyenv init -)"
 
-# pipx
-export PATH=$HOME/.local/bin:$PATH
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
@@ -169,18 +181,12 @@ export DISABLE_AUTO_TITLE='true'
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 
-#cargo
-export PATH="/Users/laixintao/.cargo/bin:$PATH"
-
-# opam configuration
-test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # -------------------
 # My own functions
 
 # https://github.com/lf94/peek-for-tmux
 peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
-export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # bat conf
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
@@ -188,6 +194,3 @@ export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
 # ALL SOCK5 PROXY
 # export ALL_PROXY=socks5://127.0.0.1:7891
 
-# Wasmer
-export WASMER_DIR="/Users/laixintao/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
