@@ -106,13 +106,11 @@ fi
 if [ -f ~/.sensitive_alias ]; then
     . ~/.sensitive_alias
 fi
-
 # sensitive url and token
 # Do not track by git
 if [ -f ~/.secret ]; then
     . ~/.secret
 fi
-
 
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
@@ -151,16 +149,10 @@ compctl -K _pip_completion pip
 
 # tmuxp
 export DISABLE_AUTO_TITLE='true'
-
-# vscode
-# Then from Terminal you can type:
-
-# code – opens Visual Studio Code
-# code . – opens current directory in Visual Studio Code
-# code somefile – opens somefile in Visual Studio Code
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
-
-
+# bat conf
+export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
+# ALL SOCK5 PROXY
+export ALL_PROXY=socks5://127.0.0.1:7891
 
 # -------------------
 # My own functions
@@ -168,11 +160,13 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # https://github.com/lf94/peek-for-tmux
 peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 
-# bat conf
-export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
-
-# ALL SOCK5 PROXY
-export ALL_PROXY=socks5://127.0.0.1:7891
+# vscode
+# Then from Terminal you can type:
+#
+# code – opens Visual Studio Code
+# code . – opens current directory in Visual Studio Code
+# code somefile – opens somefile in Visual Studio Code
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 # ______     _   _     
 # | ___ \   | | | |    
@@ -182,6 +176,8 @@ export ALL_PROXY=socks5://127.0.0.1:7891
 # \_|  \__,_|\__|_| |_|
 # See:
 # https://superuser.com/a/598924/986660
+# To test you $PATH:
+# echo "$PATH" | tr ':' '\n'
 typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 path=($HOME/bin
       /usr/local/opt/postgresql@9.4/bin       # postgres path
