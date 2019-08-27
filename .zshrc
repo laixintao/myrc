@@ -1,4 +1,3 @@
-echo "zsh config run..."
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -74,37 +73,18 @@ export ARCHFLAGS="-arch x86_64"
 
 DEFAULT_USER="laixintao"
 
-# ______     _   _     
-# | ___ \   | | | |    
-# | |_/ /_ _| |_| |__  
-# |  __/ _` | __| '_ \ 
-# | | | (_| | |_| | | |
-# \_|  \__,_|\__|_| |_|
-export PATH="$PATH:$HOME/bin"
-# postgres path
-export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
-# Go-lang path
+
 export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 # GNU coreutils path
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-# pipx
-export PATH=$HOME/.local/bin:$PATH
-#cargo
-export PATH="/Users/laixintao/.cargo/bin:$PATH"
 # opam configuration
 test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 # Wasmer
 export WASMER_DIR="/Users/laixintao/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
 # pyenv
-export PATH="/Users/laixintao/.pyenv:$PATH"
 export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
-# ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # don't check for new mail
 MAILCHECK=0
@@ -192,5 +172,25 @@ peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
 
 # ALL SOCK5 PROXY
-# export ALL_PROXY=socks5://127.0.0.1:7891
+export ALL_PROXY=socks5://127.0.0.1:7891
 
+# ______     _   _     
+# | ___ \   | | | |    
+# | |_/ /_ _| |_| |__  
+# |  __/ _` | __| '_ \ 
+# | | | (_| | |_| | | |
+# \_|  \__,_|\__|_| |_|
+# See:
+# https://superuser.com/a/598924/986660
+typeset -U path  # keep path alwasy unique, tmux will reload zshrc
+path=($HOME/bin
+      /usr/local/opt/postgresql@9.4/bin       # postgres path
+      $GOPATH/bin                             # golang
+      $GOROOT/bin
+      /usr/local/opt/coreutils/libexec/gnubin # Gnu coreutils
+      $HOME/.local/bin                        # pipx
+      /Users/laixintao/.cargo/bin             # cargo
+      /Users/laixintao/.pyenv                 # pyenv
+      /usr/local/opt/ruby/bin                 # ruby
+      $path
+  )
