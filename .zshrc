@@ -150,8 +150,13 @@ compctl -K _pip_completion pip
 export DISABLE_AUTO_TITLE='true'
 # bat conf
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
-# ALL SOCK5 PROXY
-export ALL_PROXY=socks5://127.0.0.1:7891
+# virtualenv-wrapper
+# https://virtualenvwrapper.readthedocs.io/en/latest/install.html
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper_lazy.sh
+export VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/pipx/venvs/virtualenvwrapper/bin/python
+
 
 # -------------------
 # My own functions
@@ -179,13 +184,13 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # echo "$PATH" | tr ':' '\n'
 typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 path=($HOME/bin
-      /usr/local/opt/postgresql@9.4/bin       # postgres path
-      $GOPATH/bin                             # golang
+      /usr/local/opt/postgresql@9.4/bin        # postgres path
+      $GOPATH/bin                              # golang
       $GOROOT/bin
-      /usr/local/opt/coreutils/libexec/gnubin # Gnu coreutils
-      $HOME/.local/bin                        # pipx
-      /Users/laixintao/.cargo/bin             # cargo
-      /Users/laixintao/.pyenv                 # pyenv
-      /usr/local/opt/ruby/bin                 # ruby
+      /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
+      $HOME/.local/bin                         # pipx
+      /Users/laixintao/.cargo/bin              # cargo
+      /Users/laixintao/.pyenv                  # pyenv
+      /usr/local/opt/ruby/bin                  # ruby
       $path
   )
