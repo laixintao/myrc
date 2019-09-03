@@ -34,5 +34,8 @@ alias gpc='git pullrequest create $(git branch | grep \* | cut -d " " -f2) maste
 alias gcn='git commit -v --no-verify'
 
 # https://www.commandlinefu.com/commands/view/9065/what-is-the-use-of-this-switch-
-
 function manswitch () { man $1 | less -p "^ +$2"; }
+
+# convert milliseconds to verbose datetime
+# https://stackoverflow.com/questions/12362562/convert-milliseconds-timestamp-to-date-from-unix-command-line
+milliseconds() { echo $(date -d @$(($1 / 1000))) }
