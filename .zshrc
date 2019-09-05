@@ -157,6 +157,13 @@ export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
 source $HOME/.local/bin/virtualenvwrapper_lazy.sh
 export VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/pipx/venvs/virtualenvwrapper/bin/python
 
+# GNU Readline
+# For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+# For pkg-config to find readline you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+
 
 # -------------------
 # My own functions
