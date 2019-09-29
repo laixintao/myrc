@@ -18,3 +18,4 @@ dump.rdb
 *.prefs
 */logs/*
 *.log.*
+laixintao_fixtures/*
