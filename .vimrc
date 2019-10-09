@@ -161,6 +161,11 @@ let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
 
+" Elixir
+" See https://github.com/elixir-editors/vim-elixir/issues/121
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex set filetype=eelixir
+
 " When writing a buffer.
 call neomake#configure#automake('w')
 " When writing a buffer, and on normal mode changes (after 750ms).
@@ -519,3 +524,5 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
+
+
