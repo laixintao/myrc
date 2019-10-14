@@ -11,4 +11,5 @@ fixture/weekly_report_template.md
 .config/clash
 .config/asciinema
 .config/clash-vagrant/
+.config/clash*
 .config/pgcli/history
