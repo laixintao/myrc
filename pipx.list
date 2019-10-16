@@ -1,0 +1,17 @@
+ansible
+black
+bumpversion
+flake8
+ipdb
+ipython
+jupyter
+mkdocs
+mycli
+pingtop
+poetry
+py-spy
+tmuxp
+twine
+virtualenv
+virtualenvwrapper
+youtube-dl
