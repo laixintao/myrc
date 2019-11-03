@@ -34,3 +34,5 @@
 	branch = false
 [push]
 	followTags = true
+[diff]
+	submodule = log

@@ -19,7 +19,23 @@ windows:
       - mycli -u root -P3308 -p123 --auto-vertical-output troublehunter
   start_directory: /Users/laixintao/Program/alipay/troublehunter
   window_name: database
-- layout: 650f,173x47,0,0,10
+- layout:
+  options:
+    automatic-rename: 'off'
+  panes:
+    - focus: 'true'
+  start_directory: /Users/laixintao/Program/alipay/thph5
+  window_name: thph5
+- layout:
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+      - tnpm run dev
+  start_directory: /Users/laixintao/Program/alipay/thph5
+  window_name: tnpm running
+- layout:
   options:
     automatic-rename: 'off'
   panes:

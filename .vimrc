@@ -115,13 +115,13 @@ Plugin 'majutsushi/tagbar'              " show tags of codes
 Plugin 'Vimjas/vim-python-pep8-indent'  " auto indent ()
 Plugin 'tweekmonster/django-plus.vim'
 Plugin 'spacewander/openresty-vim'
-Plugin 'mxw/vim-jsx'
 Plugin 'kien/rainbow_parentheses.vim'   " Rainbow Parentheses
 Plugin 'cespare/vim-toml'
 Plugin 'stephpy/vim-yaml'
 Plugin 'nvie/vim-flake8'
-Plugin 'elixir-editors/vim-elixir'
+Plugin 'elixir-editors/vim-elixir'    " Elixir
 Plugin 'slashmili/alchemist.vim'
+Plugin 'mxw/vim-jsx'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
