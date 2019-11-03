@@ -1,1 +1,1 @@
-networksetup -setsocksfirewallproxy wi-fi 127.0.0.1 7891
+networksetup -setsocksfirewallproxy wi-fi 127.0.0.1 7991
