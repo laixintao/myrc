@@ -125,6 +125,8 @@ Plugin 'prabirshrestha/async.vim' " Async complete with vim-lsp
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'prabirshrestha/asyncomplete-buffer.vim'
+Plugin 'prabirshrestha/asyncomplete-file.vim'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -180,6 +182,16 @@ augroup elixir_lsp
     \ 'whitelist': ['elixir', 'eelixir'],
     \ })
 augroup END
+
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'whitelist': ['*'],
+    \ 'blacklist': ['go'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ 'config': {
+    \    'max_buffer_size': 5000000,
+    \  },
+    \ }))
 
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
