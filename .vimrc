@@ -29,6 +29,8 @@ set encoding=utf-8
 filetype  on                   " required!
 filetype plugin on
 filetype indent on
+set autoindent
+set smartindent
 set rtp+=/Users/laixintao/.vim/bundle/Vundle.vim
 call vundle#rc()
 let mapleader=','
@@ -36,8 +38,6 @@ syntax enable
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0              " 关闭softtabstop 永远不要将空格和tab混合输入
-set autoindent
-set smartindent
 set expandtab
 set nu
 set hlsearch
@@ -90,7 +90,7 @@ noremap \ ,
 " Plugin 'file:///Users/gmarik/path/to/plugin'
 
 Plugin 'gmarik/vundle'                  " Vim Package management
-Plugin 'Valloric/YouCompleteMe'         " auto complete
+" Plugin 'Valloric/YouCompleteMe'         " auto complete
 Plugin 'The-NERD-tree'                  " file tree
 Plugin 'mattn/emmet-vim'                " zen coding
 Plugin 'mattn/webapi-vim'
@@ -102,7 +102,6 @@ Plugin 'neomake/neomake'                " lint async check
 Plugin 'scrooloose/nerdcommenter'       " Quick comment
 Plugin 'ruanyl/vim-gh-line'             " 在Bitbucket或github快速打开当前代码行
 Plugin 'ctrlpvim/ctrlp.vim'             " 模糊查找
-Plugin 'sjl/gundo.vim'
 Plugin 'terryma/vim-multiple-cursors'   " 多光标编辑
 Plugin 'tpope/vim-fugitive'             " git插件 （Blame)
 Plugin 'SirVer/ultisnips'               " 代码片段
@@ -122,6 +121,11 @@ Plugin 'nvie/vim-flake8'
 Plugin 'elixir-editors/vim-elixir'    " Elixir
 Plugin 'slashmili/alchemist.vim'
 Plugin 'mxw/vim-jsx'
+" Async complete with vim-lsp
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -153,6 +157,21 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCustomDelimiters = {
             \ 'python': { 'left': '#', 'right': '' }
             \ }
+
+" Completion settings
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
+" LSP
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
 
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
@@ -339,11 +358,6 @@ augroup python_lang
     " ------------------- 缩写 -----------------
     " 使用ipdb自动设置断点
     autocmd FileType python :iabbrev ipdb import ipdb; ipdb.set_trace()<ESC>:w<CR>
-    func! RunPython()
-        exec 'w'
-        exec '!python' shellescape(@%, 1)
-    endfunc
-    autocmd FileType python nnoremap <buffer> <F5> :call RunPython() <cr>
 augroup END
 " }}}
 
@@ -524,5 +538,3 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
-
-
