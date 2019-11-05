@@ -127,6 +127,9 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete-buffer.vim'
 Plugin 'prabirshrestha/asyncomplete-file.vim'
+
+Plugin 'thomasfaingnaert/vim-lsp-snippets'
+Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
 " }}}
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -152,6 +155,7 @@ let g:NERDCustomDelimiters = {
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
 
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
