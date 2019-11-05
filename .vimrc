@@ -127,24 +127,13 @@ Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete-buffer.vim'
 Plugin 'prabirshrestha/asyncomplete-file.vim'
+" }}}
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] }
 
-" Unused Plugins
-" Plugin 'vimwiki/vimwiki' " Quick key to create/view/edit wiki
-" Plugin 'plasticboy/vim-markdown'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                   Unused Awesome Plugins                              "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" salt sandbox .sls file
-"Plugin 'git://github.com/saltstack/salt-vim.git'
-
-" start page
-" git clone https://github.com/mhinz/vim-startify ~/.vim/bundle/vim-startify
 
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
@@ -159,29 +148,10 @@ let g:NERDCustomDelimiters = {
             \ 'python': { 'left': '#', 'right': '' }
             \ }
 
-" Completion settings
+" Completion settings --------------------{{{ 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-
-" LSP
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
-augroup elixir_lsp
-  au!
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'elixir-ls',
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
-    \ 'whitelist': ['elixir', 'eelixir'],
-    \ })
-augroup END
 
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
@@ -193,6 +163,8 @@ call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options
     \  },
     \ }))
 
+" }}}
+
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
 nnoremap <leader>o :CtrlSFOpen<CR>
@@ -200,10 +172,22 @@ let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
 
-" Elixir
+" Elixir --------------------{{{ 
+
 " See https://github.com/elixir-editors/vim-elixir/issues/121
 au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
 au BufRead,BufNewFile *.eex set filetype=eelixir
+
+augroup elixir_lsp
+  au!
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'elixir-ls',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
+    \ 'whitelist': ['elixir', 'eelixir'],
+    \ })
+augroup END
+
+" }}}
 
 " When neomake trigger a check
 call neomake#configure#automake('w')
@@ -243,18 +227,6 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 let g:rbpt_max = 16
-" }}}
-
-" YCM Settings --------------------{{{
-augroup ycm_settings:
-    autocmd!
-    let g:ycm_autoclose_preview_window_after_insertion = 1
-    let g:ycm_autoclose_preview_window_after_completion = 1
-    let g:ycm_goto_buffer_command = 'horizontal-split'
-    let g:ycm_python_binary_path = 'python'
-    let g:ycm_seed_identifiers_with_syntax = 1
-    nnoremap <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-augroup END
 " }}}
 
 " NerdTree Settings --------------------{{{
@@ -373,7 +345,15 @@ augroup python_lang
     function! SetPythonEncoding()
        call setline(1, "# -*- coding: utf-8 -*-")
     endfunc
-    " ------------------- 缩写 -----------------
+    " LSP
+    if executable('pyls')
+        " pip install python-language-server
+        au User lsp_setup call lsp#register_server({
+            \ 'name': 'pyls',
+            \ 'cmd': {server_info->['pyls']},
+            \ 'whitelist': ['python'],
+            \ })
+    endif
 augroup END
 " }}}
 
