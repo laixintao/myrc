@@ -1,38 +1,9 @@
-" 我对vimrc文件的态度是：
-" 1. 只配置可以让你少按键的东西（例如不要配置自动格式化代码）
-" 2. Don't put anything in your .vimrc you don't understand! (check :help)
-" 3. 记下来痛点，随后解决
-"
-" ## Note:
-" 1. vim字体受终端的限制，所以如果不是gvim， set guifont是无效的
-" 2. 需要安装配色方案，还需要对终端进行配置，如果只安装了Vim的，Vim会看起来雾蒙蒙的一片
-"
-" 终端配色安装:
-" 1. 设置Termial配色：git clone git://github.com/seebi/dircolors-solarized.git
-" 2. 注意第二个参数是dircolor是的文件夹
-"   cp ~/dircolors-solarized/dircolors.256dark ~/.dircolors
-"   eval 'dircolors .dircolors'
-" 3. 使设置生效
-
-" cd gnome-terminal-colors-solarized
-" ./set_dark.sh 或./set_light.sh
-"
 " ## Ussage
-" 0. Install Vundle: git clone https://github.com/gmarik/vundle.git
-" ~/.vim/bundle/vundle
-" 1. go in vim, do :PluginInstall
-" 2. go ~/.vim/bundle/YouCompleteMe do ./install.sh (some problems: do not use mac port python ,use system python
+" 0. git clone https://github.com/gmarik/vundle.git
+" 1. vim +PluginInstall +qall
 
 " General settings --------------------{{{
-set nocompatible               " be iMproved
 set encoding=utf-8
-filetype  on                   " required!
-filetype plugin on
-filetype indent on
-set autoindent
-set smartindent
-set rtp+=/Users/laixintao/.vim/bundle/Vundle.vim
-call vundle#rc()
 let mapleader=','
 syntax enable
 set tabstop=4
@@ -52,19 +23,13 @@ set backspace=2 " 删除键的问题
 set background=dark
 colorscheme molokai
 set cursorline " 高亮光标所在行
-" 括号颜色
 :highlight MatchParen ctermbg=DarkGray ctermfg=black
 set incsearch
-set pastetoggle=<F2>
-" 80行 120行之后设置为灰色背景
-" let &colorcolumn="80,".join(range(120,999),",")
-" highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 set wildignore+=*.swp,*.pyc
 
 " 文件编码的猜测顺序
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
-
 " }}}
 
 " Key bindings --------------------{{{ 
@@ -73,7 +38,6 @@ nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>st :tab split<CR>
 " ,作为了leader key, 将\映射成反向查找
 noremap \ ,
-"
 " }}}
 
 " Plugins --------------------{{{
@@ -88,54 +52,59 @@ noremap \ ,
 " Plugin 'git://git.wincent.com/command-t.git'
 " d) 指定本地Git仓库中的插件
 " Plugin 'file:///Users/gmarik/path/to/plugin'
-
-Plugin 'gmarik/vundle'                       " Vim Package management
-Plugin 'The-NERD-tree'                       " file tree
-Plugin 'mattn/emmet-vim'                     " zen coding
+set nocompatible               " be iMproved
+filetype off                   " required!
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+Plugin 'gmarik/vundle'                          " Vim Package management
+Plugin 'The-NERD-tree'                          " file tree
+Plugin 'mattn/emmet-vim'                        " zen coding
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'airblade/vim-gitgutter'              " git diff
+Plugin 'airblade/vim-gitgutter'                 " git diff
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'neomake/neomake'                     " lint async check
-Plugin 'scrooloose/nerdcommenter'            " Quick comment
-Plugin 'ruanyl/vim-gh-line'                  " 在Bitbucket或github快速打开当前代码行
-Plugin 'ctrlpvim/ctrlp.vim'                  " 模糊查找
-Plugin 'terryma/vim-multiple-cursors'        " 多光标编辑
-Plugin 'tpope/vim-fugitive'                  " git插件 （Blame)
-Plugin 'SirVer/ultisnips'                    " 代码片段
-Plugin 'godlygeek/tabular'                   " 自动根据某个符号对其，用于json 字典 表格等
-Plugin 'ambv/black'                          " Python code formatter
+Plugin 'neomake/neomake'                        " lint async check
+Plugin 'scrooloose/nerdcommenter'               " Quick comment
+Plugin 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打开当前代码行
+Plugin 'ctrlpvim/ctrlp.vim'                     " 模糊查找
+Plugin 'terryma/vim-multiple-cursors'           " 多光标编辑
+Plugin 'tpope/vim-fugitive'                     " git插件 （Blame)
+Plugin 'SirVer/ultisnips'                       " 代码片段
+Plugin 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
+Plugin 'ambv/black'                             " Python code formatter
 Plugin 'mechatroner/rainbow_csv'
-Plugin 'tweekmonster/startuptime.vim'        " Vim start up time debug (figure out which script is slow)
-Plugin 'dyng/ctrlsf.vim'                     " Ascyn use rg to find
-Plugin 'majutsushi/tagbar'                   " show tags of codes
-Plugin 'Vimjas/vim-python-pep8-indent'       " auto indent ()
+Plugin 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
+Plugin 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
+Plugin 'majutsushi/tagbar'                      " show tags of codes
+Plugin 'Vimjas/vim-python-pep8-indent'          " auto indent ()
 Plugin 'tweekmonster/django-plus.vim'
 Plugin 'spacewander/openresty-vim'
-Plugin 'kien/rainbow_parentheses.vim'        " Rainbow Parentheses
+Plugin 'kien/rainbow_parentheses.vim'           " Rainbow Parentheses
 Plugin 'cespare/vim-toml'
 Plugin 'stephpy/vim-yaml'
 Plugin 'nvie/vim-flake8'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'elixir-editors/vim-elixir'           " Elixir
-
-Plugin 'prabirshrestha/async.vim' " Async complete with vim-lsp
+Plugin 'elixir-editors/vim-elixir'              " Elixir
+Plugin 'prabirshrestha/async.vim'               " Async complete with vim-lsp
 Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/vim-lsp'                 " LSP support
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete-buffer.vim'
 Plugin 'prabirshrestha/asyncomplete-file.vim'
-
-Plugin 'thomasfaingnaert/vim-lsp-snippets'
+Plugin 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
 Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
-" }}}
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] }
+call vundle#end()
+filetype plugin indent on
+set autoindent
+set smartindent
+" }}}
 
 
 let g:airline_theme='simple'
@@ -548,7 +517,3 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
-
-
-set completeopt+=preview
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
