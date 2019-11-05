@@ -89,43 +89,44 @@ noremap \ ,
 " d) 指定本地Git仓库中的插件
 " Plugin 'file:///Users/gmarik/path/to/plugin'
 
-Plugin 'gmarik/vundle'                  " Vim Package management
-" Plugin 'Valloric/YouCompleteMe'         " auto complete
-Plugin 'The-NERD-tree'                  " file tree
-Plugin 'mattn/emmet-vim'                " zen coding
+Plugin 'gmarik/vundle'                       " Vim Package management
+                                             " Plugin 'Valloric/YouCompleteMe'                           " auto complete
+Plugin 'The-NERD-tree'                       " file tree
+Plugin 'mattn/emmet-vim'                     " zen coding
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
-Plugin 'airblade/vim-gitgutter'         " git diff
+Plugin 'airblade/vim-gitgutter'              " git diff
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'neomake/neomake'                " lint async check
-Plugin 'scrooloose/nerdcommenter'       " Quick comment
-Plugin 'ruanyl/vim-gh-line'             " 在Bitbucket或github快速打开当前代码行
-Plugin 'ctrlpvim/ctrlp.vim'             " 模糊查找
-Plugin 'terryma/vim-multiple-cursors'   " 多光标编辑
-Plugin 'tpope/vim-fugitive'             " git插件 （Blame)
-Plugin 'SirVer/ultisnips'               " 代码片段
-Plugin 'godlygeek/tabular'              " 自动根据某个符号对其，用于json 字典 表格等
-Plugin 'ambv/black'                     " Python code formatter
+Plugin 'neomake/neomake'                     " lint async check
+Plugin 'scrooloose/nerdcommenter'            " Quick comment
+Plugin 'ruanyl/vim-gh-line'                  " 在Bitbucket或github快速打开当前代码行
+Plugin 'ctrlpvim/ctrlp.vim'                  " 模糊查找
+Plugin 'terryma/vim-multiple-cursors'        " 多光标编辑
+Plugin 'tpope/vim-fugitive'                  " git插件 （Blame)
+Plugin 'SirVer/ultisnips'                    " 代码片段
+Plugin 'godlygeek/tabular'                   " 自动根据某个符号对其，用于json 字典 表格等
+Plugin 'ambv/black'                          " Python code formatter
 Plugin 'mechatroner/rainbow_csv'
-Plugin 'tweekmonster/startuptime.vim'   " Vim start up time debug (figure out which script is slow)
-Plugin 'dyng/ctrlsf.vim'  " Ascyn use rg to find
-Plugin 'majutsushi/tagbar'              " show tags of codes
-Plugin 'Vimjas/vim-python-pep8-indent'  " auto indent ()
+Plugin 'tweekmonster/startuptime.vim'        " Vim start up time debug (figure out which script is slow)
+Plugin 'dyng/ctrlsf.vim'                     " Ascyn use rg to find
+Plugin 'majutsushi/tagbar'                   " show tags of codes
+Plugin 'Vimjas/vim-python-pep8-indent'       " auto indent ()
 Plugin 'tweekmonster/django-plus.vim'
 Plugin 'spacewander/openresty-vim'
-Plugin 'kien/rainbow_parentheses.vim'   " Rainbow Parentheses
+Plugin 'kien/rainbow_parentheses.vim'        " Rainbow Parentheses
 Plugin 'cespare/vim-toml'
 Plugin 'stephpy/vim-yaml'
 Plugin 'nvie/vim-flake8'
-Plugin 'elixir-editors/vim-elixir'    " Elixir
+Plugin 'elixir-editors/vim-elixir'           " Elixir
 Plugin 'slashmili/alchemist.vim'
 Plugin 'mxw/vim-jsx'
-" Async complete with vim-lsp
+                                             " Async complete with vim-lsp
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'wellle/tmux-complete.vim'            " AutoComplete with tmux panes
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -538,3 +539,7 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
+
+
+set completeopt+=preview
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
