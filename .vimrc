@@ -91,7 +91,6 @@ Plugin 'prabirshrestha/async.vim'               " Async complete with vim-lsp
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'                 " LSP support
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'prabirshrestha/asyncomplete-buffer.vim'
 Plugin 'prabirshrestha/asyncomplete-file.vim'
 Plugin 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
 Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
@@ -125,16 +124,6 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
-
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'whitelist': ['*'],
-    \ 'blacklist': ['go'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor'),
-    \ 'config': {
-    \    'max_buffer_size': 5000000,
-    \  },
-    \ }))
 
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
     \ 'name': 'file',
@@ -176,7 +165,7 @@ function SetupElixir()
         \ 'whitelist': ['elixir', 'eelixir'],
         \ })
     " Map keys for lsp
-    nnoremap <leader>= :LspDocumentFormat<cr>
+    nnoremap <buffer> <leader>= :LspDocumentFormat<cr>
 endfunction
 
 augroup elixir_lang
