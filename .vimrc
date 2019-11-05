@@ -121,8 +121,8 @@ Plugin 'nvie/vim-flake8'
 Plugin 'elixir-editors/vim-elixir'           " Elixir
 Plugin 'slashmili/alchemist.vim'
 Plugin 'mxw/vim-jsx'
-                                             " Async complete with vim-lsp
-Plugin 'prabirshrestha/async.vim'
+
+Plugin 'prabirshrestha/async.vim' " Async complete with vim-lsp
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
@@ -186,11 +186,9 @@ let g:ctrlsf_auto_focus = {
 au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
 au BufRead,BufNewFile *.eex set filetype=eelixir
 
-" When writing a buffer.
+" When neomake trigger a check
 call neomake#configure#automake('w')
-" When writing a buffer, and on normal mode changes (after 750ms).
 call neomake#configure#automake('nw', 300)
-" When reading a buffer (after 1s), and when writing.
 call neomake#configure#automake('rw', 300)
 nnoremap <leader>lo :lopen<CR>
 nnoremap <leader>lc :lclose<CR>
@@ -357,8 +355,6 @@ augroup python_lang
        call setline(1, "# -*- coding: utf-8 -*-")
     endfunc
     " ------------------- 缩写 -----------------
-    " 使用ipdb自动设置断点
-    autocmd FileType python :iabbrev ipdb import ipdb; ipdb.set_trace()<ESC>:w<CR>
 augroup END
 " }}}
 
