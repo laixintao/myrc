@@ -90,7 +90,6 @@ noremap \ ,
 " Plugin 'file:///Users/gmarik/path/to/plugin'
 
 Plugin 'gmarik/vundle'                       " Vim Package management
-                                             " Plugin 'Valloric/YouCompleteMe'                           " auto complete
 Plugin 'The-NERD-tree'                       " file tree
 Plugin 'mattn/emmet-vim'                     " zen coding
 Plugin 'mattn/webapi-vim'
@@ -118,15 +117,14 @@ Plugin 'kien/rainbow_parentheses.vim'        " Rainbow Parentheses
 Plugin 'cespare/vim-toml'
 Plugin 'stephpy/vim-yaml'
 Plugin 'nvie/vim-flake8'
-Plugin 'elixir-editors/vim-elixir'           " Elixir
 Plugin 'slashmili/alchemist.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'elixir-editors/vim-elixir'           " Elixir
 
 Plugin 'prabirshrestha/async.vim' " Async complete with vim-lsp
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'wellle/tmux-complete.vim'            " AutoComplete with tmux panes
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -173,6 +171,15 @@ if executable('pyls')
         \ 'whitelist': ['python'],
         \ })
 endif
+
+augroup elixir_lsp
+  au!
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'elixir-ls',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
+    \ 'whitelist': ['elixir', 'eelixir'],
+    \ })
+augroup END
 
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
