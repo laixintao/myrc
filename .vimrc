@@ -181,11 +181,6 @@ au User lsp_setup call lsp#register_server({
     \ 'whitelist': ['sh'],
     \ })
 
-au User lsp_setup call lsp#register_server({
-    \ 'name': 'elixir-ls',
-    \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
-    \ 'whitelist': ['elixir', 'eelixir'],
-    \ })
 
 " pip install python-language-server
 au User lsp_setup call lsp#register_server({
@@ -204,11 +199,24 @@ let g:ctrlsf_auto_focus = {
     \ }
 
 " Elixir --------------------{{{ 
+function SetupElixir()
+    " Setup LSP
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'elixir-ls',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
+        \ 'whitelist': ['elixir', 'eelixir'],
+        \ })
+    " Map keys for lsp
+    nnoremap <leader>= :LspDocumentFormat<cr>
+endfunction
 
-" See https://github.com/elixir-editors/vim-elixir/issues/121
-au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
-au BufRead,BufNewFile *.eex set filetype=eelixir
-
+augroup elixir_lang
+    autocmd!
+    " See https://github.com/elixir-editors/vim-elixir/issues/121
+    autocmd BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+    autocmd BufRead,BufNewFile *.eex set filetype=eelixir
+    autocmd FileType elixir,eelixir :call SetupElixir()
+augroup end
 " }}}
 
 " When neomake trigger a check
@@ -301,13 +309,6 @@ augroup nerdtree_settings
 augroup END
 " }}}
 
-" Tab Set --------------------{{{
-augroup tab_set
-    autocmd!
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv set sw=2 ts=2
-augroup END
-" }}}
-
 " InsertMode Quick Edit --------------------{{{
 " use emacs shortcut in INSERT mode
 imap <C-e> <END>
@@ -328,17 +329,6 @@ augroup shortcuts
     command! -nargs=? Vres vertical res <args>
     nnoremap <leader>a ggvG
     onoremap in( :<c-u>normal! f(vi(<cr>
-augroup END
-" }}}
-
-" Code format --------------------{{{
-augroup code_format
-    autocmd!
-    " Javascript Prettier
-    " default <leader>p
-    let g:prettier#config#parser = 'babylon'
-
-    autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
 augroup END
 " }}}
 
@@ -367,14 +357,25 @@ augroup python_lang
     function! SetPythonEncoding()
        call setline(1, "# -*- coding: utf-8 -*-")
     endfunc
+    " Python using black
+    autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
 augroup END
 " }}}
 
-" HTML Javascript --------------------{{{
+" Javascript-like Language --------------------{{{
+function SetupJavascript()
+    set sw=2 ts=2
+    " Javascript-like language --> Prettier
+    " default <leader>p
+    let g:prettier#config#parser = 'babylon'
+    nmap <Leader>= <Plug>(Prettier)
+endfunction
+
 augroup html_lang
     autocmd!
     autocmd BufNewFile,BufRead *.html setlocal nowrap
     autocmd FileType javascript set filetype=javascript.jsx
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv :call SetupJavascript()
 augroup END
 " }}}
 
