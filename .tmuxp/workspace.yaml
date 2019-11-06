@@ -49,12 +49,12 @@ windows:
   - focus: 'true'
     shell_command: clash
   window_name: <clash>
-# - layout: main-vertical
-#   options:
-#     automatic-rename: 'off'
-#   panes:
-#   - focus: 'true'
-#     shell_command: clash -d ~/.config/clash_kcp
-#   - connect_kcp
-#   - echo "Morning"
-#   window_name: http7990-socks7991
+- layout: main-vertical
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: clash -d ~/.config/clash_kcp
+  - connect_kcp
+  - echo "Morning"
+  window_name: http7990-socks7991
