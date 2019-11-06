@@ -100,7 +100,9 @@ Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] }
 call vundle#end()
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
 set autoindent
 set smartindent
 " }}}
@@ -139,6 +141,12 @@ au User lsp_setup call lsp#register_server({
     \ 'whitelist': ['sh'],
     \ })
 
+" Setup LSP
+autocmd User lsp_setup call lsp#register_server({
+    \ 'name': 'elixir-ls',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
+    \ 'whitelist': ['elixir', 'eelixir'],
+    \ })
 
 " pip install python-language-server
 au User lsp_setup call lsp#register_server({
@@ -158,12 +166,6 @@ let g:ctrlsf_auto_focus = {
 
 " Elixir --------------------{{{ 
 function SetupElixir()
-    " Setup LSP
-    autocmd User lsp_setup call lsp#register_server({
-        \ 'name': 'elixir-ls',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
-        \ 'whitelist': ['elixir', 'eelixir'],
-        \ })
     " Map keys for lsp
     nnoremap <buffer> <leader>= :LspDocumentFormat<cr>
 endfunction
@@ -173,6 +175,7 @@ augroup elixir_lang
     " See https://github.com/elixir-editors/vim-elixir/issues/121
     autocmd BufRead,BufNewFile *.ex,*.exs set filetype=elixir
     autocmd BufRead,BufNewFile *.eex set filetype=eelixir
+
     autocmd FileType elixir,eelixir :call SetupElixir()
 augroup end
 " }}}
