@@ -171,31 +171,24 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ }))
 
 " ------> LSP <-------
-if executable('bash-language-server')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'bash-language-server',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
-        \ 'whitelist': ['sh'],
-        \ })
-endif
+au User lsp_setup call lsp#register_server({
+    \ 'name': 'bash-language-server',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+    \ 'whitelist': ['sh'],
+    \ })
 
-augroup elixir_lsp
-  au!
-  au User lsp_setup call lsp#register_server({
+au User lsp_setup call lsp#register_server({
     \ 'name': 'elixir-ls',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
     \ 'whitelist': ['elixir', 'eelixir'],
     \ })
-augroup END
 
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
+" pip install python-language-server
+au User lsp_setup call lsp#register_server({
+    \ 'name': 'pyls',
+    \ 'cmd': {server_info->['pyls']},
+    \ 'whitelist': ['python'],
+    \ })
 " ------> LSP END <-------
 " }}}
 
