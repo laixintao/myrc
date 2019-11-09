@@ -22,7 +22,9 @@ set t_Co=256
 set backspace=2 " 删除键的问题
 set background=dark
 colorscheme molokai
+set colorcolumn=80  " max line 80
 set cursorline " 高亮光标所在行
+set ignorecase
 :highlight MatchParen ctermbg=DarkGray ctermfg=black
 set incsearch
 
