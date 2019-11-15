@@ -134,6 +134,7 @@ inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
 nmap <leader>dp :LspPeekDefinition<CR>
 nmap <leader>gd :vs<cr> :LspDefinition<CR>
 
+let g:lsp_signature_help_enabled = v:false
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
     \ 'name': 'file',
     \ 'whitelist': ['*'],
@@ -516,3 +517,4 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
+"
