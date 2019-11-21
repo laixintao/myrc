@@ -149,7 +149,7 @@ au User lsp_setup call lsp#register_server({
     \ 'whitelist': ['sh'],
     \ })
 
-" Setup LSP
+" elixir-ls
 autocmd User lsp_setup call lsp#register_server({
     \ 'name': 'elixir-ls',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, '/usr/local/elixir-ls/language_server.sh']},
@@ -161,6 +161,14 @@ au User lsp_setup call lsp#register_server({
     \ 'name': 'pyls',
     \ 'cmd': {server_info->['pyls']},
     \ 'whitelist': ['python'],
+    \ })
+" js ts lsp
+" npm install -g typescript typescript-language-server
+autocmd User lsp_setup call lsp#register_server({
+    \ 'name': 'javascript support using typescript-language-server',
+    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+    \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
     \ })
 " ------> LSP END <-------
 " }}}
