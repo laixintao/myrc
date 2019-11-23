@@ -191,15 +191,17 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # echo "$PATH" | tr ':' '\n'
 typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 path=(
+    /usr/local/opt/sqlite/bin
     /usr/local/opt/curl/bin                  # curl in brew
-    $HOME/bin
     /usr/local/opt/postgresql@9.4/bin        # postgres path
+    /usr/local/opt/ruby/bin                  # ruby
+    /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
+    $HOME/bin
     $GOPATH/bin                              # golang
     $GOROOT/bin
-    /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
     $HOME/.local/bin                         # pipx
     /Users/laixintao/.cargo/bin              # cargo
     /Users/laixintao/.pyenv                  # pyenv
-    /usr/local/opt/ruby/bin                  # ruby
     $path
   )
+export PATH=":$PATH"
