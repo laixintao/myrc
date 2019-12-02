@@ -148,20 +148,19 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
-
 au User asyncomplete_setup call asyncomplete#register_source({
     \ 'name': 'gitcommit',
-    \ 'whitelist': ['*'],
+    \ 'whitelist': ['gitcommit'],
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#gitcommit#completor')
     \ })
-" ------> LSP <-------
 au User lsp_setup call lsp#register_server({
     \ 'name': 'bash-language-server',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
     \ 'whitelist': ['sh'],
     \ })
 
+" ------> LSP <-------
 " elixir-ls
 autocmd User lsp_setup call lsp#register_server({
     \ 'name': 'elixir-ls',
