@@ -95,6 +95,7 @@ Plugin 'prabirshrestha/vim-lsp'                 " LSP support
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete-ultisnips.vim'
 Plugin 'prabirshrestha/asyncomplete-file.vim'
+Plugin 'laixintao/asyncomplete-gitcommit'
 Plugin 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
 Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
 
@@ -148,6 +149,12 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
 
+au User asyncomplete_setup call asyncomplete#register_source({
+    \ 'name': 'gitcommit',
+    \ 'whitelist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#gitcommit#completor')
+    \ })
 " ------> LSP <-------
 au User lsp_setup call lsp#register_server({
     \ 'name': 'bash-language-server',
