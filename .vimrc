@@ -357,6 +357,7 @@ function SetupJavascript()
     " Javascript-like language --> Prettier
     " default <leader>p
     let g:prettier#config#parser = 'babylon'
+    let g:prettier#config#bracket_spacing = 'true'
     nmap <Leader>= <Plug>(Prettier)
 endfunction
 
