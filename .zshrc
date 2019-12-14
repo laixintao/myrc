@@ -196,6 +196,7 @@ path=(
     /usr/local/opt/postgresql@9.4/bin        # postgres path
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
+    /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
     $HOME/bin
     $GOPATH/bin                              # golang
     $GOROOT/bin
