@@ -193,7 +193,6 @@ typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 path=(
     /usr/local/opt/sqlite/bin
     /usr/local/opt/curl/bin                  # curl in brew
-    /usr/local/opt/postgresql@9.4/bin        # postgres path
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
