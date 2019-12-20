@@ -138,8 +138,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
-nmap <leader>pd :LspPeekDefinition<CR>
-nmap <leader>gd :vs<cr> :LspDefinition<CR>
+nmap <leader>p :LspPeekDefinition<CR>
+nmap <leader>d :vs<cr> :LspDefinition<CR>
 
 let g:lsp_signature_help_enabled = v:false
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
@@ -483,8 +483,8 @@ augroup END
 
 " graphviz --------------------{{{
 augroup graphviz
-    autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>dp :call OpenGraphviz()<cr>
-    autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>dc :call CompileGraphviz()<cr>
+    autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>p :call OpenGraphviz()<cr>
+    autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>c :call CompileGraphviz()<cr>
     function! CompileGraphviz()
         execute ":w"
         execute "Compile dot file and then open it."
