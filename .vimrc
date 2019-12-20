@@ -138,7 +138,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
-nmap <leader>dp :LspPeekDefinition<CR>
+nmap <leader>pd :LspPeekDefinition<CR>
 nmap <leader>gd :vs<cr> :LspDefinition<CR>
 
 let g:lsp_signature_help_enabled = v:false
