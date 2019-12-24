@@ -1,0 +1,9 @@
+%compile_commands.json
+%c -std=c11
+%cpp -std=c++14
+%c %cpp -pthread
+-I/usr/local/include
+-I/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1
+-I/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include
+-I/Library/Developer/CommandLineTools/usr/include
+-I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include

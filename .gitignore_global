@@ -19,3 +19,5 @@ dump.rdb
 */logs/*
 *.log.*
 laixintao_fixtures/*
+compile_commands.json
+.ccls
