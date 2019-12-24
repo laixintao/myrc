@@ -139,7 +139,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
 nmap <leader>p :LspPeekDefinition<CR>
-nmap <leader>d :vs<cr> :LspDefinition<CR>
+nmap gd :LspDefinition<CR>
 
 let g:lsp_signature_help_enabled = v:false
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
@@ -191,6 +191,17 @@ nnoremap <leader>o :CtrlSFOpen<CR>
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
+
+" CLang --------------------{{{ 
+" Register ccls C++ lanuage server.
+   au User lsp_setup call lsp#register_server({
+      \ 'name': 'ccls',
+      \ 'cmd': {server_info->['ccls']},
+      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+      \ 'initialization_options': {'cache': {'directory': '/tmp/ccls/cache' }},
+      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+      \ })
+" }}}
 
 " Elixir --------------------{{{ 
 function SetupElixir()
