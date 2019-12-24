@@ -75,7 +75,6 @@ Plugin 'tpope/vim-fugitive'                     " git插件 （Blame)
 Plugin 'SirVer/ultisnips'                       " 代码片段
 Plugin 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
 Plugin 'ambv/black'                             " Python code formatter
-Plugin 'mechatroner/rainbow_csv'
 Plugin 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
 Plugin 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
 Plugin 'majutsushi/tagbar'                      " show tags of codes
@@ -119,6 +118,7 @@ let g:gist_open_browser_after_post = 1
 " NerdComment
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
+
 " vim 8 / neovim HEAD runtime: when ft==python, cms:=#\ %s
 " "   -- when g:NERDSpaceDelims==1, then NERDComment results in double space
 let g:NERDCustomDelimiters = {
@@ -267,6 +267,7 @@ augroup nerdtree_settings
     " 忽略一下文件的显示
     let NERDTreeIgnore=['\.pyc','\~$',
                 \ '\.swp',
+                \ '\.o',
                 \ '.DS_Store',
                 \ '\.orig$',
                 \ '@neomake_',
@@ -516,13 +517,6 @@ autocmd BufNewFile,BufRead *.sls set ft=yaml
 autocmd BufNewFile,BufRead *.coffee set ft=coffee
 autocmd BufNewFile,BufRead *.toml set ft=TOML
 
-let g:vimwiki_list = [{
-            \ 'path'             : '/Users/laixintao/Program/laixintao-wikibot.github.io/wiki',
-            \ 'path_html'        : '/Users/laixintao/Program/laixintao-wikibot.github.io/html',
-            \ 'template_path'    : '/Users/laixintao/Program/laixintao-wikibot.github.io/html/assets',
-            \ 'template_default' : 'default',
-            \ 'template_ext'     : '.tpl',
-            \ 'auto_export'      : 0}]
 autocmd SwapExists * let v:swapchoice = "o"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|test-reports\|htmlcov\'
 
