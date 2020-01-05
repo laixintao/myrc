@@ -136,8 +136,7 @@ call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_opti
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-inoremap <expr> <C-o> pumvisible() ? "\<C-y>" : "\<C-o>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 nmap <leader>p :LspPeekDefinition<CR>
 nmap gd :LspDefinition<CR>
 
