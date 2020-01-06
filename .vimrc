@@ -138,6 +138,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 nmap <leader>p :LspPeekDefinition<CR>
+nmap <leader>= :LspDocumentFormat<CR>
 nmap gd :LspDefinition<CR>
 
 let g:lsp_signature_help_enabled = v:false
