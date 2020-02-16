@@ -357,15 +357,7 @@ augroup END
 " }}}
 
 " Python --------------------{{{
-augroup python_lang
-    autocmd!
-    autocmd BufNewFile *.py exec ":call SetPythonEncoding()"
-    function! SetPythonEncoding()
-       call setline(1, "# -*- coding: utf-8 -*-")
-    endfunc
-    " Python using black
-    autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
-augroup END
+autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
 " }}}
 
 " Javascript-like Language --------------------{{{
