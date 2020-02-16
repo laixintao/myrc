@@ -94,11 +94,11 @@ Plugin 'prabirshrestha/vim-lsp'                 " LSP support
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 Plugin 'prabirshrestha/asyncomplete-ultisnips.vim'
 Plugin 'prabirshrestha/asyncomplete-file.vim'
-Plugin 'laixintao/asyncomplete-gitcommit'
 Plugin 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
 Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'benmills/vimux'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -153,12 +153,6 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
-au User asyncomplete_setup call asyncomplete#register_source({
-    \ 'name': 'gitcommit',
-    \ 'whitelist': ['gitcommit'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#gitcommit#completor')
-    \ })
 au User lsp_setup call lsp#register_server({
     \ 'name': 'bash-language-server',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
@@ -270,10 +264,7 @@ augroup nerdtree_settings
     " NERDDTree快捷键
     map <leader>t :NERDTreeToggle<CR>
     map <C-n> :NERDTreeToggle<CR>
-    nnoremap <leader>r :NERDTreeFind<cr>
-    " 显示行号
-    " let NERDTreeShowLineNumbers=1
-    " let NERDTreeAutoCenter=1
+    nnoremap <leader>d :NERDTreeFind<cr>
     " 是否显示隐藏文件
     let NERDTreeShowHidden=1
     " 设置宽度
@@ -314,6 +305,15 @@ augroup nerdtree_settings
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 augroup END
 " }}}
+
+" vimux settings --------------------{{{ 
+nnoremap <leader>rp :VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
+" Prompt for a command to run
+nnoremap <Leader>ri :VimuxPromptCommand<CR>
+" Close vim tmux runner opened by VimuxRunCommand
+nnoremap <Leader>rc :VimuxCloseRunner<CR>
+nnoremap <Leader>rl :VimuxRunLastCommand<CR>
+"}}}
 
 " InsertMode Quick Edit --------------------{{{
 " use emacs shortcut in INSERT mode
