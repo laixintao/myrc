@@ -21,3 +21,5 @@ dump.rdb
 laixintao_fixtures/*
 compile_commands.json
 .ccls
+
+.envrc
