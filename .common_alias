@@ -12,8 +12,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias git-tree='git log --graph --decorate --pretty=oneline --abbrev-commit' 
 alias p4="proxychains4"
 
-# tmux alias
-alias tmux='tmux -2'
 
 # vim $(fzf)
 alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)'
