@@ -83,7 +83,9 @@ export WASMER_DIR="/Users/laixintao/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
 # pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
-eval "$(pyenv init -)"
+# pyenv-virtualenv
+# https://github.com/pyenv/pyenv-virtualenv
+export VIRTUALENV_VERSION=20.0.5
 
 # don't check for new mail
 MAILCHECK=0
@@ -150,9 +152,6 @@ compctl -K _pip_completion pip
 export DISABLE_AUTO_TITLE='true'
 # bat conf
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
-# pyenv-virtualenv
-# https://github.com/pyenv/pyenv-virtualenv
-export VIRTUALENV_VERSION=20.0.5
 
 # GNU Readline
 # For compilers to find readline you may need to set:
@@ -206,3 +205,6 @@ path=(
     $path
   )
 export PATH=":$PATH"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
