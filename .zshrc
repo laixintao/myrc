@@ -51,7 +51,7 @@ ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python virtualenv z osx sudo extract)
+plugins=(git python z osx sudo extract)
 
 
 # User configuration
@@ -150,12 +150,9 @@ compctl -K _pip_completion pip
 export DISABLE_AUTO_TITLE='true'
 # bat conf
 export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
-# virtualenv-wrapper
-# https://virtualenvwrapper.readthedocs.io/en/latest/install.html
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/bin/virtualenvwrapper.sh
-source $HOME/.local/bin/virtualenvwrapper_lazy.sh
-export VIRTUALENVWRAPPER_PYTHON=/Users/laixintao/.local/pipx/venvs/virtualenvwrapper/bin/python
+# pyenv-virtualenv
+# https://github.com/pyenv/pyenv-virtualenv
+export VIRTUALENV_VERSION=20.0.5
 
 # GNU Readline
 # For compilers to find readline you may need to set:
