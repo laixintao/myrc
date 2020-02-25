@@ -86,6 +86,7 @@ export PYENV_ROOT=/usr/local/var/pyenv
 # pyenv-virtualenv
 # https://github.com/pyenv/pyenv-virtualenv
 export VIRTUALENV_VERSION=20.0.5
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # don't check for new mail
 MAILCHECK=0
