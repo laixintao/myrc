@@ -5,7 +5,7 @@ windows:
   options:
     automatic-rename: 'off'
   panes:
-  - workon iredis 
+    -
   start_directory: /Users/laixintao/Program/iredis
   window_name: iredis
 - layout: 4758,129x38,0,0[129x19,0,0,45,129x18,0,20,48]
@@ -13,10 +13,9 @@ windows:
     automatic-rename: 'off'
   panes:
   - shell_command:
-    - workon iredis
+    -
   - focus: 'true'
     shell_command:
-    - workon iredis
     - tail -f iredis.log
   start_directory: /Users/laixintao/Program/iredis
   window_name: redis-cli
