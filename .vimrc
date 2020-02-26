@@ -24,8 +24,6 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
 set backspace=2 " 删除键的问题
-set background=dark
-colorscheme molokai
 set colorcolumn=80  " max line 80
 set cursorline " 高亮光标所在行
 set ignorecase
@@ -103,6 +101,7 @@ Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'benmills/vimux'
+Plugin 'flazz/vim-colorschemes'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -116,6 +115,8 @@ set autoindent
 set smartindent
 " }}}
 
+set background=dark
+colorscheme molokai
 
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
