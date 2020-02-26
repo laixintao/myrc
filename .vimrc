@@ -131,7 +131,7 @@ let g:NERDCustomDelimiters = {
             \ 'python': { 'left': '#', 'right': '' }
             \ }
 
-" Completion settings --------------------{{{ 
+" Completion settings -------------------- 
 let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
@@ -148,7 +148,7 @@ autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
 nmap <leader>p :LspPeekDefinition<CR>
 nmap <leader>= :LspDocumentFormat<CR>
-nmap gd :LspDefinition<CR>
+nmap gd :tab split<cr>:LspDefinition<cr>
 
 let g:lsp_signature_help_enabled = v:false
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
@@ -186,7 +186,7 @@ autocmd User lsp_setup call lsp#register_server({
     \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
     \ })
 " ------> LSP END <-------
-" }}}
+" 
 
 " CtrlSF
 nnoremap <leader>f :CtrlSF 
