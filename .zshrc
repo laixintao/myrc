@@ -87,6 +87,8 @@ export PYENV_ROOT=/usr/local/var/pyenv
 # https://github.com/pyenv/pyenv-virtualenv
 export VIRTUALENV_VERSION=20.0.5
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # don't check for new mail
 MAILCHECK=0
@@ -191,6 +193,7 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # To test you $PATH:
 # echo "$PATH" | tr ':' '\n'
 typeset -U path  # keep path alwasy unique, tmux will reload zshrc
+
 path=(
     /usr/local/opt/sqlite/bin
     /usr/local/opt/curl/bin                  # curl in brew
@@ -207,8 +210,6 @@ path=(
   )
 export PATH=":$PATH"
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # Proxy
 export http_proxy="http://127.0.0.1:7890"
