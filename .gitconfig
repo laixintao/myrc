@@ -5,8 +5,9 @@
 	quotepath = false
 [user]
 	name = laixintao
-	email = laixintao1995@163.com
+	email = laixintaoo@gmail.com
 	username = laixintao
+	signingkey = 4E7314AC219D7FE4
 [alias]
 	pr = pullrequest
 	ck = checkout
@@ -36,3 +37,7 @@
 	followTags = true
 [diff]
 	submodule = log
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
