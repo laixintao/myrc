@@ -68,7 +68,6 @@ Plugin 'mattn/gist-vim'
 Plugin 'airblade/vim-gitgutter'                 " git diff
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'neomake/neomake'                        " lint async check
 Plugin 'scrooloose/nerdcommenter'               " Quick comment
 Plugin 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打开当前代码行
 Plugin 'ctrlpvim/ctrlp.vim'                     " 模糊查找
@@ -223,15 +222,6 @@ augroup elixir_lang
 augroup end
 " }}}
 
-" When neomake trigger a check
-call neomake#configure#automake('w')
-call neomake#configure#automake('nw', 300)
-call neomake#configure#automake('rw', 300)
-nnoremap <leader>lo :lopen<CR>
-nnoremap <leader>lc :lclose<CR>
-nnoremap <Leader>ln :lnext<CR>
-nnoremap <Leader>lp :lprev<CR>
-let g:neomake_tempfile_dir = '/tmp/neomake%:p:h'
 
 nnoremap <leader>b :Gblame<CR>
 " UltiSnips triggering
