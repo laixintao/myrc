@@ -1,1 +1,2 @@
 git config user.email "nanshi.lxt@alipay.com"
+git config commit.gpgsign false
