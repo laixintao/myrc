@@ -75,7 +75,6 @@ Plugin 'terryma/vim-multiple-cursors'           " 多光标编辑
 Plugin 'tpope/vim-fugitive'                     " git插件 （Blame)
 Plugin 'SirVer/ultisnips'                       " 代码片段
 Plugin 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
-Plugin 'ambv/black'                             " Python code formatter
 Plugin 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
 Plugin 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
 Plugin 'majutsushi/tagbar'                      " show tags of codes
@@ -101,6 +100,7 @@ Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'benmills/vimux'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'dense-analysis/ale'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plugin 'prettier/vim-prettier', {
@@ -131,6 +131,14 @@ let g:NERDCustomDelimiters = {
             \ 'python': { 'left': '#', 'right': '' }
             \ }
 
+" ALE--------------------{{{ 
+let g:ale_fixers = {
+            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \   'python': ['black'],
+            \}
+" Default fixer: ALE
+nmap <leader>= :ALEFix<cr>
+" }}}
 " Completion settings -------------------- 
 let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
@@ -147,7 +155,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
 nmap <leader>p :LspPeekDefinition<CR>
-nmap <leader>= :LspDocumentFormat<CR>
 nmap gd :tab split<cr>:LspDefinition<cr>
 
 let g:lsp_signature_help_enabled = v:false
@@ -351,9 +358,6 @@ augroup lisp_lang
 augroup END
 " }}}
 
-" Python --------------------{{{
-autocmd FileType python nnoremap <buffer> <leader>= :Black <cr>
-" }}}
 
 " Javascript-like Language --------------------{{{
 function SetupJavascript()
