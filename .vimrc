@@ -138,6 +138,7 @@ let g:ale_fixers = {
             \}
 " Default fixer: ALE
 nmap <leader>= :ALEFix<cr>
+nmap <leader>a :ALEFirst<cr>
 " }}}
 " Completion settings -------------------- 
 let g:lsp_signs_enabled = 1         " enable signs
@@ -282,7 +283,7 @@ augroup nerdtree_settings
                 \ '@neomake_',
                 \ '__pycache__$[[dir]]',
                 \ '.pytest_cache$[[dir]]',
-                \ '.git[[dir]]',
+                \ '.git$[[dir]]',
                 \ '.idea[[dir]]',
                 \ '.vscode[[dir]]',
                 \ 'htmlcov[[dir]]',
@@ -335,7 +336,6 @@ augroup shortcuts
     autocmd!
     " alias Vres to resize screen
     command! -nargs=? Vres vertical res <args>
-    nnoremap <leader>a ggvG
     onoremap in( :<c-u>normal! f(vi(<cr>
 augroup END
 " }}}
