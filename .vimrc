@@ -1,6 +1,8 @@
 " ## Ussage
-" 0. git clone https://github.com/gmarik/vundle.git
-" 1. vim +PluginInstall +qall
+" install vim-plug( https://github.com/junegunn/vim-plug )
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Run: PlugInstall
 
 " General settings --------------------{{{
 set encoding=utf-8
@@ -31,6 +33,13 @@ set ignorecase
 set incsearch
 
 set wildignore+=*.swp,*.pyc
+set nocompatible               " be iMproved
+
+filetype on
+filetype plugin on
+filetype indent on
+set autoindent
+set smartindent
 
 " 文件编码的猜测顺序
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
@@ -45,73 +54,56 @@ noremap \ ,
 " }}}
 
 " Plugins --------------------{{{
-" let Vundle manage Vundle
-" 可以通过以下四种方式指定插件的来源
-" a) 指定Github中vim-scripts仓库中的插件，直接指定插件名称即可，插件明中的空格使用“-”代替。
-" Plugin 'L9'
-" b) 指定Github中其他用户仓库的插件，使用“用户名/插件名称”的方式指定
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'Lokaltog/vim-easymotion'
-" c) 指定非Github的Git仓库的插件，需要使用git地址
-" Plugin 'git://git.wincent.com/command-t.git'
-" d) 指定本地Git仓库中的插件
-" Plugin 'file:///Users/gmarik/path/to/plugin'
-set nocompatible               " be iMproved
-filetype off                   " required!
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-Plugin 'gmarik/vundle'                          " Vim Package management
-Plugin 'The-NERD-tree'                          " file tree
-Plugin 'mattn/emmet-vim'                        " zen coding
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
-Plugin 'airblade/vim-gitgutter'                 " git diff
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdcommenter'               " Quick comment
-Plugin 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打开当前代码行
-Plugin 'ctrlpvim/ctrlp.vim'                     " 模糊查找
-Plugin 'terryma/vim-multiple-cursors'           " 多光标编辑
-Plugin 'tpope/vim-fugitive'                     " git插件 （Blame)
-Plugin 'SirVer/ultisnips'                       " 代码片段
-Plugin 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
-Plugin 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
-Plugin 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
-Plugin 'majutsushi/tagbar'                      " show tags of codes
-Plugin 'Vimjas/vim-python-pep8-indent'          " auto indent ()
-Plugin 'tweekmonster/django-plus.vim'
-Plugin 'spacewander/openresty-vim'
-Plugin 'kien/rainbow_parentheses.vim'           " Rainbow Parentheses
-Plugin 'cespare/vim-toml'
-Plugin 'stephpy/vim-yaml'
-Plugin 'nvie/vim-flake8'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'elixir-editors/vim-elixir'              " Elixir
-Plugin 'prabirshrestha/async.vim'               " Async complete with vim-lsp
-Plugin 'prabirshrestha/asyncomplete.vim'
-Plugin 'prabirshrestha/vim-lsp'                 " LSP support
-Plugin 'prabirshrestha/asyncomplete-lsp.vim'
-Plugin 'prabirshrestha/asyncomplete-ultisnips.vim'
-Plugin 'prabirshrestha/asyncomplete-file.vim'
-Plugin 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
-Plugin 'thomasfaingnaert/vim-lsp-ultisnips'
-Plugin 'mzlogin/vim-markdown-toc'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'benmills/vimux'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'dense-analysis/ale'
+call plug#begin('~/.vim/plugged')
+Plug 'gmarik/vundle'                          " Vim Package management
+Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'                        " zen coding
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'airblade/vim-gitgutter'                 " git diff
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdcommenter'               " Quick comment
+Plug 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打开当前代码行
+Plug 'ctrlpvim/ctrlp.vim'                     " 模糊查找
+Plug 'terryma/vim-multiple-cursors'           " 多光标编辑
+Plug 'tpope/vim-fugitive'                     " git插件 （Blame)
+Plug 'SirVer/ultisnips'                       " 代码片段
+Plug 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
+Plug 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
+Plug 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
+Plug 'majutsushi/tagbar'                      " show tags of codes
+Plug 'Vimjas/vim-python-pep8-indent'          " auto indent ()
+Plug 'tweekmonster/django-plus.vim'
+Plug 'spacewander/openresty-vim'
+Plug 'kien/rainbow_parentheses.vim'           " Rainbow Parentheses
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'nvie/vim-flake8'
+Plug 'slashmili/alchemist.vim'
+Plug 'mxw/vim-jsx'
+Plug 'elixir-editors/vim-elixir'              " Elixir
+Plug 'prabirshrestha/async.vim'               " Async complete with vim-lsp
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'                 " LSP support
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
+Plug 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
+Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'plasticboy/vim-markdown'
+Plug 'benmills/vimux'
+Plug 'flazz/vim-colorschemes'
+Plug 'dense-analysis/ale'
 
-" post install (yarn install | npm install) then load plugin only for editing supported files
-Plugin 'prettier/vim-prettier', {
+" post install (yarn install | npm install) then load Plug only for editing supported files
+Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] }
-call vundle#end()
-filetype on
-filetype plugin on
-filetype indent on
-set autoindent
-set smartindent
+
+call plug#end()
+
 " }}}
 
 set background=dark
