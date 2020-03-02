@@ -56,7 +56,7 @@ set synmaxcol=500
 
 set scrolloff=3
 
-" Key bindings --------------------{{{ 
+" Key bindings --------------------{{{
 nnoremap <leader>sp :split<CR>
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>st :tab split<CR>
@@ -103,7 +103,10 @@ Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'thomasfaingnaert/vim-lsp-snippets'      " LSP with ultisnips
 Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'plasticboy/vim-markdown'
+Plug 'gabrielelana/vim-markdown'
+" Those two vim-markdown are bad...
+" Plug 'plasticboy/vim-markdown'
+" Plug 'tpope/vim-markdown'
 Plug 'benmills/vimux'
 Plug 'flazz/vim-colorschemes'
 Plug 'dense-analysis/ale'
@@ -134,16 +137,17 @@ let g:NERDCustomDelimiters = {
             \ 'python': { 'left': '#', 'right': '' }
             \ }
 
-" ALE--------------------{{{ 
+" ALE--------------------{{{
 let g:ale_fixers = {
-            \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \   '*': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
             \   'python': ['black'],
             \}
 " Default fixer: ALE
 nmap <leader>= :ALEFix<cr>
 nmap <leader>a :ALEFirst<cr>
+let b:ale_javascript_prettier_options = '--prose-wrap always'
 " }}}
-" Completion settings -------------------- 
+" Completion settings --------------------
 let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
@@ -197,16 +201,16 @@ autocmd User lsp_setup call lsp#register_server({
     \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
     \ })
 " ------> LSP END <-------
-" 
+"
 
 " CtrlSF
-nnoremap <leader>f :CtrlSF 
+nnoremap <leader>f :CtrlSF
 nnoremap <leader>o :CtrlSFOpen<CR>
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
 
-" CLang --------------------{{{ 
+" CLang --------------------{{{
 " Register ccls C++ lanuage server.
    au User lsp_setup call lsp#register_server({
       \ 'name': 'ccls',
@@ -217,7 +221,7 @@ let g:ctrlsf_auto_focus = {
       \ })
 " }}}
 
-" Elixir --------------------{{{ 
+" Elixir --------------------{{{
 function SetupElixir()
     " Map keys for lsp
     nnoremap <buffer> <leader>= :LspDocumentFormat<cr>
@@ -312,7 +316,7 @@ augroup nerdtree_settings
 augroup END
 " }}}
 
-" vimux settings --------------------{{{ 
+" vimux settings --------------------{{{
 nnoremap <leader>rp :VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
 " Prompt for a command to run
 nnoremap <Leader>ri :VimuxPromptCommand<CR>
