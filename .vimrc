@@ -144,7 +144,8 @@ let g:ale_fixers = {
             \}
 " Default fixer: ALE
 nmap <leader>= :ALEFix<cr>
-nmap <leader>a :ALEFirst<cr>
+nmap [e :ALEPrevious<cr>
+nmap ]e :ALENext<cr>
 let b:ale_javascript_prettier_options = '--prose-wrap always'
 " }}}
 " Completion settings --------------------
