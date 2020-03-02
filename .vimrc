@@ -479,6 +479,25 @@ function! FormatMongodoc2Python() range
 endfunction
 
 nnoremap <leader>m :.,$call FormatMongodoc2Python()<cr>
+
+
+" ]p to paste into a newline
+" [p to paste into the line upon cursor
+" https://github.com/tpope/vim-unimpaired/blob/master/plugin/unimpaired.vim#L343
+function! s:putline(how, map) abort
+  let [body, type] = [getreg(v:register), getregtype(v:register)]
+  if type ==# 'V'
+    exe 'normal! "'.v:register.a:how
+  else
+    call setreg(v:register, body, 'l')
+    exe 'normal! "'.v:register.a:how
+    call setreg(v:register, body, type)
+  endif
+  silent! call repeat#set("\<Plug>unimpairedPut".a:map)
+endfunction
+
+nnoremap <silent> [p :call <SID>putline('[p', 'Above')<CR>
+nnoremap <silent> ]p :call <SID>putline(']p', 'Below')<CR>
 " }}}
 
 " .tmux.conf --------------------{{{
