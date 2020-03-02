@@ -13,7 +13,6 @@ set shiftwidth=4
 set softtabstop=0              " 关闭softtabstop 永远不要将空格和tab混合输入
 set expandtab
 set nu
-set hlsearch
 set foldmethod=indent
 set nofoldenable               " disable folding
 set mouse=a                    " 支持鼠标
@@ -28,9 +27,14 @@ set termguicolors
 set backspace=2 " 删除键的问题
 set colorcolumn=80  " max line 80
 set cursorline " 高亮光标所在行
+
+" search
 set ignorecase
-:highlight MatchParen ctermbg=DarkGray ctermfg=black
 set incsearch
+set hlsearch
+set smartcase
+
+set linebreak
 
 set wildignore+=*.swp,*.pyc
 set nocompatible               " be iMproved
@@ -40,10 +44,17 @@ filetype plugin on
 filetype indent on
 set autoindent
 set smartindent
+set shiftround
 
 " 文件编码的猜测顺序
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
 " }}}
+
+" https://superuser.com/questions/302186/vim-scrolls-very-slowly-when-a-line-is-too-long
+" Syntax coloring lines that are too long just slows down the world
+set synmaxcol=500
+
+set scrolloff=3
 
 " Key bindings --------------------{{{ 
 nnoremap <leader>sp :split<CR>
