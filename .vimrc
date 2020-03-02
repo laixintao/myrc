@@ -366,7 +366,7 @@ function SetupJavascript()
     " default <leader>p
     let g:prettier#config#parser = 'babylon'
     let g:prettier#config#bracket_spacing = 'true'
-    nmap <Leader>= <Plug>(Prettier)
+    nmap <buffer> <Leader>= <Plug>(Prettier)
 endfunction
 
 augroup html_lang
