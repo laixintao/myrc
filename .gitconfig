@@ -41,3 +41,5 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+[submodule]
+	recurse = true
