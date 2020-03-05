@@ -37,8 +37,18 @@ echo "created ${project}"
 echo "Python: ${GREEN}$(pyenv which python)${NOCOLOR}"
 echo "pip: ${GREEN}$(pyenv which pip)${NOCOLOR}"
 
-echo "Running pip install -e . ..."
-pip install -e .
+if [ -f setup.py ]; then
+    echo "Running pip install -e . ..."
+    pip install -e .
+fi
+
+
+if [ -f pyproject.toml ]; then
+    echo "Running poetry install ..."
+    pip install poetry
+    /usr/local/var/pyenv/shims/poetry install
+fi
+
 
 echo "Setting .python-version..."
 echo $project > .python-version
