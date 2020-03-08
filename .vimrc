@@ -313,7 +313,7 @@ augroup nerdtree_settings
     autocmd VimEnter * :wincmd l
 
     " 当vim中没有其他文件，值剩下nerdtree的时候，自动关闭窗口
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 " }}}
 
