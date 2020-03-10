@@ -1,0 +1,26 @@
+session_name: seekers
+windows:
+- focus: 'true'
+  layout: e2d6,130x37,0,0,84
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/alipay/seekers
+  window_name: seekers
+- layout: e2d7,130x37,0,0,85
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/alipay/seekers
+  window_name: shell
+- layout: e2d8,130x37,0,0,86
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  window_name: shell

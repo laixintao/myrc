@@ -205,8 +205,17 @@ autocmd User lsp_setup call lsp#register_server({
 "
 
 " CtrlSF
-nnoremap <leader>f :CtrlSF
-nnoremap <leader>o :CtrlSFOpen<CR>
+
+nmap     <leader>ff <Plug>CtrlSFPrompt
+vmap     <leader>ff <Plug>CtrlSFVwordPath
+vmap     <leader>fF <Plug>CtrlSFVwordExec
+nmap     <leader>fn <Plug>CtrlSFCwordPath
+
+nnoremap <leader>fo :CtrlSFOpen<CR>
+nnoremap <leader>ft :CtrlSFToggle<CR>
+inoremap <leader>ft <Esc>:CtrlSFToggle<CR>
+nnoremap <silent> <leader>fj :CtrlSFFocus<CR>
+
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
     \ }
@@ -289,6 +298,7 @@ augroup nerdtree_settings
                 \ '.DS_Store',
                 \ '\.orig$',
                 \ '@neomake_',
+                \ '.coverage.',
                 \ '__pycache__$[[dir]]',
                 \ '.pytest_cache$[[dir]]',
                 \ '.git$[[dir]]',
