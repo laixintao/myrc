@@ -62,6 +62,8 @@ nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>st :tab split<CR>
 " ,作为了leader key, 将\映射成反向查找
 noremap \ ,
+" use q to exit help window
+autocmd FileType help noremap <buffer> q :q<cr>
 " }}}
 
 " Plugins --------------------{{{
@@ -148,38 +150,26 @@ nmap [e :ALEPrevious<cr>
 nmap ]e :ALENext<cr>
 let b:ale_javascript_prettier_options = '--prose-wrap always'
 " }}}
-" Completion settings --------------------
-let g:lsp_signs_enabled = 1         " enable signs
-let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+
+" ------> LSP <-------
 call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
     \ 'name': 'ultisnips',
     \ 'whitelist': ['*'],
     \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
     \ }))
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-" To auto close preview window when completion is done.
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
-nmap <leader>p :LspPeekDefinition<CR>
-nmap gd :tab split<cr>:LspDefinition<cr>
-
-let g:lsp_signature_help_enabled = v:false
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
     \ 'name': 'file',
     \ 'whitelist': ['*'],
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
+
 au User lsp_setup call lsp#register_server({
     \ 'name': 'bash-language-server',
     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
     \ 'whitelist': ['sh'],
     \ })
-
-" ------> LSP <-------
 " elixir-ls
 autocmd User lsp_setup call lsp#register_server({
     \ 'name': 'elixir-ls',
@@ -201,8 +191,29 @@ autocmd User lsp_setup call lsp#register_server({
     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
     \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
     \ })
+
+" Completion settings --------------------
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    nmap <buffer> gd :tab split<cr>:LspDefinition<cr>
+    nmap <buffer> gp <plug>(lsp-peek-definition)
+    nmap <buffer> <f2> <plug>(lsp-rename)
+    nmap <buffer> K <plug>(lsp-hover)
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+    " To auto close preview window when completion is done.
+    autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+    inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
+endfunction
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 " ------> LSP END <-------
-"
 
 " CtrlSF
 
@@ -407,7 +418,6 @@ augroup END
 " }}} }}}
 
 " Custome functions --------------------{{{
-
 function! FoldColumnToggle()
     if &foldcolumn
         setlocal foldcolumn=0
