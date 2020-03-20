@@ -24,3 +24,10 @@ windows:
   - focus: 'true'
     shell_command: zsh
   window_name: shell
+
+- window_name: db
+  panes:
+    - focus: 'false'
+      shell_command:
+        - "docker run -d --name seeker_mysql -v /Users/laixintao/Program/alipay/seekers_db_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=seekers -e  MYSQL_USER=seekers -e  MYSQL_PASSWORD=seekers -p 3306:3306 mysql:5.7 || docker start seeker_mysql"
+        - mycli seekers-local
