@@ -15,15 +15,24 @@ windows:
   panes:
   - focus: 'true'
     shell_command: zsh
-  start_directory: /Users/laixintao/Program/alipay/seekers
-  window_name: shell
+  start_directory: /Users/laixintao/Program/alipay/seekersintegration
+  window_name: seekers-integration
+
 - layout: e2d8,130x37,0,0,86
+  start_directory: /Users/laixintao/Program/alipay/seekers/logs
   options:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: zsh
-  window_name: shell
+    shell_command: ./tail.sh
+  window_name: all-log
+
+- start_directory: /Users/laixintao/Program/alipay/seekers/logs
+  options:
+    automatic-rename: 'off'
+  panes:
+    - shell_command: tail -f seekers/tbf-default.log
+  window_name: tbf-log
 
 - window_name: db
   panes:
