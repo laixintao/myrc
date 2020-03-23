@@ -26,3 +26,4 @@ compile_commands.json
 pip-wheel-metadata/*
 .python-version
 .ccls-cache/
+.yarnrc
