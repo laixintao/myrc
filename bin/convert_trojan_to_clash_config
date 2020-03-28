@@ -1,0 +1,28 @@
+#!/usr/local/var/pyenv/shims/python3
+# -*- coding: utf-8 -*-
+
+import re
+import sys
+import json
+
+
+def convert_trojan(filename):
+    config = json.load(open(filename))
+    names = []
+    index = 0
+    for ss in config["configs"]:
+        match = re.match(r"(\w+),.*?([\d\.]+)", ss["remarks"])
+        name = "{}-{}(${})".format(match.group(1), index, match.group(2))
+        names.append(name)
+        index += 1
+        print(
+            f"- {{ name: \"{name}\", type: trojan, server: {ss['server']}, port: {ss['server_port']}, password: {ss['password']} }}"
+        )
+
+    for name in names:
+        print(f"- \"{name}\"")
+
+
+if __name__ == "__main__":
+    # convert_ss_to_clash_config(sys.argv[1])
+    convert_trojan(sys.argv[1])
