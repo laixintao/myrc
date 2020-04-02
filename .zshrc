@@ -121,11 +121,6 @@ fi
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
-# brew install z.sh
-# https://github.com/rupa/z
-. /usr/local/etc/profile.d/z.sh
-
-
 # fzf settings
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
