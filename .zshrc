@@ -1,3 +1,7 @@
+# uncomment this line to perf, command is `zprof`
+# zmodload zsh/zprof
+
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -51,7 +55,39 @@ ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python z osx sudo extract pyenv)
+plugins=(git python z osx)
+
+
+# pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+# pyenv-virtualenv
+# https://github.com/pyenv/pyenv-virtualenv
+export VIRTUALENV_VERSION=20.0.8
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export ZSH_PYENV_LAZY_VIRTUALENV=1
+
+# load pyenv only when first time call pyenv
+# code from:
+# https://github.com/davidparsson/zsh-pyenv-lazy
+
+# Try to find pyenv, if it's not on the path
+export PYENV_ROOT="${PYENV_ROOT:=${HOME}/.pyenv}"
+if ! type pyenv > /dev/null && [ -f "${PYENV_ROOT}/bin/pyenv" ]; then
+    export PATH="${PYENV_ROOT}/bin:${PATH}"
+fi
+
+# Lazy load pyenv
+if type pyenv > /dev/null; then
+    export PATH="${PYENV_ROOT}/bin:${PYENV_ROOT}/shims:${PATH}"
+    function pyenv() {
+        unset -f pyenv
+        eval "$(command pyenv init -)"
+        if [[ -n "${ZSH_PYENV_LAZY_VIRTUALENV}" ]]; then
+            eval "$(command pyenv virtualenv-init -)"
+        fi
+        pyenv $@
+    }
+fi
 
 
 # User configuration
@@ -81,14 +117,6 @@ test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/op
 # Wasmer
 export WASMER_DIR="/Users/laixintao/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
-# pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-# pyenv-virtualenv
-# https://github.com/pyenv/pyenv-virtualenv
-export VIRTUALENV_VERSION=20.0.8
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
 
@@ -202,7 +230,6 @@ path=(
     $GOROOT/bin
     $HOME/.local/bin                         # pipx
     /Users/laixintao/.cargo/bin              # cargo
-    /Users/laixintao/.pyenv                  # pyenv
     $path
   )
 export PATH=":$PATH"
