@@ -188,6 +188,7 @@ export CPPFLAGS="-I/usr/local/opt/readline/include"
 # For pkg-config to find readline you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 # hook direnv
 # https://github.com/direnv/direnv/blob/master/docs/hook.md
 eval "$(direnv hook zsh)"
