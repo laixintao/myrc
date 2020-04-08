@@ -21,7 +21,7 @@
 [mergetool]
 	prompt = false
 [github]
-	user = laixintaoo@163.com
+	user = laixintaoo@gmail.com
 	username = laixintao
     name = laixintao
 [filter "lfs"]
@@ -30,8 +30,8 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [pager]
-       diff = diff-so-fancy | less --tabs=1,5 -RFX
-       show = diff-so-fancy | less --tabs=1,5 -RFX
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
 	branch = false
 [push]
 	followTags = true
