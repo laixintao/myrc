@@ -1,47 +1,47 @@
 [core]
-	editer = "/usr/local/bin/vim"
-	editor = vim
-	excludesfile = ~/.gitignore_global
-	quotepath = false
+    editer = "/usr/local/bin/vim"
+    editor = vim
+    excludesfile = ~/.gitignore_global
+    quotepath = false
 [user]
-	name = laixintao
-	email = laixintaoo@gmail.com
-	username = laixintao
-	signingkey = 4E7314AC219D7FE4
+    name = laixintao
+    email = laixintaoo@gmail.com
+    username = laixintao
+    signingkey = 4E7314AC219D7FE4
 [alias]
-	pr = pullrequest
-	ck = checkout
-	br = branch
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    pr = pullrequest
+    ck = checkout
+    br = branch
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 [pull]
     rebase = true
 [mergetool]
-	prompt = false
+    prompt = false
 [github]
-	user = laixintaoo@gmail.com
-	username = laixintao
+    user = laixintaoo@gmail.com
+    username = laixintao
     name = laixintao
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 [pager]
     diff = diff-so-fancy | less --tabs=1,5 -RFX
     show = diff-so-fancy | less --tabs=1,5 -RFX
-	branch = false
+    branch = false
 [push]
-	followTags = true
+    followTags = true
 [diff]
-	submodule = log
+    submodule = log
 [commit]
-	gpgsign = true
+    gpgsign = true
 [gpg]
-	program = gpg
+    program = gpg
 [submodule]
-	recurse = true
+    recurse = true
 [http]
-	proxy = http://127.0.0.1:7890
+    proxy = http://127.0.0.1:7890
