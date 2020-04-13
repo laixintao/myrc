@@ -68,7 +68,6 @@ autocmd FileType help noremap <buffer> q :q<cr>
 
 " Plugins --------------------{{{
 call plug#begin('~/.vim/plugged')
-Plug 'gmarik/vundle'                          " Vim Package management
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'                        " zen coding
 Plug 'mattn/webapi-vim'
