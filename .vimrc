@@ -65,9 +65,10 @@ noremap \ ,
 " use q to exit help window
 autocmd FileType help noremap <buffer> q :q<cr>
 
-" <Leader>[1-9] move to window [1-9]
+" <Leader>[1-9] move to tab [1-9]
+" from: https://github.com/liuchengxu/dotfiles/blob/master/vimrc#L74
 for s:i in range(1, 9)
-  execute 'nnoremap <Leader>' . s:i . ' :' . s:i . 'wincmd w<CR>'
+  execute 'nnoremap <Leader>' . s:i . ' ' . s:i . 'gt'
 endfor
 
 " }}}
