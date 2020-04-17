@@ -64,6 +64,12 @@ nnoremap <leader>st :tab split<CR>
 noremap \ ,
 " use q to exit help window
 autocmd FileType help noremap <buffer> q :q<cr>
+
+" <Leader>[1-9] move to window [1-9]
+for s:i in range(1, 9)
+  execute 'nnoremap <Leader>' . s:i . ' :' . s:i . 'wincmd w<CR>'
+endfor
+
 " }}}
 
 " Plugins --------------------{{{
@@ -106,11 +112,11 @@ Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'gabrielelana/vim-markdown'
 " Those two vim-markdown are bad...
-" Plug 'plasticboy/vim-markdown'
-" Plug 'tpope/vim-markdown'
 Plug 'benmills/vimux'
 Plug 'flazz/vim-colorschemes'
 Plug 'dense-analysis/ale'
+" On-demand lazy load
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " post install (yarn install | npm install) then load Plug only for editing supported files
 Plug 'prettier/vim-prettier', {
@@ -127,6 +133,10 @@ colorscheme molokai
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
+
+" Vim WhichKey --------------------{{{ 
+nnoremap <silent> <leader> :WhichKey ','<CR>
+" }}}
 
 " NerdComment
 let g:NERDSpaceDelims = 1
