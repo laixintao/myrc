@@ -240,4 +240,6 @@ export PATH=":$PATH"
 export http_proxy="http://127.0.0.1:7890"
 export all_proxy="http://127.0.0.1:7890"
 
-# export PROMPT="$ "
+function replace(){
+    gsed -i"" "s/$1/$2/g" $(rg $1 -l)
+}
