@@ -142,6 +142,8 @@ nnoremap <silent> <leader> :WhichKey ','<CR>
 " NerdComment
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
+nnoremap <leader>cp :%s/\(print(.*)\)/# \1/g<CR>
+nnoremap <leader>cc :%s/# \(print(.*)\)/\1/g<CR>
 
 " vim 8 / neovim HEAD runtime: when ft==python, cms:=#\ %s
 " "   -- when g:NERDSpaceDelims==1, then NERDComment results in double space
