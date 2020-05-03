@@ -135,7 +135,7 @@ let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 let g:gist_open_browser_after_post = 1
 
-" Vim WhichKey --------------------{{{ 
+" Vim WhichKey --------------------{{{
 nnoremap <silent> <leader> :WhichKey ','<CR>
 " }}}
 
@@ -596,6 +596,17 @@ augroup END
 let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 
+" Copy leetcode solution into system clipboard
+" how it works:
+" line 1: format code
+" 2: select Solution block
+" 3: comment out all prints
+" 4: copy to system clip board
+nnoremap <leader>l :ALEFix<CR>
+    \ /class Solution:<CR>V/\n\n\n<CR>
+        \ :s/\(^\s\+\)\(print(.*)\)/\1# \2/g<CR>
+    \ /class Solution:<CR>V/\n\n\n<CR>"+y
+
+
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
-"
