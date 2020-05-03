@@ -351,7 +351,7 @@ augroup END
 " }}}
 
 " vimux settings --------------------{{{
-nnoremap <leader>rp :w<CR>:VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
+nnoremap <leader>rp :w!<CR>:VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
 " Prompt for a command to run
 nnoremap <Leader>ri :VimuxPromptCommand<CR>
 " Close vim tmux runner opened by VimuxRunCommand
