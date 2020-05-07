@@ -603,8 +603,6 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 " 3: comment out all prints
 " 4: copy to system clip board
 nnoremap <leader>l :ALEFix<CR>
-    \ /class Solution:<CR>V/\n\n\n<CR>
-        \ :s/\(^\s\+\)\(print(.*)\)/\1# \2/g<CR>
     \ /class Solution:<CR>V/\n\n\n<CR>"+y
 
 
