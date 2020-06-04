@@ -119,11 +119,6 @@ Plug 'dense-analysis/ale'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
-" post install (yarn install | npm install) then load Plug only for editing supported files
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] }
-
 call plug#end()
 
 " }}}
@@ -205,6 +200,9 @@ autocmd User lsp_setup call lsp#register_server({
     \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript'],
     \ })
 
+" type script --------------------{{{ 
+nnoremap <leader>i :LspCodeAction<CR>
+" }}}
 " Completion settings --------------------
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
