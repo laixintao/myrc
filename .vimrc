@@ -157,27 +157,20 @@ let g:ctrlsf_auto_focus = {
 
 " CLang --------------------{{{
 " Register ccls C++ lanuage server.
-   au User lsp_setup call lsp#register_server({
-      \ 'name': 'ccls',
-      \ 'cmd': {server_info->['ccls']},
-      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-      \ })
+   " au User lsp_setup call lsp#register_server({
+   "    \ 'name': 'ccls',
+   "    \ 'cmd': {server_info->['ccls']},
+   "    \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+   "    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+   "    \ })
 " }}}
 
 " Elixir --------------------{{{
-function SetupElixir()
-    " Map keys for lsp
-    nnoremap <buffer> <leader>= :LspDocumentFormat<cr>
-endfunction
-
 augroup elixir_lang
     autocmd!
     " See https://github.com/elixir-editors/vim-elixir/issues/121
     autocmd BufRead,BufNewFile *.ex,*.exs set filetype=elixir
     autocmd BufRead,BufNewFile *.eex set filetype=eelixir
-
-    autocmd FileType elixir,eelixir :call SetupElixir()
 augroup end
 " }}}
 
