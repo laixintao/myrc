@@ -107,7 +107,6 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'benmills/vimux'
 Plug 'flazz/vim-colorschemes'
-Plug 'dense-analysis/ale'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
@@ -139,22 +138,9 @@ let g:NERDDefaultAlign = 'left'
 nnoremap <leader>cp :%s/\(print(.*)\)/# \1/g<CR>
 nnoremap <leader>cq :%s/# \(print(.*)\)/\1/g<CR>
 
-" ALE--------------------{{{
-let g:ale_fixers = {
-            \   '*': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
-            \   'python': ['black'],
-            \}
-" Default fixer: ALE
-nmap <leader>= :ALEFix<cr>
-nmap [e :ALEPrevious<cr>
-nmap ]e :ALENext<cr>
-let b:ale_javascript_prettier_options = '--prose-wrap always'
-" }}}
-
 
 
 " CtrlSF
-
 nmap     <leader>ff <Plug>CtrlSFPrompt
 vmap     <leader>ff <Plug>CtrlSFVwordPath
 vmap     <leader>fF <Plug>CtrlSFVwordExec
@@ -326,20 +312,16 @@ augroup END
 
 
 " Javascript-like Language --------------------{{{
-function SetupJavascript()
-    set sw=2 ts=2
-    " Javascript-like language --> Prettier
-    " default <leader>p
-    let g:prettier#config#parser = 'babylon'
-    let g:prettier#config#bracket_spacing = 'true'
-    nmap <buffer> <Leader>= <Plug>(Prettier)
-endfunction
 
-augroup html_lang
+augroup javascript_lang
     autocmd!
     autocmd BufNewFile,BufRead *.html setlocal nowrap
     autocmd FileType javascript set filetype=javascript.jsx
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv :call SetupJavascript()
+
+    command! -nargs=0 Prettier :CocCommand prettier.formatFile
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact vmap <leader>=  <Plug>(coc-format-selected)
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact nmap <leader>=  <Plug>(coc-format-selected)
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact set sw=2 ts=2
 augroup END
 " }}}
 
