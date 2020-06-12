@@ -322,7 +322,13 @@ augroup javascript_lang
     autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact vmap <leader>=  <Plug>(coc-format-selected)
     autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact nmap <leader>=  <Plug>(coc-format-selected)
     autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact set sw=2 ts=2
-augroup END
+augroup end
+" }}}
+
+" Python --------------------{{{ 
+augroup python_lang
+    autocmd FileType python nmap <leader>=  <Plug>(coc-format)
+augroup end
 " }}}
 
 " VimScript file settings --------------------{{{
@@ -504,19 +510,11 @@ let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
 
 " Copy leetcode solution into system clipboard
-" how it works:
-" line 1: format code
-" 2: select Solution block
-" 3: comment out all prints
-" 4: copy to system clip board
-nnoremap <leader>l :ALEFix<CR>
-    \ /class Solution:<CR>V/\n\n\n<CR>"+y
+nnoremap <leader>l /class Solution:<CR>V/\n\n\n<CR>"+y
 
 
 " Ref
 " For C/C++ https://gist.github.com/rocarvaj/2513367
-
-
 
 
 " TextEdit might fail if hidden is not set.
@@ -598,10 +596,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!

@@ -15,3 +15,4 @@ fixture/weekly_report_template.md
 .config/pgcli/history
 node_modules/*
 node_modules
+.config/coc/memos.json
