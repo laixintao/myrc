@@ -1,0 +1,4 @@
+{
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/Users/laixintao/.local/bin/black"
+}
