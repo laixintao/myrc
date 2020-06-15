@@ -312,8 +312,8 @@ augroup javascript_lang
     autocmd FileType javascript set filetype=javascript.jsx
 
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript vmap <leader>=  <Plug>(coc-format-selected)
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript nmap <leader>=  <Plug>(coc-format-selected)
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript,markdown vmap <leader>=  <Plug>(coc-format-selected)
+    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript,markdown nmap <leader>=  <Plug>(coc-format)
     autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript set sw=2 ts=2
 augroup end
 " }}}
