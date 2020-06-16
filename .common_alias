@@ -40,6 +40,10 @@ alias gpc='git pullrequest create $(git branch | grep \* | cut -d " " -f2) maste
 alias gcn='git commit -v --no-verify'
 alias gme='GIT_COMMITTER_DATE="$(gdate --date=20:43)"; git commit --date $GIT_COMMITTER_DATE'  # private work
 
+# find for hidden files
+alias fd='fd -HI'
+alias clean-log='fd -HI -e log -x rm -rf'
+
 # https://www.commandlinefu.com/commands/view/9065/what-is-the-use-of-this-switch-
 function manswitch () { man $1 | less -p "^ +$2"; }
 
