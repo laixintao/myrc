@@ -121,6 +121,7 @@ libvpx
 libyaml
 little-cms2
 llvm
+lnav
 lua
 lzo
 maven
@@ -130,6 +131,7 @@ mkcert
 mongodb
 mosh
 mpfr
+multitail
 mysql
 mysql-client
 mysql-connector-c
@@ -166,6 +168,7 @@ pipx
 pixman
 pkg-config
 postgresql
+prettier
 prettyping
 protobuf
 proxychains-ng
@@ -189,6 +192,7 @@ rubberband
 ruby
 rust
 sbcl
+scc
 sdl2
 snappy
 source-highlight
@@ -206,6 +210,7 @@ unixodbc
 utf8proc
 vault
 vim
+watch
 webp
 wget
 wrk
