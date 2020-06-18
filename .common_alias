@@ -42,7 +42,7 @@ alias gme='GIT_COMMITTER_DATE="$(gdate --date=20:43)"; git commit --date $GIT_CO
 
 # find for hidden files
 alias fd='fd -HI'
-alias clean-log='fd -HI -e log -x rm -rf'
+alias clean-log='\fd -HI -e log -x rm -rf'
 
 # https://www.commandlinefu.com/commands/view/9065/what-is-the-use-of-this-switch-
 function manswitch () { man $1 | less -p "^ +$2"; }
