@@ -1,0 +1,4 @@
+#!/bin/sh
+# set -ex
+_git_url=$(git remote -v | grep push | awk -F " " '{print $2}' | sed 's/git@//;s/:/\//;s/.git//' )
+echo http://$_git_url/tree/$(git rev-parse --abbrev-ref HEAD)
