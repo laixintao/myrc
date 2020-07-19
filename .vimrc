@@ -107,6 +107,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'benmills/vimux'
 Plug 'flazz/vim-colorschemes'
+Plug 'nathangrigg/vim-beancount'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
@@ -290,7 +291,7 @@ augroup iabbrevs
     autocmd!
     " long comment
     autocmd FileType python,coffee :iabbrev <buffer> #-- #-----------<left><left><left><left><left><left>
-    autocmd FileType coffee :iabbrev <buffer> cl console.log
+    :iab <expr> dd strftime("%Y-%M-%d")
 augroup END
 " }}}
 
