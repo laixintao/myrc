@@ -291,7 +291,7 @@ augroup iabbrevs
     autocmd!
     " long comment
     autocmd FileType python,coffee :iabbrev <buffer> #-- #-----------<left><left><left><left><left><left>
-    :iab <expr> dd strftime("%Y-%M-%d")
+    :iab <expr> dd strftime("%Y-%m-%d")
 augroup END
 " }}}
 
