@@ -69,5 +69,5 @@ commit_date = get_first_uncommited_day(stat)
 print("Commit date is: {}".format(commit_date.strftime("%Y-%m-%d")))
 
 subprocess.run(
-    ["git", "commit", "--date={}".format(commit_date.timestamp()),] + sys.argv
+    ["git", "commit", "--date={}".format(commit_date.timestamp()),] + sys.argv[1:]
 )
