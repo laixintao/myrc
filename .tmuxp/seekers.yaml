@@ -1,20 +1,32 @@
 session_name: seekers
 windows:
-- focus: 'true'
-  layout: e2d6,130x37,0,0,84
+- layout: e2d6,130x37,0,0,84
   options:
     automatic-rename: 'off'
   panes:
-  - focus: 'true'
-    shell_command: zsh
+  -   shell_command: zsh
   start_directory: /Users/laixintao/Program/alipay/seekers
   window_name: seekers
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'false'
+    shell_command: zsh
+  start_directory: /Users/laixintao/Program/alipay/seekersweb
+  window_name: seekersweb
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'false'
+    shell_command: tnpm run start
+  - shell_command: 
+  start_directory: /Users/laixintao/Program/alipay/seekersweb
+  window_name: run-seekersweb
 - layout: e2d7,130x37,0,0,85
   options:
     automatic-rename: 'off'
   panes:
-  - focus: 'true'
-    shell_command: zsh
+  -   shell_command: zsh
   start_directory: /Users/laixintao/Program/alipay/seekersintegration
   window_name: seekers-integration
 
@@ -23,8 +35,7 @@ windows:
   options:
     automatic-rename: 'off'
   panes:
-  - focus: 'true'
-    shell_command: ./tail.sh
+  -   shell_command: ./tail.sh
   window_name: all-log
 
 - start_directory: /Users/laixintao/Program/alipay/seekers/logs

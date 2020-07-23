@@ -17,3 +17,4 @@ node_modules/*
 node_modules
 .config/coc/memos.json
 .config/coc/extensions/coc-go-data/
+.config/coc/history.json
