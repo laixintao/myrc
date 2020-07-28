@@ -5,8 +5,7 @@ windows:
   options:
     automatic-rename: 'off'
   panes:
-    - shell_command:
-      - workon easycron-backend
+    - pyenv
   start_directory: /Users/laixintao/Program/easycron/easycron-backend
   window_name: backend
 - layout: 019e,238x57,0,0[238x28,0,0,12,238x28,0,29{119x28,0,29,27,118x28,120,29,33}]
@@ -14,11 +13,9 @@ windows:
     automatic-rename: 'off'
   panes:
     - shell_command:
-      - cd /Users/laixintao/Program/easycron/easycron-backend
-      - workon easycron-backend
+      - pyenv
     - shell_command:
-      - cd /Users/laixintao/Program/easycron/easycron-backend
-      - workon easycron-backend
+      - pyenv
       - python manage.py runserver 8004
   start_directory: /Users/laixintao/Program/easycron/easycron-backend
   window_name: backend-panel
@@ -28,7 +25,7 @@ windows:
   panes:
   - focus: 'true'
     shell_command: 
-      - workon easycron-worker
+      - pyenv
   start_directory: /Users/laixintao/Program/easycron/easycron-worker
   window_name: worker-dev
 - layout: e319,173x46,0,0,49
@@ -55,16 +52,15 @@ windows:
   panes:
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-beat
-    - workon easycron-beat
+    - pyenv
     - celery beat -S redbeat.RedBeatScheduler --config config -l info
   - shell_command:
-    - cd backend
     - cd /Users/laixintao/Program/easycron/easycron-backend
-    - workon easycron-backend
+    - pyenv
     - python manage.py celery_event_handler
   - shell_command:
     - cd /Users/laixintao/Program/easycron/easycron-worker
-    - workon easycron-worker
+    - pyenv
     - celery worker -A main -l info --config=config -E
   window_name: running-shell
 - layout: 6314,173x46,0,0,53
@@ -72,7 +68,7 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: redis-cli
+    shell_command: iredis
   start_directory: /Users/laixintao
   window_name: redis
 - layout: 6314,173x46,0,0,53
@@ -80,6 +76,6 @@ windows:
     automatic-rename: 'off'
   panes:
   - focus: 'true'
-    shell_command: mycli -u root easycron --auto-vertical-output
+    shell_command: pgcli -U postgres -h 127.0.0.1 easycron
     start_directory: /Users/laixintao
   window_name: db
