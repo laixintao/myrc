@@ -87,7 +87,6 @@ Plug 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打�
 Plug 'ctrlpvim/ctrlp.vim'                     " 模糊查找
 Plug 'terryma/vim-multiple-cursors'           " 多光标编辑
 Plug 'tpope/vim-fugitive'                     " git插件 （Blame)
-Plug 'SirVer/ultisnips'                       " 代码片段
 Plug 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
 Plug 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
 Plug 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
@@ -177,10 +176,6 @@ augroup end
 
 
 nnoremap <leader>b :Gblame<CR>
-" UltiSnips triggering
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 nnoremap <F8> :TagbarToggle<CR>
 
@@ -537,6 +532,25 @@ else
   set signcolumn=yes
 endif
 
+" coc snippets --------------------{{{ 
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" }}}
+
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -550,6 +564,7 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
