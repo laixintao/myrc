@@ -4,6 +4,7 @@
     "coc-json": ">=1.2.6",
     "coc-prettier": ">=1.1.14",
     "coc-python": ">=1.2.12",
+    "coc-snippets": ">=2.1.28",
     "coc-tsserver": ">=1.5.1"
   }
 }
