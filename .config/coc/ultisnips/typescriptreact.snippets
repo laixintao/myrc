@@ -1,0 +1,49 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+# stolen from https://github.com/mlaursen/vim-react-snippets/blob/master/UltiSnips/typescript.snippets
+
+snippet rccps "react class exported (with prop and state interfaces)" b
+import React, { Component } from "react";
+
+export interface $1Props {
+}
+
+export interface $1State {
+}
+
+export default class ${1:`!v expand('%:t:r')`} extends Component<$1Props, $1State> {
+	constructor(props: $1Props) {
+		super(props);
+
+		this.state = {};
+	}
+
+	public render() {
+		return ${2:null};$0
+	}
+}
+endsnippet
