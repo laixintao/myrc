@@ -107,6 +107,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'benmills/vimux'
 Plug 'flazz/vim-colorschemes'
 Plug 'nathangrigg/vim-beancount'
+Plug 'tyru/open-browser.vim' " preview plantuml
+Plug 'aklt/plantuml-syntax'
+Plug 'weirongxu/plantuml-previewer.vim'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
