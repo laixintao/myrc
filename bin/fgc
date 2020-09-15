@@ -11,7 +11,7 @@ username = "laixintao"
 
 
 def download_stat():
-    start = (datetime.datetime.now() - datetime.timedelta(days=365)).strftime(
+    start = (datetime.datetime.now() - datetime.timedelta(days=363)).strftime(
         "%Y-%m-%d"
     )
     end = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime(
@@ -35,7 +35,7 @@ def download_stat():
         "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,zh-TW;q=0.7,ja;q=0.6,de;q=0.5,ko;q=0.4,mt;q=0.3",
     }
 
-    # print(start, end)
+    print(start, end)
     conn.request(
         "GET",
         "/users/{}/contributions?from={}&to={}".format(username, start, end),
@@ -45,6 +45,8 @@ def download_stat():
 
     res = conn.getresponse()
     data = res.read()
+    print("download github.com/users/{}/contributions?from={}&to={}".format(username, start, end))
+    print(data)
     return data.decode("utf-8")
 
 
@@ -53,6 +55,7 @@ def parse_xml(xml):
     match = re.findall(r'<rect.*data-count="(\d+)".*data-date="([\d-]+)".*', xml)
     data = {k: v for v, k in match}
     count = {}
+    print(data)
 
     for key, value in data.items():
         date_key = datetime.datetime.strptime(key, "%Y-%m-%d")
@@ -62,7 +65,7 @@ def parse_xml(xml):
 
 def get_first_uncommited_day(stat_data):
     for date in sorted(stat_data.keys()):
-        # print(date, stat_data[date])
+        print(date, stat_data[date])
         if stat_data[date] == 0:
             return date
 
