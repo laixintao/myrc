@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "coc-go": ">=0.8.0",
+    "coc-go": ">=0.12.0",
     "coc-json": ">=1.2.6",
-    "coc-prettier": ">=1.1.14",
+    "coc-prettier": ">=1.1.17",
     "coc-python": ">=1.2.12",
-    "coc-snippets": ">=2.1.28",
-    "coc-tsserver": ">=1.5.1"
+    "coc-snippets": ">=2.2.1",
+    "coc-tsserver": ">=1.5.7"
   }
 }
