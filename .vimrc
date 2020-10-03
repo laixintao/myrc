@@ -253,8 +253,6 @@ augroup nerdtree_settings
 augroup END
 " }}}
 
-" vimux settings --------------------{{{
-nnoremap <leader>rp :w!<CR>:VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
 " Prompt for a command to run
 nnoremap <Leader>ri :VimuxPromptCommand<CR>
 " Close vim tmux runner opened by VimuxRunCommand
@@ -320,9 +318,17 @@ augroup end
 " Python --------------------{{{ 
 augroup python_lang
     autocmd FileType python nmap <leader>=  <Plug>(coc-format)
+    autocmd FileType python nnoremap <leader>rp :w!<CR>:call VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
 augroup end
 " }}}
 
+" Golang --------------------{{{ 
+augroup go_lang
+    autocmd FileType go nmap <leader>=  <Plug>(coc-format)
+    autocmd FileType go nnoremap <leader>rp :w!<CR>:call VimuxRunCommand("clear; go run " . bufname("%"))<CR>
+augroup end
+
+" }}}
 " VimScript file settings --------------------{{{
 augroup filetype_vim
     autocmd!
