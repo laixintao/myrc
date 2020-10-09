@@ -1,0 +1,25 @@
+#!/bin/sh
+# set ft: sh
+
+# Quickly push the last commit in a different branch.
+# 
+# Usage: git quickfix bugfix/fix-something
+
+set -euo pipefail
+
+# quickfix, inspired by:
+# https://github.com/siedentop/git-quickfix
+
+last_commit=$(git rev-parse HEAD)
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+# found base branch: https://stackoverflow.com/a/17843908/6931919
+parent_branch=$(git show-branch \
+    | sed "s/].*//" \
+    | grep "\*" \
+    | grep -v "$(git rev-parse --abbrev-ref HEAD)" \
+    | head -n1 \
+    | sed "s/^.*\[//")
+git checkout -b $1 $parent_branch
+git cherry-pick $last_commit
+git push --set-upstream origin $1:$1
+git checkout $current_branch
