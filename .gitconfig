@@ -3,6 +3,7 @@
     editor = vim
     excludesfile = ~/.gitignore_global
     quotepath = false
+	autocrlf = input
 [user]
     name = laixintao
     email = laixintaoo@gmail.com
@@ -13,6 +14,7 @@
     ck = checkout
     br = branch
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
 [merge]
     tool = vimdiff
     conflictstyle = diff3
