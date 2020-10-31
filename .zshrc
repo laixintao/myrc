@@ -231,6 +231,7 @@ path=(
     $GOROOT/bin
     $HOME/.local/bin                         # pipx
     /Users/laixintao/.cargo/bin              # cargo
+    /usr/local/texlive/2020basic/bin/x86_64-darwin/ #latex
     $path
   )
 export PATH=":$PATH"
