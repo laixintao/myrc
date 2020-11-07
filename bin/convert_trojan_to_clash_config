@@ -11,9 +11,8 @@ def convert_trojan(filename):
     names = []
     index = 0
     for ss in config["configs"]:
-        match = re.match(r"(\w+),.*?([\d\.]+)", ss["remarks"])
-        name = "{}-{}(${})".format(match.group(1), index, match.group(2))
-        names.append(name)
+        name = ss['remarks']
+        names.append(ss['remarks'])
         index += 1
         print(
             f"- {{ name: \"{name}\", type: trojan, server: {ss['server']}, port: {ss['server_port']}, password: {ss['password']} }}"
