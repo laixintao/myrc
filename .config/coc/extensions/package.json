@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "coc-go": ">=0.12.0",
+    "coc-go": ">=0.12.1",
     "coc-json": ">=1.2.6",
     "coc-prettier": ">=1.1.17",
     "coc-python": ">=1.2.12",
