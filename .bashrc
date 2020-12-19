@@ -113,3 +113,4 @@ fi
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source ~/.autoenv/activate.sh
