@@ -2,9 +2,9 @@
   "dependencies": {
     "coc-go": ">=0.12.1",
     "coc-json": ">=1.2.6",
-    "coc-prettier": ">=1.1.17",
-    "coc-python": ">=1.2.12",
-    "coc-snippets": ">=2.2.1",
-    "coc-tsserver": ">=1.5.7"
+    "coc-prettier": ">=1.1.20",
+    "coc-python": ">=1.2.13",
+    "coc-snippets": ">=2.3.1",
+    "coc-tsserver": ">=1.6.6"
   }
 }
