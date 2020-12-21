@@ -227,6 +227,7 @@ path=(
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
     $HOME/bin
+    $HOME/shopee-bin
     $GOPATH/bin                              # golang
     $GOROOT/bin
     $HOME/.local/bin                         # pipx
