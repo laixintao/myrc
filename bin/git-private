@@ -1,2 +1,3 @@
-git config user.email "nanshi.lxt@alipay.com"
-git config commit.gpgsign false
+git config user.email "xintao.lai@shopee.com"
+git config commit.gpgsign true
+git config user.signingkey 3C1B36C2FE4C34F8
