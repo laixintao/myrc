@@ -45,8 +45,6 @@
     program = gpg
 [submodule]
     recurse = true
-[http]
-    proxy = http://127.0.0.1:7890
 [color]
 	ui = true
 [color "diff-highlight"]
