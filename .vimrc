@@ -302,16 +302,25 @@ augroup END
 
 
 " Javascript-like Language --------------------{{{
-
 augroup javascript_lang
     autocmd!
     autocmd BufNewFile,BufRead *.html setlocal nowrap
     autocmd FileType javascript set filetype=javascript.jsx
 
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript,markdown vmap <leader>=  <Plug>(coc-format-selected)
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript,markdown nmap <leader>=  <Plug>(coc-format)
-    autocmd FileType coffee,html,css,xml,yaml,json,js,javascript,dot,gv,typescriptreact,typescript set sw=2 ts=2
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript,markdown vmap <leader>=  <Plug>(coc-format-selected)
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript,markdown nmap <leader>=  <Plug>(coc-format)
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set sw=2 ts=2
+augroup end
+" }}}
+
+" JSON --------------------{{{
+augroup json_lang
+    autocmd!
+    autocmd BufNewFile,BufRead *.html setlocal nowrap
+    autocmd FileType json nmap <leader>=  :%!jq .<CR>
+    autocmd FileType json vmap <leader>=  :%!jq .<CR>
+    autocmd FileType json set sw=2 ts=2
 augroup end
 " }}}
 

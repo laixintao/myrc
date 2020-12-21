@@ -23,6 +23,10 @@ Now support:
 - custom zsh theme
 - automatic load dev enviroment via tmux
 
+# Install COC
+
+Go to `myrc/.config/coc/extensions` run `npm install`.
+
 
 # usage
 
