@@ -19,3 +19,5 @@ node_modules
 .config/coc/extensions/coc-go-data/
 .config/coc/history.json
 .config/coc/snippets-mru
+.config/coc/list-lists-history.json
+.config/coc/list-location-history.json
