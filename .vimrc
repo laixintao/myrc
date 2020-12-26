@@ -335,6 +335,33 @@ augroup end
 augroup go_lang
     autocmd FileType go nmap <leader>=  <Plug>(coc-format)
     autocmd FileType go nnoremap <leader>rp :w!<CR>:call VimuxRunCommand("clear; go run " . bufname("%"))<CR>
+    let g:tagbar_type_go = {
+      \ 'ctagstype' : 'go',
+      \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+      \ ],
+      \ 'sro' : '.',
+      \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+      \ },
+      \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+      \ },
+      \ 'ctagsbin'  : 'gotags',
+      \ 'ctagsargs' : '-sort -silent'
+    \ }
 augroup end
 
 " }}}
@@ -600,6 +627,9 @@ endif
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Quick fix
+nmap <silent><nowait> <leader>x :<C-u>CocFix<CR>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
