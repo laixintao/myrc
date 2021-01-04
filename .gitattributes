@@ -1,2 +1,3 @@
 .config/clash/config.yaml filter=git-crypt diff=git-crypt
 bin/toc-ssh filter=git-crypt diff=git-crypt
+bin/git-private filter=git-crypt diff=git-crypt
