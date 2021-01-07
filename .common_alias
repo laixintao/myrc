@@ -53,3 +53,4 @@ milliseconds() { echo $(date -d @$(($1 / 1000))) }
 
 
 # alias iredis="/Users/laixintao/.virtualenvs/iredis/bin/iredis"
+alias vg="vagrant global-status"
