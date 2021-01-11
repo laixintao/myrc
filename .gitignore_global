@@ -27,3 +27,4 @@ pip-wheel-metadata/*
 .python-version
 .ccls-cache/
 .yarnrc
+local_test/*

@@ -21,3 +21,4 @@ node_modules
 .config/coc/snippets-mru
 .config/coc/list-lists-history.json
 .config/coc/list-location-history.json
+local_test/*
