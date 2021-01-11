@@ -247,3 +247,4 @@ function replace(){
 }
 
 unset __PYVENV_LAUNCHER__
+export ANSIBLE_NOCOWS=1
