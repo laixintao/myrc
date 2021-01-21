@@ -22,3 +22,4 @@ node_modules
 .config/coc/list-lists-history.json
 .config/coc/list-location-history.json
 local_test/*
+.config/coc/list-commands-history.json
