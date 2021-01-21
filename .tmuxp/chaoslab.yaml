@@ -1,0 +1,47 @@
+session_name: chaoslab
+windows:
+- layout:
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/chaoslab
+  window_name: chaoslab
+- options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  - shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/chaoslab
+  window_name: shell
+- focus: 'true'
+  layout: deb0,185x53,0,0,21
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/chaoslab
+  window_name: running
+
+- layout:
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/chaoslab/web
+  window_name: frontend
+
+- layout:
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  - shell_command: npm run start
+  start_directory: /Users/xintao.lai/Programs/shopee/chaoslab/web
+  window_name: frontend-running
+
