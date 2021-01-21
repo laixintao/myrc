@@ -2,8 +2,6 @@
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
   "prettier.proseWrap": "always",
-  "python.jediPath": "/usr/local/var/pyenv/versions/coc-python-dependecies/lib/python3.8/site-packages",
-  "python.ropePath": "/usr/local/var/pyenv/versions/coc-python-dependecies/lib/python3.8/site-packages",
   "go.goplsOptions": {
     "completeUnimported": true
   }
