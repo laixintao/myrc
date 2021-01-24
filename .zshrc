@@ -154,14 +154,6 @@ export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# --------------------------------
-# Install awesome tools!
-# 1. brew install z
-# 2. brew install fpp
-# 3. brew install autojump *
-# 4. brew install fd
-# 5. brew install fzf
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # pip zsh completion start
@@ -189,9 +181,6 @@ export CPPFLAGS="-I/usr/local/opt/readline/include"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-# hook direnv
-# https://github.com/direnv/direnv/blob/master/docs/hook.md
-eval "$(direnv hook zsh)"
 
 
 # -------------------
@@ -226,6 +215,7 @@ path=(
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
+    /opt/homebrew/bin
     $HOME/bin
     $HOME/shopee-bin
     $GOPATH/bin                              # golang
@@ -248,3 +238,7 @@ function replace(){
 
 unset __PYVENV_LAUNCHER__
 export ANSIBLE_NOCOWS=1
+
+# hook direnv
+# https://github.com/direnv/direnv/blob/master/docs/hook.md
+eval "$(direnv hook zsh)"
