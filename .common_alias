@@ -1,9 +1,5 @@
 #!/bin/sh
-alias ls='ls --color=auto'
 alias ll='ls -ahlF'
-alias la='ls -A'
-alias l='ls -CF'
-alias vim='/usr/local/bin/vim'
 
 # verbose
 alias mkdir='mkdir -v'
@@ -54,3 +50,5 @@ milliseconds() { echo $(date -d @$(($1 / 1000))) }
 
 # alias iredis="/Users/laixintao/.virtualenvs/iredis/bin/iredis"
 alias vg="vagrant global-status"
+
+alias abrew="/opt/homebrew/bin/brew"
