@@ -136,6 +136,9 @@ setopt SHARE_HISTORY
 if [ -f ~/.common_alias ]; then
     . ~/.common_alias
 fi
+if [ -f ~/.my_alias ]; then
+    . ~/.my_alias
+fi
 # sensitive_alias
 if [ -f ~/.sensitive_alias ]; then
     . ~/.sensitive_alias
