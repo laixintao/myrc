@@ -12,7 +12,7 @@ windows:
     panes:
       - focus: "true"
         shell_command: pyenv
-      - shell_command: pyenv
+      - shell_command: make runserver
     start_directory: /Users/xintao.lai/Programs/shopee/chaoslab
     window_name: shell
   - layout: deb0,185x53,0,0,21
@@ -39,7 +39,7 @@ windows:
     panes:
       - focus: "true"
         shell_command: pyenv
-      - shell_command: npm run start
+      - shell_command: HOST=chaoslab.dev.shopee.io npm start
     start_directory: /Users/xintao.lai/Programs/shopee/chaoslab/web
     window_name: frontend-running
 
