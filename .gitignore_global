@@ -28,3 +28,4 @@ pip-wheel-metadata/*
 .ccls-cache/
 .yarnrc
 local_test/*
+chaoslab_agent/bin/*

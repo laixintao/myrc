@@ -24,3 +24,4 @@ node_modules
 local_test/*
 .config/coc/list-commands-history.json
 .config/lnav/
+bin/blade
