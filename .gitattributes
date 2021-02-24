@@ -4,4 +4,5 @@ bin/*ssh filter=git-crypt diff=git-crypt
 bin/git-private filter=git-crypt diff=git-crypt
 bin/install_shopee_pipx.sh filter=git-crypt diff=git-crypt
 bin/get-spexagent-test-ip filter=git-crypt diff=git-crypt
+bin/get-spex-deploy-info filter=git-crypt diff=git-crypt
 .my_alias filter=git-crypt diff=git-crypt
