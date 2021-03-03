@@ -178,12 +178,12 @@ export BAT_CONFIG_PATH="/Users/laixintao/.bat.conf"
 
 # GNU Readline
 # For compilers to find readline you may need to set:
-export LDFLAGS="-L/usr/local/opt/readline/lib"
-export CPPFLAGS="-I/usr/local/opt/readline/include"
+export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/readline/include -I/usr/local/opt/openssl@1.1/include"
 # For pkg-config to find readline you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl@1.1/lib/pkgconfig
 
 
 # -------------------
@@ -214,6 +214,7 @@ typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 
 path=(
     /usr/local/opt/sqlite/bin
+    /usr/local/opt/openssl@1.1/bin
     /usr/local/opt/curl/bin                  # curl in brew
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
