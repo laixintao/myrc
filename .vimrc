@@ -312,6 +312,7 @@ augroup javascript_lang
     autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript,markdown vmap <leader>=  <Plug>(coc-format-selected)
     autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript,markdown nmap <leader>=  <Plug>(coc-format)
     autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set sw=2 ts=2
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set foldmethod=indent
 augroup end
 " }}}
 
