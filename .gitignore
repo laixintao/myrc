@@ -25,3 +25,4 @@ local_test/*
 .config/coc/list-commands-history.json
 .config/lnav/
 bin/blade
+.config/coc/*-history.json
