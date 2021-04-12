@@ -111,6 +111,8 @@ Plug 'nathangrigg/vim-beancount'
 Plug 'tyru/open-browser.vim' " preview plantuml
 Plug 'aklt/plantuml-syntax'
 Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'laixintao/vim-textobj-ipmac'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
