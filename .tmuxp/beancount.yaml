@@ -1,6 +1,6 @@
 session_name: '2'
 windows:
-- layout: 6255,174x55,0,0,35
+- layout: tiled
   options:
     automatic-rename: 'off'
   panes:
@@ -8,17 +8,13 @@ windows:
     shell_command: pyenv && vim
   start_directory: /Users/xintao.lai/Programs/beancount-file
   window_name: beancount
-- layout: 6256,174x55,0,0,36
+- layout: main-vertical
   options:
     automatic-rename: 'off'
   panes:
   - shell_command: pyenv
+  - shell_command: 
+    - pyenv
+    - fava accounting/main.bean --host=127.0.0.1
   start_directory: /Users/xintao.lai/Programs/beancount-file
   window_name: scripts
-- layout: 6257,174x55,0,0,37
-  options:
-    automatic-rename: 'off'
-  panes:
-  - shell_command: pyenv && fava accounting/main.bean --host=127.0.0.1
-  start_directory: /Users/xintao.lai/Programs/beancount-file
-  window_name: running
