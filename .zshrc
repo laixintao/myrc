@@ -246,3 +246,5 @@ export ANSIBLE_NOCOWS=1
 # hook direnv
 # https://github.com/direnv/direnv/blob/master/docs/hook.md
 eval "$(direnv hook zsh)"
+
+. ~/.scrects_export
