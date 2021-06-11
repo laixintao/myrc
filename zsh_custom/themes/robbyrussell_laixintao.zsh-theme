@@ -1,4 +1,4 @@
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 local pyenv_prompt_zsh=""
 
 if [[ ! -z ${PYENV_VIRTUAL_ENV##*/} ]]; then
