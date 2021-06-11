@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=13
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-ZSH_CUSTOM=/Users/laixintao/Program/myrc/zsh_custom
+ZSH_CUSTOM=/Users/xintao.lai/Programs/myrc/zsh_custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
