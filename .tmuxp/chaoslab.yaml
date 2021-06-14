@@ -53,6 +53,6 @@ windows:
     window_name: agent-run
     panes:
       - pyenv
-      - make run
+      - make run-as-physical
       - tail -f chaoslab-agent.log
     start_directory: /Users/xintao.lai/Programs/shopee/chaoslab-agent
