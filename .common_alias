@@ -23,7 +23,7 @@ alias vf='vim $(fzf --preview "file {}" --preview-window down:1   --inline-info)
 # open typora note
 alias note="open -a typora /Users/laixintao/Program/gist"
 
-alias cat="bat"
+alias cat="bat --plain"
 alias ping="prettyping"
 
 alias a=ansible
