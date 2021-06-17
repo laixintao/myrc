@@ -723,3 +723,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+vnoremap al :<C-U>normal 0v$h<CR>
+omap al :normal val<CR>
+vnoremap il :<C-U>normal ^vg_<CR>
+omap il :normal vil<CR>
