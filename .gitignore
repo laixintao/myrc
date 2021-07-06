@@ -26,3 +26,4 @@ local_test/*
 .config/lnav/
 bin/blade
 .config/coc/*-history.json
+.config/wireshark/preferences
