@@ -219,6 +219,7 @@ path=(
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
+    /usr/local/opt/llvm/bin
     /opt/homebrew/bin
     $HOME/bin
     $HOME/shopee-bin

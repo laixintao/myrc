@@ -311,8 +311,6 @@ augroup javascript_lang
     autocmd FileType javascript set filetype=javascript.jsx
 
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
-    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript,markdown vmap <leader>=  <Plug>(coc-format-selected)
-    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript,markdown nmap <leader>=  <Plug>(coc-format)
     autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set sw=2 ts=2
     autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set foldmethod=indent
 augroup end
@@ -322,22 +320,18 @@ augroup end
 augroup json_lang
     autocmd!
     autocmd BufNewFile,BufRead *.html setlocal nowrap
-    autocmd FileType json nmap <leader>=  :%!jq .<CR>
-    autocmd FileType json vmap <leader>=  :%!jq .<CR>
     autocmd FileType json set sw=2 ts=2
 augroup end
 " }}}
 
 " Python --------------------{{{ 
 augroup python_lang
-    autocmd FileType python nmap <leader>=  <Plug>(coc-format)
     autocmd FileType python nnoremap <leader>rp :w!<CR>:call VimuxRunCommand("clear; python3 " . bufname("%"))<CR>
 augroup end
 " }}}
 
 " Golang --------------------{{{ 
 augroup go_lang
-    autocmd FileType go nmap <leader>=  <Plug>(coc-format)
     autocmd FileType go nnoremap <leader>rp :w!<CR>:call VimuxRunCommand("clear; go run " . bufname("%"))<CR>
     let g:tagbar_type_go = {
       \ 'ctagstype' : 'go',
@@ -597,6 +591,9 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
+" Formatting selected code.
+xmap <leader>=  <Plug>(coc-format-selected)
+nmap <leader>=  <Plug>(coc-format)
 " }}}
 
 
