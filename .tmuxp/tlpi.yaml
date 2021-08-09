@@ -1,0 +1,30 @@
+session_name: tlpi
+windows:
+- layout: 5d39,187x52,0,0,39
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/xintao.lai/Programs/tlpi-code/tlpi-book
+  window_name: editor
+- layout: dd30,187x52,0,0,40
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+      - vagrant reload bf59c7e
+      - vagrant ssh bf59c7e
+  start_directory: /Users/xintao.lai/Programs/tlpi-code
+  window_name: linux-compile
+- focus: 'true'
+  layout: b968,187x52,0,0{93x52,0,0,41,93x52,94,0,42}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - zsh
+  - focus: 'true'
+    shell_command: Python
+  start_directory: /Users/xintao.lai/Programs/tlpi-code
+  window_name: shell
