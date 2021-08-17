@@ -243,6 +243,7 @@ function replace(){
 
 unset __PYVENV_LAUNCHER__
 export ANSIBLE_NOCOWS=1
+export CC=gcc
 
 # hook direnv
 # https://github.com/direnv/direnv/blob/master/docs/hook.md
