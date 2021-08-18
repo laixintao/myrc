@@ -178,7 +178,7 @@ export BAT_CONFIG_PATH="~/.bat.conf"
 
 # GNU Readline
 # For compilers to find readline you may need to set:
-export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib"
+export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/bison/lib"
 export CPPFLAGS="-I/usr/local/opt/readline/include -I/usr/local/opt/openssl@1.1/include"
 # For pkg-config to find readline you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
@@ -219,6 +219,8 @@ path=(
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
+    /usr/local/opt/texinfo/bin
+    /usr/local/opt/bison/bin
     /usr/local/opt/llvm/bin
     /opt/homebrew/bin
     $HOME/bin
