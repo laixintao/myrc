@@ -58,8 +58,6 @@ ZSH_CUSTOM=~/Programs/myrc/zsh_custom
 plugins=(git python z osx)
 
 
-# pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
 # pyenv-virtualenv
 # https://github.com/pyenv/pyenv-virtualenv
 export VIRTUALENV_VERSION=20.0.8
@@ -213,11 +211,13 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 
 path=(
+    /usr/local/var/pyenv/shims               # pyenv
     /usr/local/opt/sqlite/bin
     /usr/local/opt/openssl@1.1/bin
     /usr/local/opt/curl/bin                  # curl in brew
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
+    /opt/homebrew/opt/coreutils/libexec/gnubin
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
     /usr/local/opt/texinfo/bin
     /usr/local/opt/bison/bin
