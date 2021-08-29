@@ -39,7 +39,7 @@ windows:
     panes:
       - focus: "true"
         shell_command: pyenv
-      - shell_command: HOST=chaoslab.sto.dev.shopee.io npm start
+      - shell_command: HOST=chaoslab.sto.dev.shopee.io PORT=3000 npm start
     start_directory: /Users/xintao.lai/Programs/shopee/chaoslab/web
     window_name: frontend-running
 
@@ -49,7 +49,7 @@ windows:
       - pyenv
     start_directory: /Users/xintao.lai/Programs/shopee/chaoslab-agent
 
-  - layout: main-vertical
+  - layout: tiled
     window_name: agent-run
     panes:
       - pyenv
