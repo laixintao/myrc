@@ -174,15 +174,26 @@ export DISABLE_AUTO_TITLE='true'
 # bat conf
 export BAT_CONFIG_PATH="~/.bat.conf"
 
-# GNU Readline
-# For compilers to find readline you may need to set:
-export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/bison/lib"
-export CPPFLAGS="-I/usr/local/opt/readline/include -I/usr/local/opt/openssl@1.1/include"
-# For pkg-config to find readline you may need to set:
+# for compilers
+export LDFLAGS="-L/usr/local/opt/readline/lib"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/bin"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/openssl@1.1/lib"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/sqlite/lib"
+export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/lib"
+
+export CPPFLAGS="-I/usr/local/opt/readline/include"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/openssl@1.1/include"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/sqlite/include"
+export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/libpcap/include"
+
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/sqlite/lib/pkgconfig"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/libpcap/lib/pkgconfig"
 
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl@1.1/lib/pkgconfig
-
 
 # -------------------
 # My own functions
@@ -217,6 +228,7 @@ path=(
     /usr/local/opt/curl/bin                  # curl in brew
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
+    /usr/local/opt/libpcap/bin
     /opt/homebrew/opt/coreutils/libexec/gnubin
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
     /usr/local/opt/texinfo/bin
@@ -230,6 +242,7 @@ path=(
     $HOME/.local/bin                         # pipx
     /Users/laixintao/.cargo/bin              # cargo
     /usr/local/texlive/2020basic/bin/x86_64-darwin/ #latex
+    /usr/local/sbin                          # for sudo commands
     $path
   )
 export PATH=":$PATH"
