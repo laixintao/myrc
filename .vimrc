@@ -220,7 +220,7 @@ augroup nerdtree_settings
     let NERDTreeWinSize=30
     " 在终端启动vim时，共享NERDTree
     let g:nerdtree_tabs_open_on_console_startup=1
-    " 忽略一下文件的显示
+    " 忽略以下文件的显示
     let NERDTreeIgnore=['\.pyc','\~$',
                 \ '\.swp',
                 \ '\.o',
