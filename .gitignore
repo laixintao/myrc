@@ -27,3 +27,4 @@ local_test/*
 bin/blade
 .config/coc/*-history.json
 .config/wireshark/preferences
+.config/coc/list-diagnostics-history.json
