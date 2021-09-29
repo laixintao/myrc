@@ -181,7 +181,7 @@ augroup end
 " }}}
 
 
-nnoremap <leader>b :Gblame<CR>
+nnoremap <leader>b :Git blame<CR>
 
 nnoremap <F8> :TagbarToggle<CR>
 
