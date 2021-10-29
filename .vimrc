@@ -52,7 +52,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,gb2312,big5,euc-jp,euc-kr,latin1
 
 " https://superuser.com/questions/302186/vim-scrolls-very-slowly-when-a-line-is-too-long
 " Syntax coloring lines that are too long just slows down the world
-set synmaxcol=500
+set synmaxcol=600
 
 set scrolloff=3
 
@@ -115,6 +115,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'laixintao/vim-textobj-ipmac'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'LnL7/vim-nix'
 
 call plug#end()
 
