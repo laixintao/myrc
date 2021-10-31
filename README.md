@@ -37,6 +37,9 @@ Go to `myrc/.config/coc/extensions` run `npm install`.
     2. YouCompleteMe Install
 3. Install dircolors and solarized for terminal manually:https://www.kawabangga.com/posts/1887
 
+need to set option key as Meta key from iterm2:
+https://superuser.com/questions/649960/option-key-does-not-work-as-meta-in-tmux
+
 # todo list
 
 - [x] shell script to delete the original rc files, and make softlinks to replace it .
