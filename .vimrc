@@ -76,7 +76,6 @@ endfor
 " Plugins --------------------{{{
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
-Plug 'mattn/emmet-vim'                        " zen coding
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'airblade/vim-gitgutter'                 " git diff
@@ -99,7 +98,12 @@ Plug 'stephpy/vim-yaml'
 Plug 'nvie/vim-flake8'
 Plug 'Vimjas/vim-python-pep8-indent'          " auto indent ()
 Plug 'slashmili/alchemist.vim'
-Plug 'mxw/vim-jsx'
+
+" javascript, react, jsx, etc
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mattn/emmet-vim'                        " zen coding
+
 Plug 'elixir-editors/vim-elixir'              " Elixir
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'gabrielelana/vim-markdown'
@@ -307,6 +311,13 @@ augroup END
 
 
 " Javascript-like Language --------------------{{{
+
+" enable zen coding for jsx
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
 augroup javascript_lang
     autocmd!
     autocmd BufNewFile,BufRead *.html setlocal nowrap
@@ -732,3 +743,4 @@ omap il :normal vil<CR>
 
 " copy the current file path
 nmap <leader>p :let @+ = expand("%:p")<cr>
+
