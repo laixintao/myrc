@@ -3,6 +3,5 @@
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
   "prettier.proseWrap": "always",
   "go.goplsOptions": {
-    "completeUnimported": true
   }
 }

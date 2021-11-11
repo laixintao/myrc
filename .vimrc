@@ -92,13 +92,12 @@ Plug 'godlygeek/tabular'                      " 自动根据某个符号对其�
 Plug 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
 Plug 'dyng/ctrlsf.vim'                        " Ascyn use rg to find
 Plug 'majutsushi/tagbar'                      " show tags of codes
-Plug 'Vimjas/vim-python-pep8-indent'          " auto indent ()
-Plug 'tweekmonster/django-plus.vim'
 Plug 'spacewander/openresty-vim'
 Plug 'kien/rainbow_parentheses.vim'           " Rainbow Parentheses
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'nvie/vim-flake8'
+Plug 'Vimjas/vim-python-pep8-indent'          " auto indent ()
 Plug 'slashmili/alchemist.vim'
 Plug 'mxw/vim-jsx'
 Plug 'elixir-editors/vim-elixir'              " Elixir
@@ -116,16 +115,18 @@ Plug 'laixintao/vim-textobj-ipmac'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'LnL7/vim-nix'
-
 call plug#end()
-
 " }}}
 
 set background=dark
 colorscheme molokai
 
-let g:airline_theme='simple'
+let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.colnr = ' ㏇:'
 let g:gist_open_browser_after_post = 1
 
 " Vim WhichKey --------------------{{{
