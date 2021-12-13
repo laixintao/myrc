@@ -1,0 +1,20 @@
+session_name: lobbyboy
+windows:
+- focus: 'true'
+  layout: 6839,160x49,0,0,58
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/lobbyboy
+  window_name: lobbyboy
+- layout: 326a,160x49,0,0[160x24,0,0,59,160x24,0,25,61]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pyenv
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/lobbyboy
+  window_name: shell

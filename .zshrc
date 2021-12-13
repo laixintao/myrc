@@ -222,6 +222,7 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 
 path=(
+    $HOME/.local/bin                         # pipx
     /usr/local/var/pyenv/shims               # pyenv
     /usr/local/opt/sqlite/bin
     /usr/local/opt/openssl@1.1/bin
@@ -239,7 +240,6 @@ path=(
     $HOME/shopee-bin
     $GOPATH/bin                              # golang
     $GOROOT/bin
-    $HOME/.local/bin                         # pipx
     /Users/laixintao/.cargo/bin              # cargo
     /usr/local/texlive/2020basic/bin/x86_64-darwin/ #latex
     /usr/local/sbin                          # for sudo commands
