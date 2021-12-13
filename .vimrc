@@ -119,6 +119,7 @@ Plug 'laixintao/vim-textobj-ipmac'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'LnL7/vim-nix'
+Plug 'mattn/vim-goimports'
 call plug#end()
 " }}}
 
@@ -373,6 +374,10 @@ augroup go_lang
       \ 'ctagsbin'  : 'gotags',
       \ 'ctagsargs' : '-sort -silent'
     \ }
+
+    " goimports
+    let g:goimports = 0
+    nmap <leader>i :GoImportRun <cr>
 augroup end
 
 " }}}

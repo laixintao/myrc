@@ -1,0 +1,48 @@
+session_name: statuspage
+windows:
+- layout: dd35,187x52,0,0,26
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/statuspage
+  window_name: statuspage
+- layout: 7969,187x52,0,0[187x26,0,0,28,187x25,0,27,29]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pyenv
+  - focus: 'true'
+    shell_command: 
+      - pyenv
+      - make runserver
+  start_directory: /Users/xintao.lai/Programs/shopee/statuspage
+  window_name: backend-running
+- layout: 5d31,187x52,0,0,31
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/statuspage
+  window_name: database
+- layout: 5d32,187x52,0,0,32
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: vim
+  start_directory: /Users/xintao.lai/Programs/shopee/statuspage/web
+  window_name: frontend
+- focus: 'true'
+  layout: b962,187x52,0,0[187x26,0,0,33,187x25,0,27,34]
+  start_directory: /Users/xintao.lai/Programs/shopee/statuspage/web
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - npm run start
+  - 
+  window_name: frontend-running
