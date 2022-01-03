@@ -139,6 +139,10 @@ nnoremap <silent> <leader> :WhichKey ','<CR>
 " }}}
 
 
+" https://github.com/mzlogin/vim-markdown-toc
+let g:vmt_list_item_char = '-'
+
+
 " vim 8 / neovim HEAD runtime: when ft==python, cms:=#\ %s
 " "   -- when g:NERDSpaceDelims==1, then NERDComment results in double space
 let g:NERDCustomDelimiters = {
