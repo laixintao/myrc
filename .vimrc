@@ -167,6 +167,7 @@ nnoremap <leader>fo :CtrlSFOpen<CR>
 nnoremap <leader>ft :CtrlSFToggle<CR>
 inoremap <leader>ft <Esc>:CtrlSFToggle<CR>
 nnoremap <silent> <leader>fj :CtrlSFFocus<CR>
+let g:ctrlsf_follow_symlinks = 0
 
 let g:ctrlsf_auto_focus = {
     \ "at": "start",
