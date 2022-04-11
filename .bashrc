@@ -114,3 +114,10 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source ~/.autoenv/activate.sh
+function xbin() {
+  if [ -t 0 ]; then
+    curl -X POST 127.0.0.1:5000/${1} -H "X-Args: ${@:2}"
+  else
+    curl --data-binary  @- 127.0.0.1:5000/${1} -H "X-Args: ${@:2}"
+  fi
+}

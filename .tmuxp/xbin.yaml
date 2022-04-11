@@ -1,0 +1,40 @@
+session_name: 'xbin'
+windows:
+- focus: 'true'
+  layout: c236,188x53,0,0[188x26,0,0,16,188x26,0,27,28]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - cd /Users/xintao.lai/Programs/xbin
+    - pyenv
+  window_name: backend edit
+- layout: 0c87,188x53,0,0[188x26,0,0{94x26,0,0,21,93x26,95,0,23},188x26,0,27,22]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - pyenv
+  - focus: 'true'
+    shell_command: pyenv
+  - pyenv
+  start_directory: /Users/xintao.lai/Programs/xbin
+  window_name: running
+- layout: df73,188x53,0,0,24
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: vim
+  start_directory: /Users/xintao.lai/Programs/xbin/web
+  window_name: web
+- layout: c235,188x53,0,0[188x26,0,0,25,188x26,0,27,27]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - cd /Users/xintao.lai/Programs/xbin
+    - PORT=3080 npm start run
+  - focus: 'true'
+    shell_command: cd /Users/xintao.lai/Programs/xbin/web
+  window_name: web-run

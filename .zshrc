@@ -266,3 +266,13 @@ export CC=gcc
 eval "$(direnv hook zsh)"
 
 . ~/.scrects_export
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+% function xbin() {
+  if [ -t 0 ]; then
+    curl -X POST 127.0.0.1:5000/${1} -H "X-Args: ${@:2}"
+  else
+    curl --data-binary  @- 127.0.0.1:5000/${1} -H "X-Args: ${@:2}"
+  fi
+}
