@@ -1,0 +1,45 @@
+session_name: campaign
+windows:
+  - focus: "true"
+    layout: be7d,188x53,0,0,0
+    options:
+      automatic-rename: "off"
+    panes:
+      - focus: "true"
+        shell_command: vim
+    start_directory: /Users/xintao.lai/Programs/shopee/campaign/
+    window_name: api
+  - layout: 1493,188x53,0,0[188x26,0,0,1,188x26,0,27,2]
+    start_directory: /Users/xintao.lai/Programs/shopee/campaign/
+    options:
+      automatic-rename: "off"
+    panes:
+      - pyenv
+      - focus: "true"
+        shell_command: pyenv && make runserver
+    window_name: shell
+  - layout: be80,188x53,0,0,3
+    options:
+      automatic-rename: "off"
+    panes:
+      - focus: "true"
+        shell_command: zsh
+    start_directory: /Users/xintao.lai/Programs/shopee/campaign/campaign
+    window_name: queue
+  - layout: be81,188x53,0,0,4
+    options:
+      automatic-rename: "off"
+    panes:
+      - focus: "true"
+        shell_command: vim
+    start_directory: /Users/xintao.lai/Programs/shopee/campaign/web
+    window_name: web
+  - layout: 949d,188x53,0,0[188x26,0,0,5,188x26,0,27,7]
+    options:
+      automatic-rename: "off"
+    panes:
+      - 
+      - focus: "true"
+        shell_command: PORT=3004 npm run start
+    start_directory: /Users/xintao.lai/Programs/shopee/campaign/web
+    window_name: web-run

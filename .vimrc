@@ -754,3 +754,4 @@ omap il :normal vil<CR>
 " copy the current file path
 nmap <leader>p :let @+ = expand("%:p")<cr>
 
+nnoremap <F5> :bufdo! e <cr>
