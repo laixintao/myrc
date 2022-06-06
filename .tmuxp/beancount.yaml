@@ -8,7 +8,7 @@ windows:
     shell_command: pyenv && vim
   start_directory: /Users/xintao.lai/Programs/beancount-file
   window_name: beancount
-- layout: main-vertical
+- layout: tiled
   options:
     automatic-rename: 'off'
   panes:
