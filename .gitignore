@@ -30,3 +30,6 @@ bin/blade
 .config/coc/list-diagnostics-history.json
 */.__pycache__/*
 bin/__pycache__/*
+.config/GNS3/
+.config/wireshark
+.config/coc/suggest.txt
