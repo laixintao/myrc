@@ -120,6 +120,8 @@ Plug 'laixintao/vim-textobj-ipmac'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'LnL7/vim-nix'
 Plug 'mattn/vim-goimports'
+
+Plug 'martinda/Jenkinsfile-vim-syntax'
 call plug#end()
 " }}}
 
