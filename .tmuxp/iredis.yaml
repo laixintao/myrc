@@ -6,7 +6,7 @@ windows:
     automatic-rename: 'off'
   panes:
     -
-  start_directory: /Users/laixintao/Program/iredis
+  start_directory: /Users/xintao.lai/Programs/iredis
   window_name: iredis
 - layout: 4758,129x38,0,0[129x19,0,0,45,129x18,0,20,48]
   options:
@@ -17,7 +17,7 @@ windows:
   - focus: 'true'
     shell_command:
     - tail -f iredis.log
-  start_directory: /Users/laixintao/Program/iredis
+  start_directory: /Users/xintao.lai/Programs/iredis
   window_name: redis-cli
 - layout: e6f6,129x38,0,0,46
   options:
@@ -25,7 +25,7 @@ windows:
   panes:
   - focus: 'true'
     shell_command: zsh
-  start_directory: /Users/laixintao/Program/iredis
+  start_directory: /Users/xintao.lai/Programs/iredis
   window_name: redis-cli
 - layout: e6f7,129x38,0,0,47
   options:
