@@ -53,3 +53,5 @@ alias vg="vagrant global-status"
 alias abrew="/opt/homebrew/bin/brew"
 
 alias bfg="java -jar /Users/xintao.lai/Documents/jars/bfg-1.13.2.jar"
+
+alias tmuxn="tmux new -s "
