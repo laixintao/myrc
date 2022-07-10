@@ -119,7 +119,6 @@ Plug 'laixintao/vim-textobj-ipmac'
 " On-demand lazy load
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'LnL7/vim-nix'
-Plug 'mattn/vim-goimports'
 
 Plug 'martinda/Jenkinsfile-vim-syntax'
 call plug#end()
@@ -129,6 +128,8 @@ set background=dark
 colorscheme molokai
 
 let g:airline_theme='wombat'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -384,7 +385,7 @@ augroup go_lang
 
     " goimports
     let g:goimports = 0
-    nmap <leader>i :GoImportRun <cr>
+    nmap <leader>i :CocCommand editor.action.organizeImport<cr>
 augroup end
 
 " }}}

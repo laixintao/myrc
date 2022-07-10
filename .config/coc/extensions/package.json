@@ -4,7 +4,7 @@
     "coc-go": ">=0.13.3",
     "coc-json": ">=1.3.6",
     "coc-prettier": ">=1.1.24",
-    "coc-pyright": ">=1.1.159",
+    "coc-pyright": ">=1.1.255",
     "coc-snippets": ">=2.4.3",
     "coc-tsserver": ">=1.8.3"
   }
