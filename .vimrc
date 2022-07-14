@@ -354,6 +354,8 @@ augroup end
 
 " Golang --------------------{{{ 
 augroup go_lang
+    " update gopls: go install golang.org/x/tools/gopls@latest
+    "
     autocmd FileType go nnoremap <leader>rp :w!<CR>:call VimuxRunCommand("clear; go run " . bufname("%"))<CR>
     let g:tagbar_type_go = {
       \ 'ctagstype' : 'go',
