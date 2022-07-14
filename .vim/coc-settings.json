@@ -2,6 +2,15 @@
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
   "prettier.proseWrap": "always",
-  "go.goplsOptions": {
+  "go.goplsOptions": {},
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
   }
 }
