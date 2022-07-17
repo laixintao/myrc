@@ -568,15 +568,6 @@ augroup END
 
 let g:gh_gitlab_domain= "gitlab.alipay-inc.com"
 
-
-" Copy leetcode solution into system clipboard
-nnoremap <leader>l /class Solution:<CR>V/\n\n\n<CR>"+y
-
-
-" Ref
-" For C/C++ https://gist.github.com/rocarvaj/2513367
-
-
 " TextEdit might fail if hidden is not set.
 set hidden
 
