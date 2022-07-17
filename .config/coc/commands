@@ -1,3 +1,4 @@
+prettier.formatFile
 workspace.showOutput
 editor.action.organizeImport
 editor.action.organizeImport
