@@ -3,6 +3,7 @@
   "list.height": 15,
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
+  "python.formatting.blackArgs": ["--preview"],
   "prettier.proseWrap": "always",
   "go.goplsOptions": {},
   "languageserver": {
