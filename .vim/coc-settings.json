@@ -1,4 +1,5 @@
 {
+  "suggest.noselect": true,
   "list.maxPreviewHeight": 20,
   "list.height": 15,
   "python.formatting.provider": "black",
