@@ -2,6 +2,7 @@
   "list.maxPreviewHeight": 20,
   "list.height": 15,
   "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
   "python.formatting.blackArgs": ["--preview"],
   "prettier.proseWrap": "always",

@@ -31,8 +31,7 @@ eval "$(pyenv virtualenv-init -)"
 echo "Create a new virtualenv shell named ${project}, using $(pyenv version)..."
 
 
-pyenv
-pyenv virtualenv 3.7.5 $project
+pyenv virtualenv 3.9.0 $project
 pyenv activate $project
 echo "created ${project}"
 echo "Python: ${GREEN}$(pyenv which python)${NOCOLOR}"

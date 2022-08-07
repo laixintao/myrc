@@ -84,8 +84,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'               " Quick comment
 Plug 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打开当前代码行
 Plug 'ctrlpvim/ctrlp.vim'                     " 模糊查找
-" 多光标编辑
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-fugitive'                     " git插件 （Blame)
 Plug 'godlygeek/tabular'                      " 自动根据某个符号对其，用于json 字典 表格等
 Plug 'tweekmonster/startuptime.vim'           " Vim start up time debug (figure out which script is slow)
