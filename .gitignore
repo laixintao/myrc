@@ -33,3 +33,4 @@ bin/__pycache__/*
 .config/GNS3/
 .config/wireshark
 .config/coc/suggest.txt
+bin/amtool
