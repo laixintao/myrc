@@ -10,5 +10,6 @@ bin/spex-bumpversion.sh filter=git-crypt diff=git-crypt
 bin/server-inspect filter=git-crypt diff=git-crypt
 bin/server-list filter=git-crypt diff=git-crypt
 bin/server-command filter=git-crypt diff=git-crypt
+bin/offline_spex_ip.py filter=git-crypt diff=git-crypt
 .my_alias filter=git-crypt diff=git-crypt
 .scrects_export filter=git-crypt diff=git-crypt

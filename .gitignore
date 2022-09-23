@@ -34,3 +34,4 @@ bin/__pycache__/*
 .config/wireshark
 .config/coc/suggest.txt
 bin/amtool
+.config/litecli/
