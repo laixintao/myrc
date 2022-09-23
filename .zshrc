@@ -224,6 +224,7 @@ typeset -U path  # keep path alwasy unique, tmux will reload zshrc
 
 path=(
     $HOME/.local/bin                         # pipx
+    /Users/xintao.lai/Library/Python/3.8/bin/ # in system
     /usr/local/var/pyenv/shims               # pyenv
     /usr/local/opt/sqlite/bin
     /usr/local/opt/openssl@1.1/bin
