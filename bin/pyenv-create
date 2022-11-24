@@ -25,13 +25,14 @@ LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
 project=${PWD##*/}
+PY_VERSION="3.10.7"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-echo "Create a new virtualenv shell named ${project}, using $(pyenv version)..."
+echo "Create a new virtualenv shell named ${project}, using ${PY_VERSION}..."
 
 
-pyenv virtualenv 3.9.0 $project
+pyenv virtualenv $PY_VERSION $project
 pyenv activate $project
 echo "created ${project}"
 echo "Python: ${GREEN}$(pyenv which python)${NOCOLOR}"

@@ -170,7 +170,6 @@ nmap     <leader>fn <Plug>CtrlSFCwordPath
 
 nnoremap <leader>fo :CtrlSFOpen<CR>
 nnoremap <leader>ft :CtrlSFToggle<CR>
-inoremap <leader>ft <Esc>:CtrlSFToggle<CR>
 nnoremap <silent> <leader>fj :CtrlSFFocus<CR>
 let g:ctrlsf_follow_symlinks = 0
 
@@ -286,11 +285,6 @@ imap <C-e> <END>
 imap <C-a> <HOME>
 imap <C-f> <Right>
 imap <C-b> <Left>
-augroup relative_numbser
-    autocmd!
-    autocmd InsertEnter * :set norelativenumber
-    autocmd InsertLeave * :set relativenumber
-augroup END
 " }}}
 
 " ShortCuts --------------------{{{
