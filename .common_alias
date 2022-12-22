@@ -57,3 +57,5 @@ alias bfg="java -jar /Users/xintao.lai/Documents/jars/bfg-1.13.2.jar"
 alias tmuxn="tmux new -s "
 
 alias gtl='git log --tags --simplify-by-decoration --pretty="format:%ci %d"'
+
+alias pocr='pngpaste - | tesseract stdin stdout'
