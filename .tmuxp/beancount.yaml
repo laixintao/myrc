@@ -15,6 +15,6 @@ windows:
   - shell_command: pyenv
   - shell_command: 
     - pyenv
-    - fava accounting/main.bean --host=127.0.0.1
+    - fava accounting/main.bean --host=127.0.0.1 --port 5001
   start_directory: /Users/xintao.lai/Programs/beancount-file
   window_name: scripts
