@@ -59,3 +59,5 @@ alias tmuxn="tmux new -s "
 alias gtl='git log --tags --simplify-by-decoration --pretty="format:%ci %d"'
 
 alias pocr='pngpaste - | tesseract stdin stdout'
+
+alias mount-action-3='sudo mkdir /Volumes/dj-action-3 && sudo /sbin/mount_exfat /dev/disk2 /Volumes/dj-action-3/ && cd /Volumes/dj-action-3'
