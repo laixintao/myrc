@@ -80,7 +80,7 @@ Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'airblade/vim-gitgutter'                 " git diff
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'laixintao/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'               " Quick comment
 Plug 'ruanyl/vim-gh-line'                     " 在Bitbucket或github快速打开当前代码行
 Plug 'ctrlpvim/ctrlp.vim'                     " 模糊查找
