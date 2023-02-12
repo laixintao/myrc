@@ -120,6 +120,7 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'LnL7/vim-nix'
 
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'tpope/vim-surround'
 call plug#end()
 " }}}
 
@@ -229,7 +230,6 @@ augroup nerdtree_settings
     autocmd!
     " NERDDTree快捷键
     map <leader>t :NERDTreeToggle<CR>
-    map <C-n> :NERDTreeToggle<CR>
     nnoremap <leader>d :NERDTreeFind<cr>
     " 是否显示隐藏文件
     let NERDTreeShowHidden=1
@@ -752,3 +752,8 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
     vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
     vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
+
+" use Shift-Tab to insert tab within expandtab mode
+" https://stackoverflow.com/questions/4781070/how-to-insert-tab-character-when-expandtab-option-is-on-in-vim
+inoremap <S-Tab> <C-V><Tab>
+
