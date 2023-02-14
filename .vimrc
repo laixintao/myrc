@@ -757,3 +757,6 @@ endif
 " https://stackoverflow.com/questions/4781070/how-to-insert-tab-character-when-expandtab-option-is-on-in-vim
 inoremap <S-Tab> <C-V><Tab>
 
+" show the ascii code of the current characters in status line
+" https://vim.fandom.com/wiki/Showing_the_ASCII_value_of_the_current_character
+nnoremap <leader>sa :set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P<cr>
