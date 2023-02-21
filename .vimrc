@@ -60,6 +60,8 @@ set scrolloff=3
 nnoremap <leader>sp :split<CR>
 nnoremap <leader>vs :vsplit<CR>
 nnoremap <leader>st :tab split<CR>
+" close current tab
+nnoremap gc :tabc <CR> 
 " ,作为了leader key, 将\映射成反向查找
 noremap \ ,
 " use q to exit help window
@@ -121,6 +123,8 @@ Plug 'LnL7/vim-nix'
 
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'tpope/vim-surround'
+
+Plug 'szw/vim-maximizer'
 call plug#end()
 " }}}
 
@@ -159,6 +163,8 @@ let g:NERDCustomDelimiters = {
 " NerdComment
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
+let NERDTreeQuitOnOpen='1'
+
 nnoremap <leader>cp :%s/\(print(.*)\)/# \1/g<CR>
 nnoremap <leader>cq :%s/# \(print(.*)\)/\1/g<CR>
 
@@ -760,3 +766,8 @@ inoremap <S-Tab> <C-V><Tab>
 " show the ascii code of the current characters in status line
 " https://vim.fandom.com/wiki/Showing_the_ASCII_value_of_the_current_character
 nnoremap <leader>sa :set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P<cr>
+
+" https://github.com/szw/vim-maximizer
+nnoremap <silent><C-W>w :MaximizerToggle<CR>
+vnoremap <silent><C-W>w :MaximizerToggle<CR>gv
+inoremap <silent><C-W>w <C-o>:MaximizerToggle<CR>
