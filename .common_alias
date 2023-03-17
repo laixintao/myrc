@@ -61,3 +61,8 @@ alias gtl='git log --tags --simplify-by-decoration --pretty="format:%ci %d"'
 alias pocr='pngpaste - | tesseract stdin stdout'
 
 alias mount-action-3='sudo mkdir /Volumes/dj-action-3 && sudo /sbin/mount_exfat /dev/disk2 /Volumes/dj-action-3/ && cd /Volumes/dj-action-3'
+
+vh() {
+    echo "shutdown all Vagrant VMs..."
+    vagrant global-status | grep running | gawk '{print $1}' | xargs vagrant halt
+}
