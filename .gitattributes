@@ -13,3 +13,4 @@ bin/server-command filter=git-crypt diff=git-crypt
 bin/offline_spex_ip.py filter=git-crypt diff=git-crypt
 .my_alias filter=git-crypt diff=git-crypt
 .scrects_export filter=git-crypt diff=git-crypt
+ssh_config  filter=git-crypt diff=git-crypt
