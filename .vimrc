@@ -771,3 +771,8 @@ nnoremap <leader>sa :set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P<cr>
 nnoremap <silent><C-W>w :MaximizerToggle<CR>
 vnoremap <silent><C-W>w :MaximizerToggle<CR>gv
 inoremap <silent><C-W>w <C-o>:MaximizerToggle<CR>
+
+
+" copy the current buffer relative path to system clipboard
+" https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+nnoremap cp :let @+ = expand("%")<cr>
