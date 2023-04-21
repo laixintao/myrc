@@ -279,6 +279,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
     curl -sS --data-binary @- "https://xbin.io/${command}" -H "X-Args: ${args}"
   fi
 }
+
 % function lbin() {
   command="$1"
   args="${@:2}"

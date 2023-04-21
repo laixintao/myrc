@@ -1,0 +1,24 @@
+session_name: operation-center
+windows:
+- layout: 5d68,251x72,0,0,38
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/operation-center
+  window_name: vim
+
+- focus: 'true'
+  layout: a60e,251x72,0,0{125x72,0,0,73,125x72,126,0[125x18,126,0,74,125x17,126,19,76,125x35,126,37,75]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: zsh
+  - shell_command:
+    - pyenv
+    - make runserver
+  - pyenv
+  - pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/operation-center
+  window_name: shell
