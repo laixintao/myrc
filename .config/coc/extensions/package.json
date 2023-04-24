@@ -6,6 +6,7 @@
     "coc-json": ">=1.3.6",
     "coc-prettier": ">=1.1.24",
     "coc-pyright": ">=1.1.260",
+    "coc-sh": ">=1.1.1",
     "coc-snippets": ">=2.4.3",
     "coc-tsserver": ">=1.8.3"
   }
