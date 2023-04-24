@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# set -xe
+
+CONTROLLER_IP=172.16.25.1
+CONTROLLER_PORT=3080
+BASIC_AUTH="Basic YWRtaW46OWZuTlVUWlVaTnJrRzI5cDFsbFo3RFZDYlBCaHNYQVZMdGJHWUI0Q1RKSHlBN3BRZGh5a3hlbkNCRVVhSlFZVQ=="
+
+project=$(curl -sS --request GET --url http://$CONTROLLER_IP:$CONTROLLER_PORT/v2/projects --header "Authorization: $BASIC_AUTH" | jq '.[] | select(.status=="opened")')
+
+project_id=$(echo $project | jq .project_id -r)
+project_name=$(echo $project | jq .name -r)
+
+echo $project_id
+echo $project_name
+
+project_details=$(curl -sS --request GET \
+      --url http://$CONTROLLER_IP:$CONTROLLER_PORT/v2/projects/$project_id/nodes \
+      --header "Authorization: $BASIC_AUTH" | jq -c '.[]')
+
+IFS=$'\n'
+
+for node in ${project_details[@]}; do
+    name=$(echo $node | jq .name -r)
+    console_host=$(echo $node | jq .console_host -r)
+    console_port=$(echo $node | jq .console -r)
+    echo "name=$name console_host=$console_host console_port=$console_port"
+done
+
+unset IFS
