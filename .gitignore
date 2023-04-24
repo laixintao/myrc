@@ -35,3 +35,4 @@ bin/__pycache__/*
 .config/coc/suggest.txt
 bin/amtool
 .config/litecli/
+.config/coc/lists
