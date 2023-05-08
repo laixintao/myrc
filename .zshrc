@@ -117,7 +117,7 @@ test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/op
 export WASMER_DIR="/Users/laixintao/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home/
 
 # don't check for new mail
 MAILCHECK=0
@@ -265,8 +265,6 @@ export CC=gcc
 # hook direnv
 # https://github.com/direnv/direnv/blob/master/docs/hook.md
 eval "$(direnv hook zsh)"
-
-. ~/.scrects_export
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
