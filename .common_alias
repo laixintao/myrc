@@ -28,6 +28,7 @@ alias cat="bat --plain"
 alias a=ansible
 alias h=htop
 alias d=docker
+alias t=tmux
 alias v=vagrant
 alias ap=ansible-playbook
 
