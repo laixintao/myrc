@@ -147,11 +147,6 @@ nnoremap <silent> <leader> :WhichKey ','<CR>
 " }}}
 
 
-" https://github.com/mzlogin/vim-markdown-toc
-let g:vmt_list_item_char = '-'
-
-" https://github.com/gabrielelana/vim-markdown
-let g:markdown_enable_mappings = 0
 
 
 " vim 8 / neovim HEAD runtime: when ft==python, cms:=#\ %s
@@ -340,6 +335,20 @@ augroup javascript_lang
     autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set foldmethod=indent
 augroup end
 " }}}
+
+
+" Markdown --------------------{{{ 
+augroup markdown_lang
+    autocmd!
+    autocmd FileType markdown let b:coc_suggest_disable = 1
+    " https://github.com/mzlogin/vim-markdown-toc
+    let g:vmt_list_item_char = '-'
+
+    " https://github.com/gabrielelana/vim-markdown
+    let g:markdown_enable_mappings = 0
+augroup end
+" }}}
+
 
 " JSON --------------------{{{
 augroup json_lang
@@ -530,14 +539,13 @@ augroup graphviz
     autocmd BufNewFile,BufRead *.dot,*.gz nnoremap <leader>c :call CompileGraphviz()<cr>
     function! CompileGraphviz()
         execute ":w"
-        execute "Compile dot file and then open it."
         execute ":silent !dot -Tsvg -o %:r.svg %"
         execute "redraw!"
     endfunction
 
     function! OpenGraphviz()
         call CompileGraphviz()
-        execute ":silent !open %:r.svg"
+        execute ":silent !open -a 'Google Chrome' %:r.svg"
         execute "redraw!"
     endfunction
 augroup END
