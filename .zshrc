@@ -297,3 +297,8 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
         echo "Usage: listening [pattern]"
     fi
 }
+
+% function get_site_cert() {
+  domain=$1
+  echo | openssl s_client -showcerts -connect $domain:443 -servername $domain 2>/dev/null
+}
