@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+"""
+Convert old GNS3 from gns3vault.com to new version project
+"""
+
+import os
+import re
+from subprocess import getoutput
+from pathlib import Path
+
+
+project_path = os.getcwd()
+
+startup_configs = getoutput("fd startup-config.cfg")
+
+
+def copy_startup_config_new_location(old_config):
+    grep_hostname = getoutput(f"grep hostname '{old_config}'")
+    hostname = re.match(r"^hostname (.*)", grep_hostname).group(1)
+    print(f"Found hostname from {old_config}: {hostname}")
+
+    # find where is the same host in new project layout
+
+    filepaths = getoutput(f"rg -l {hostname}")
+
+    string_ix = re.search(r"dynamips_i(\d+)_log.txt", filepaths).group(1)
+
+    bootflash_location = getoutput(f"fd i{string_ix}_bootflash")
+    new_config_path = (
+        Path(bootflash_location).parent / "configs" / f"i{string_ix}_startup-config.cfg"
+    )
+
+    os.system(f"cp -v '{old_config}' '{new_config_path}'")
+
+
+for config in startup_configs.splitlines():
+    copy_startup_config_new_location(config)
