@@ -267,38 +267,3 @@ export CC=gcc
 eval "$(direnv hook zsh)"
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-% function xbin() {
-  command="$1"
-  args="${@:2}"
-  if [ -t 0 ]; then
-    curl -sS -X POST "https://xbin.io/${command}" -H "X-Args: ${args}"
-  else
-    curl -sS --data-binary @- "https://xbin.io/${command}" -H "X-Args: ${args}"
-  fi
-}
-
-% function lbin() {
-  command="$1"
-  args="${@:2}"
-  if [ -t 0 ]; then
-    curl -sS -X POST "http://localhost:6061/${command}" -H "X-Args: ${args}"
-  else
-    curl -sS --data-binary @- "http://localhost:6061/${command}" -H "X-Args: ${args}"
-  fi
-}
-
-% listening() {
-    if [ $# -eq 0 ]; then
-        sudo lsof -iTCP -sTCP:LISTEN -n -P
-    elif [ $# -eq 1 ]; then
-        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
-    else
-        echo "Usage: listening [pattern]"
-    fi
-}
-
-% function get_site_cert() {
-  domain=$1
-  echo | openssl s_client -showcerts -connect $domain:443 -servername $domain 2>/dev/null
-}

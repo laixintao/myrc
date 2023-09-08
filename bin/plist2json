@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+import sys
+import plistlib
+import json
+
+content = sys.stdin.read()
+data = plistlib.loads(content.encode())
+print(json.dumps(data, default=str))
