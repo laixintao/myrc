@@ -56,6 +56,8 @@ set synmaxcol=600
 
 set scrolloff=3
 
+set wildignore+=**/debug_json/**
+
 " Key bindings --------------------{{{
 nnoremap <leader>sp :split<CR>
 nnoremap <leader>vs :vsplit<CR>
@@ -247,6 +249,8 @@ augroup nerdtree_settings
                 \ '@neomake_',
                 \ '.coverage.',
                 \ '__pycache__$[[dir]]',
+                \ 'debug_json$[[dir]]',
+                \ 'debug$[[dir]]',
                 \ '.pytest_cache$[[dir]]',
                 \ '.git$[[dir]]',
                 \ '.idea[[dir]]',
@@ -785,3 +789,5 @@ inoremap <silent><C-W>w <C-o>:MaximizerToggle<CR>
 " copy the current buffer relative path to system clipboard
 " https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
 nnoremap cp :let @+ = expand("%")<cr>
+
+
