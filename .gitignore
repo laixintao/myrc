@@ -36,3 +36,4 @@ bin/__pycache__/*
 bin/amtool
 .config/litecli/
 .config/coc/lists
+.config/bpytop/
