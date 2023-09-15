@@ -7,6 +7,7 @@
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
   "python.formatting.blackArgs": ["--preview"],
   "prettier.proseWrap": "always",
+  "coc.preferences.jumpCommand": "tabe",
   "coc.source.word.filetypes": ["text", "markdown"],
   "go.goplsOptions": {},
   "languageserver": {
