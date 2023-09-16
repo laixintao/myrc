@@ -148,7 +148,10 @@ let g:gist_open_browser_after_post = 1
 nnoremap <silent> <leader> :WhichKey ','<CR>
 " }}}
 
-
+" Vim vim-visual-multi --------------------{{{ 
+let g:VM_maps = {}
+let g:VM_maps["Exit"]               = '<C-C>'   " quit VM
+" }}}
 
 
 " vim 8 / neovim HEAD runtime: when ft==python, cms:=#\ %s

@@ -1,6 +1,6 @@
 #!/bin/sh
 alias ls='ls --color'
-alias ll='ls -ahlF'
+alias ll='ls -ahlF -t'
 
 # verbose
 alias mkdir='mkdir -v'

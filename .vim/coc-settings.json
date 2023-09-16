@@ -8,7 +8,8 @@
   "python.formatting.blackArgs": ["--preview"],
   "prettier.proseWrap": "always",
   "coc.preferences.jumpCommand": "tabe",
-  "coc.source.word.filetypes": ["text", "markdown"],
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.functionReturnTypes": false,
   "go.goplsOptions": {},
   "languageserver": {
     "golang": {
