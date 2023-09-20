@@ -37,3 +37,4 @@ bin/amtool
 .config/litecli/
 .config/coc/lists
 .config/bpytop/
+.config/coc/commands
