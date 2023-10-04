@@ -234,6 +234,7 @@ path=(
     /usr/local/opt/libpcap/bin
     /opt/homebrew/opt/coreutils/libexec/gnubin
     /usr/local/Cellar/mysql/8.0.18/bin       # mysql bins
+    /usr/local/opt/protobuf@3/bin
     /usr/local/opt/texinfo/bin
     /usr/local/opt/bison/bin
     /usr/local/opt/llvm/bin
