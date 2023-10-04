@@ -117,3 +117,5 @@ alias prom-instance="pbpaste | promquery| xsv select instance | cut -d: -f 1"
 }
 
 alias vimt="xargs -o vim -p"
+
+alias p="pbpaste"
