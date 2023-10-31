@@ -110,7 +110,7 @@ Plug 'mattn/emmet-vim'                        " zen coding
 Plug 'elixir-editors/vim-elixir'              " Elixir
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'gabrielelana/vim-markdown'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 Plug 'benmills/vimux'
 Plug 'flazz/vim-colorschemes'
 Plug 'nathangrigg/vim-beancount'

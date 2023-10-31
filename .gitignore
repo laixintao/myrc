@@ -38,3 +38,4 @@ bin/amtool
 .config/coc/lists
 .config/bpytop/
 .config/coc/commands
+.config/coc/extensions
