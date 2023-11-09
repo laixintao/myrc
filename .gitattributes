@@ -17,3 +17,5 @@ bin/connect-gns3-tmux filter=git-crypt diff=git-crypt
 .scrects_export filter=git-crypt diff=git-crypt
 .secret filter=git-crypt diff=git-crypt
 ssh_config  filter=git-crypt diff=git-crypt
+bin/spex-agent-blacklist.py filter=git-crypt diff=git-crypt
+bin/spex-agent-whitelist.py filter=git-crypt diff=git-crypt
