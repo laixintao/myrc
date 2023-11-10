@@ -268,3 +268,9 @@ export CC=gcc
 eval "$(direnv hook zsh)"
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# settings for gpg key
+# https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
+
+GPG_TTY=$(tty)
+export GPG_TTY
