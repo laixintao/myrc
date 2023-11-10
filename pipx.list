@@ -1,26 +1,26 @@
-ansible 8.1.0
-ansible-inventory-grapher 2.5.0
-az 0.8.23
-black 23.10.0
-bpytop 1.0.68
-bump2version 1.0.1
-flameshow 1.1.0
-git-fame 2.0.1
-iredis 1.13.0
-mactop 0.1.6
-memray 1.7.0
-mepe 0.1.5
-mycli 1.26.1
-pdm 2.9.3
-pgcli 3.5.0
-poetry 1.5.1
-py-spy 0.3.14
-shadowcat-dump 0.1.15
-shopee-mesos-cli 1.0.111
-shopee-spex-cli 1.1.5
-spcli 1.0.4
-tmuxp 1.27.1
-tokei-pie 1.2.0
-twine 4.0.2
-visidata 2.11
-youtube-dl 2021.12.17
+ansible
+ansible-inventory-grapher
+az
+black
+bpytop
+bump2version
+flameshow
+git-fame
+iredis
+mactop
+memray
+mepe
+mycli
+pdm
+pgcli
+poetry
+py-spy
+shadowcat-dump
+shopee-mesos-cli
+shopee-spex-cli
+spcli
+tmuxp
+tokei-pie
+twine
+visidata
+youtube-dl
