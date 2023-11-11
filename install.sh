@@ -50,4 +50,5 @@ do
         ln -s $MY_RC_PATH/${file} ~/${file}
 done
 
-# manually install vim color
+# post install
+/usr/local/opt/fzf/install
