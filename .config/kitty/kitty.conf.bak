@@ -834,7 +834,7 @@ include ./theme.conf
 
 
 # BEGIN_KITTY_THEME
-# Galaxy
+# purpurite
 include current-theme.conf
 # END_KITTY_THEME
 
