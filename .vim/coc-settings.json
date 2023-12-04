@@ -10,6 +10,7 @@
   "coc.preferences.jumpCommand": "tabe",
   "pyright.inlayHints.variableTypes": false,
   "pyright.inlayHints.functionReturnTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
   "go.goplsOptions": {},
   "languageserver": {
     "golang": {

@@ -5,7 +5,7 @@
     "coc-highlight": ">=2.0.4",
     "coc-json": ">=1.9.2",
     "coc-prettier": ">=9.3.2",
-    "coc-pyright": ">=1.1.325",
+    "coc-pyright": ">=1.1.337",
     "coc-sh": ">=1.1.1",
     "coc-snippets": ">=3.1.9",
     "coc-tsserver": ">=2.1.3"
