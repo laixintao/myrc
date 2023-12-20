@@ -178,13 +178,11 @@ export BAT_CONFIG_PATH="~/.bat.conf"
 # for compilers
 export LDFLAGS="-L/usr/local/opt/readline/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/bin"
-export LDFLAGS="${LDFLAGS} -L/usr/local/opt/openssl@1.1/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/sqlite/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/lib"
 
 export CPPFLAGS="-I/usr/local/opt/readline/include"
-export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/openssl@1.1/include"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/sqlite/include"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/libpcap/include"
