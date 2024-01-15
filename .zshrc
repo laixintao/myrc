@@ -174,6 +174,7 @@ compctl -K _pip_completion pip
 export DISABLE_AUTO_TITLE='true'
 # bat conf
 export BAT_CONFIG_PATH="~/.bat.conf"
+export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
 
 # for compilers
 export LDFLAGS="-L/usr/local/opt/readline/lib"
