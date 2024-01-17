@@ -5,19 +5,28 @@
   "python.formatting.provider": "black",
   "python.linting.flake8Enabled": true,
   "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
-  "python.formatting.blackArgs": ["--preview"],
-  "prettier.proseWrap": "always",
+  "python.formatting.blackArgs": [
+    "--preview"
+  ],
   "coc.preferences.jumpCommand": "tabe",
   "pyright.inlayHints.variableTypes": false,
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.parameterTypes": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "go.goplsOptions": {},
   "languageserver": {
     "golang": {
       "command": "gopls",
       "args": [],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "filetypes": [
+        "go"
+      ]
     }
   },
   "snippets.ultisnips.pythonPrompt": false
