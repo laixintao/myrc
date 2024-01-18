@@ -338,8 +338,9 @@ augroup javascript_lang
     autocmd BufNewFile,BufRead *.html setlocal nowrap
     autocmd FileType javascript set filetype=javascript.jsx
 
-    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set sw=2 ts=2
-    autocmd FileType coffee,html,css,xml,yaml,js,javascript,dot,gv,typescriptreact,typescript set foldmethod=indent
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,javascriptreact,dot,gv,typescriptreact,typescript set sw=2 ts=2
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,javascriptreact,dot,gv,typescriptreact,typescript set foldmethod=indent
+    autocmd FileType coffee,html,css,xml,yaml,js,javascript,javascriptreact,dot,gv,typescriptreact,typescript set shiftwidth=2
 augroup end
 " }}}
 
