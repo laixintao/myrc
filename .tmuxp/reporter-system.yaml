@@ -5,14 +5,14 @@ windows:
     panes:
       - focus: "true"
         shell_command: zsh
-    start_directory: /Users/xintao.lai/Programs/reporter
+    start_directory: /Users/xintao.lai/Programs/patrolify
     window_name: backend
   - layout: tiled
     options: {}
     panes:
       - focus: "true"
         shell_command: zsh
-    start_directory: /Users/xintao.lai/Programs/reporter
+    start_directory: /Users/xintao.lai/Programs/patrolify
     window_name: backend-running
   - layout: tiled
     options: {}
@@ -20,16 +20,16 @@ windows:
       - pyenv && make run-worker
       - pyenv && make run-scheduler
       - focus: "true"
-        shell_command: tail -f reporter.log
-      - tail -f reporter-planner.log
-    start_directory: /Users/xintao.lai/Programs/reporter
+        shell_command: tail -f patrolify.log
+      - tail -f patrolify-planner.log
+    start_directory: /Users/xintao.lai/Programs/patrolify
     window_name: shedueler-worker
   - layout: tiled
     options: {}
     panes:
       - focus: "true"
         shell_command: zsh
-    start_directory: /Users/xintao.lai/Programs/reporter/reporter/admin/web
+    start_directory: /Users/xintao.lai/Programs/patrolify/patrolify/admin/web
     window_name: frontend
   - focus: "true"
     layout: tiled
@@ -38,5 +38,5 @@ windows:
       - yarn dev
       - focus: "true"
         shell_command: Python
-    start_directory: /Users/xintao.lai/Programs/reporter/reporter/admin/web
+    start_directory: /Users/xintao.lai/Programs/patrolify/patrolify/admin/web
     window_name: frontend-running
