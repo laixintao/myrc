@@ -151,10 +151,14 @@ fi
 # press CTRL+X+E can open vim quickly
 export EDITOR=vim
 
+# choose one from fzf, autin
 # fzf settings
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# autin shell history search
+# eval "$(atuin init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
