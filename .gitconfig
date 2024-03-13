@@ -63,3 +63,5 @@
 	markEmptyLines = true
 [url "gitlab@git.garena.com:"]
 	insteadOf = https://git.garena.com
+[url "gitlab@git.garena.com:"]
+	insteadOf = http://git.garena.com
