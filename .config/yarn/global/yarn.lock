@@ -6,3 +6,8 @@ create-next-app@^12.2.3:
   version "12.2.3"
   resolved "https://registry.yarnpkg.com/create-next-app/-/create-next-app-12.2.3.tgz#fbfa13bc03e2d80a716f721be39cba7430ae61c7"
   integrity sha512-Hi1dIRDaGQoz5NN/gkG8Gz3VZdhU16a8x1kEG2S1ax4PYCb789yfgD9GTvAay0Nk7JRhtMsIVbGEk6As47CU3w==
+
+create-vite@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/create-vite/-/create-vite-5.2.3.tgz#225d38cf93adebfaeb24b2a9037c29eaa85fb2e3"
+  integrity sha512-fTIAW0foFjj0+oNzG0zs7VXMdQ/C9NcaLeoB/kl91HQukFKCXYMPzmllJAWX2lJTgunRRz4K14HBiXfyuX9xGg==

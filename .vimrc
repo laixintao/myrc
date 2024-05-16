@@ -151,6 +151,7 @@ nnoremap <silent> <leader> :WhichKey ','<CR>
 " Vim vim-visual-multi --------------------{{{ 
 let g:VM_maps = {}
 let g:VM_maps["Exit"]               = '<C-C>'   " quit VM
+let g:VM_quit_after_leaving_insert_mode = 1
 " }}}
 
 
