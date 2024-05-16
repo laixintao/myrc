@@ -1,0 +1,57 @@
+session_name: bara
+windows:
+- layout: ba5d,251x72,0,0,0
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/baratravel
+  window_name: backend
+
+- layout: main-vertical
+  panes:
+  - shell_command: 
+    - pyenv 
+    - make travel
+  - shell_command:
+    - pyenv 
+    - make runserver
+  - pyenv
+  start_directory: /Users/xintao.lai/Programs/baratravel
+  window_name: running
+
+- layout: tiled
+  options: {}
+  panes:
+  - pyenv
+  - focus: 'true'
+    shell_command:
+      - pyenv
+      - mycli -u root baratravel_local
+  start_directory: /Users/xintao.lai/Programs/baratravel
+  window_name: db
+- layout: tiled
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: pyenv
+  start_directory: /Users/xintao.lai/Programs/baratravel
+  window_name: frontend
+- layout: tiled
+  options: {}
+  panes:
+  - zsh
+  - focus: 'true'
+    shell_command: 
+        - pyenv
+        - make web
+  start_directory: /Users/xintao.lai/Programs/baratravel
+  window_name: frontend-running
+- focus: 'true'
+  layout: tiled
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: Python
+  start_directory: /Users/xintao.lai/Programs/baratravel
+  window_name: shell

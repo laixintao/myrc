@@ -121,3 +121,5 @@ alias vimt="xargs -o vim -p"
 alias p="pbpaste"
 alias promquery-ip-toc-resource-node='pbpaste | promquery | xsv select instance | tail -n +2 | cut -d: -f 1 | tr -d " " |  xargs -I {} bash -c "echo -n \"{} \"; server-inspect {} | rg \"Resource Node \""'
 alias pytest="pytest --log-cli-level=DEBUG"
+
+alias mount-canon="sudo rmdir -v /Volumes/canon ; sudo mkdir /Volumes/canon && sudo mount -t msdos /dev/disk2s1 /Volumes/canon"
