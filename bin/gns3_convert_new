@@ -17,7 +17,7 @@ startup_configs = getoutput("fd startup-config.cfg")
 
 def copy_startup_config_new_location(old_config):
     string_ix = re.search(r"i(\d+)_startup-config.cfg", old_config).group(1)
-    bootflash_location = getoutput(f"fd i{string_ix}_bootflash")
+    bootflash_location = getoutput(f"fd i{string_ix}_lock")
     new_config_path = Path(bootflash_location).parent / "configs"
 
     os.system(f"cp -v '{old_config}' '{new_config_path}'")
