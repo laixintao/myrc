@@ -793,4 +793,4 @@ inoremap <silent><C-W>w <C-o>:MaximizerToggle<CR>
 " https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
 nnoremap cp :let @+ = expand("%")<cr>
 
-
+nnoremap <leader>l G"+p:w<cr>
