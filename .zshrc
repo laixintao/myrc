@@ -5,6 +5,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -91,6 +92,16 @@ fi
 # User configuration
 source $ZSH/oh-my-zsh.sh
 
+unalias "1"
+unalias "2"
+unalias "3"
+unalias "4"
+unalias "5"
+unalias "6"
+unalias "7"
+unalias "8"
+unalias "9"
+
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
@@ -159,8 +170,6 @@ export FZF_DEFAULT_OPTS='--height 40% --reverse'
 
 # autin shell history search
 # eval "$(atuin init zsh)"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # pip zsh completion start
 function _pip_completion {
@@ -277,3 +286,4 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 GPG_TTY=$(tty)
 export GPG_TTY
+
