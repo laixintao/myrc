@@ -1,0 +1,17 @@
+SESSION=$(tmux display-message -p '#S')
+
+tmux new-window -t $SESSION
+
+WINDOW=$(tmux display-message -p '#{last_window_index}')
+
+tmux rename-window -t $SESSION:$WINDOW $1
+
+tmux split-window -v -t $SESSION:$WINDOW.1
+tmux split-window -v -t $SESSION:$WINDOW.1
+tmux split-window -v -t $SESSION:$WINDOW.1
+tmux select-layout -t $SESSION:$WINDOW tile
+
+tmux send-keys -t $SESSION:$WINDOW.1 "$*" C-m
+tmux send-keys -t $SESSION:$WINDOW.2 "$*" C-m
+tmux send-keys -t $SESSION:$WINDOW.3 "$*" C-m
+tmux send-keys -t $SESSION:$WINDOW.4 "$*" C-m
