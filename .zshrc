@@ -271,6 +271,10 @@ function replace(){
     gsed -i"" "s#$1#$2#g" $(rg --hidden $1 -l)
 }
 
+function delete-lines(){
+    gsed -i"" "/$1/d" $(rg --hidden $1 -l)
+}
+
 unset __PYVENV_LAUNCHER__
 export ANSIBLE_NOCOWS=1
 export CC=gcc
