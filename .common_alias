@@ -125,3 +125,5 @@ alias pytest="pytest --log-cli-level=DEBUG"
 alias mount-canon="sudo rmdir -v /Volumes/canon ; sudo mkdir /Volumes/canon && sudo mount -t msdos /dev/disk2s1 /Volumes/canon"
 
 alias reboot-foobar="vagrant halt 1c && vagrant up 1c"
+
+alias sed="gsed"

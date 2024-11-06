@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "create-next-app": "^12.2.3",
-    "create-vite": "^5.2.3"
+    "create-vite": "^5.2.3",
+    "markmap-cli": "^0.17.2"
   }
 }

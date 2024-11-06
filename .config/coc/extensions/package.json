@@ -9,7 +9,9 @@
     "coc-snippets": ">=3.1.9",
     "coc-tsserver": ">=2.1.3"
   },
-  "disabled": [],
+  "disabled": [
+    "coc-clangd"
+  ],
   "locked": [],
-  "lastUpdate": 1715855356043
+  "lastUpdate": 1721981926449
 }
