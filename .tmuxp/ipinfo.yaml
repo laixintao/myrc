@@ -1,0 +1,23 @@
+session_name: ipinfo
+windows:
+- focus: 'true'
+  layout: 6292,175x55,0,0,13
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+      - pyenv
+  start_directory: /Users/xintao.lai/Programs/shopee/shopeeipinfo
+  window_name: zsh
+- layout: 779b,175x55,0,0[175x27,0,0,14,175x27,0,28,15]
+  options: {}
+  panes:
+  - shell_command:
+    - pyenv
+    - flask --debug run
+  - focus: 'true'
+    shell_command: 
+     - cd web
+     - yarn vite
+  start_directory: /Users/xintao.lai/Programs/shopee/shopeeipinfo
+  window_name: shell
