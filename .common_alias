@@ -127,3 +127,4 @@ alias mount-canon="sudo rmdir -v /Volumes/canon ; sudo mkdir /Volumes/canon && s
 alias reboot-foobar="vagrant halt 1c && vagrant up 1c"
 
 alias sed="gsed"
+alias rgip="rg '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' -o"
