@@ -40,14 +40,8 @@ Go to `myrc/.config/coc/extensions` run `npm install`.
 need to set option key as Meta key from iterm2:
 https://superuser.com/questions/649960/option-key-does-not-work-as-meta-in-tmux
 
-# todo list
-
-- [x] shell script to delete the original rc files, and make softlinks to replace it .
-- [x] reorgainze the files
-- [x] wttr.in auto run when first time to open shell (by tmux)
-
 1. install `xcode-select --install`
 2. install `brew`
 3. install zsh
 4. install oh-my-zsh
-5. install pip
+5. install pipx `pipx install-all pipx.json`

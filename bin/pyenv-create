@@ -25,7 +25,7 @@ LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
 project=${PWD##*/}
-PY_VERSION="3.10.7"
+PY_VERSION="3.11.11"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
