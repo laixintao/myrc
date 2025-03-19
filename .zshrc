@@ -190,6 +190,8 @@ export BAT_CONFIG_PATH="~/.bat.conf"
 export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
 
 # for compilers
+export ARCHFLAGS="-arch arm64"
+
 export LDFLAGS="-L/usr/local/opt/readline/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/bin"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"

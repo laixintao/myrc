@@ -1,0 +1,1176 @@
+{
+    "pipx_spec_version": "0.1",
+    "venvs": {
+        "ansible": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-community",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "ansible-core": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-config",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-console",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-doc",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-galaxy",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-inventory",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-playbook",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-pull",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-test",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible/bin/ansible-vault",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "ansible-community"
+                    ],
+                    "apps_of_dependencies": [
+                        "ansible",
+                        "ansible-config",
+                        "ansible-console",
+                        "ansible-doc",
+                        "ansible-galaxy",
+                        "ansible-inventory",
+                        "ansible-playbook",
+                        "ansible-pull",
+                        "ansible-test",
+                        "ansible-vault"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "ansible",
+                    "package_or_url": "ansible",
+                    "package_version": "11.3.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "ansible-inventory-grapher": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-inventory-grapher",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "ansible-core": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-config",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-console",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-doc",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-galaxy",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-inventory",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-playbook",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-pull",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-test",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/ansible-inventory-grapher/bin/ansible-vault",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "ansible-inventory-grapher"
+                    ],
+                    "apps_of_dependencies": [
+                        "ansible",
+                        "ansible-config",
+                        "ansible-console",
+                        "ansible-doc",
+                        "ansible-galaxy",
+                        "ansible-inventory",
+                        "ansible-playbook",
+                        "ansible-pull",
+                        "ansible-test",
+                        "ansible-vault"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "ansible-inventory-grapher",
+                    "package_or_url": "ansible-inventory-grapher",
+                    "package_version": "2.6.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "black": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/black/bin/black",
+                            "__type__": "Path"
+                        },
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/black/bin/blackd",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "black",
+                        "blackd"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "black",
+                    "package_or_url": "black",
+                    "package_version": "25.1.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "bpytop": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/bpytop/bin/bpytop",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "bpytop"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "bpytop",
+                    "package_or_url": "bpytop",
+                    "package_version": "1.0.68",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "bump2version": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/bump2version/bin/bump2version",
+                            "__type__": "Path"
+                        },
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/bump2version/bin/bumpversion",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "bump2version",
+                        "bumpversion"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "bump2version",
+                    "package_or_url": "bump2version",
+                    "package_version": "1.0.1",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "flameshow": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/flameshow/bin/flameshow",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "markdown-it-py": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/flameshow/bin/markdown-it",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/flameshow/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "flameshow"
+                    ],
+                    "apps_of_dependencies": [
+                        "markdown-it",
+                        "pygmentize"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "flameshow",
+                    "package_or_url": "flameshow",
+                    "package_version": "1.1.4",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "git-fame": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/git-fame/bin/git-fame",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "tabulate": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/git-fame/bin/tabulate",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "tqdm": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/git-fame/bin/tqdm",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "git-fame"
+                    ],
+                    "apps_of_dependencies": [
+                        "tabulate",
+                        "tqdm"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "git-fame",
+                    "package_or_url": "git-fame",
+                    "package_version": "2.1.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "iredis": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/iredis/bin/iredis",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/iredis/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "iredis"
+                    ],
+                    "apps_of_dependencies": [
+                        "pygmentize"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "iredis",
+                    "package_or_url": "iredis",
+                    "package_version": "1.15.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "mactop": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mactop/bin/mactop",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "markdown-it-py": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mactop/bin/markdown-it",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mactop/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "mactop"
+                    ],
+                    "apps_of_dependencies": [
+                        "markdown-it",
+                        "pygmentize"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "mactop",
+                    "package_or_url": "mactop",
+                    "package_version": "0.1.11",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "memray": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/memray/bin/memray",
+                            "__type__": "Path"
+                        },
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/memray/bin/memray3.13",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "markdown-it-py": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/memray/bin/markdown-it",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/memray/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "memray",
+                        "memray3.13"
+                    ],
+                    "apps_of_dependencies": [
+                        "markdown-it",
+                        "pygmentize"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "memray",
+                    "package_or_url": "memray",
+                    "package_version": "1.16.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "mepe": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mepe/bin/mepe",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "charset-normalizer": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mepe/bin/normalizer",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "commonmark": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mepe/bin/cmark",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mepe/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "mepe"
+                    ],
+                    "apps_of_dependencies": [
+                        "normalizer",
+                        "cmark",
+                        "pygmentize"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "mepe",
+                    "package_or_url": "mepe",
+                    "package_version": "0.1.5",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "mycli": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mycli/bin/mycli",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mycli/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "sqlparse": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mycli/bin/sqlformat",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "tabulate": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/mycli/bin/tabulate",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "mycli"
+                    ],
+                    "apps_of_dependencies": [
+                        "pygmentize",
+                        "sqlformat",
+                        "tabulate"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "mycli",
+                    "package_or_url": "mycli",
+                    "package_version": "1.29.2",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "pgcli": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/pgcli/bin/pgcli",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/pgcli/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "sqlparse": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/pgcli/bin/sqlformat",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "tabulate": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/pgcli/bin/tabulate",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "pgcli"
+                    ],
+                    "apps_of_dependencies": [
+                        "sqlformat",
+                        "pygmentize",
+                        "tabulate"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "pgcli",
+                    "package_or_url": "pgcli",
+                    "package_version": "4.2.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "py-spy": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/py-spy/bin/py-spy",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "py-spy"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "py-spy",
+                    "package_or_url": "py-spy",
+                    "package_version": "0.4.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "shopee-mesos-cli": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/shopee-mesos-cli/bin/smc",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "smc"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "shopee-mesos-cli",
+                    "package_or_url": "shopee-mesos-cli",
+                    "package_version": "2.4.0",
+                    "pinned": false,
+                    "pip_args": [
+                        "--index-url",
+                        "https://pypi.shopee.io",
+                        "--force-reinstall"
+                    ],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/bin/python3",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "spcli": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/spcli/bin/sp",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "charset-normalizer": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/spcli/bin/normalizer",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "sp"
+                    ],
+                    "apps_of_dependencies": [
+                        "normalizer"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "spcli",
+                    "package_or_url": "spcli",
+                    "package_version": "1.0.4",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "tmuxp": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/tmuxp/bin/tmuxp",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "tmuxp"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "tmuxp",
+                    "package_or_url": "tmuxp",
+                    "package_version": "1.55.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "tokei-pie": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/tokei-pie/bin/tokei-pie",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "tokei-pie"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "tokei-pie",
+                    "package_or_url": "tokei-pie",
+                    "package_version": "1.2.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "twine": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/twine",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "charset-normalizer": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/normalizer",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "docutils": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/docutils",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2html",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2html4",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2html5",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2latex",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2man",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2odt",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2pseudoxml",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2s5",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2xetex",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/rst2xml",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "keyring": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/keyring",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "markdown-it-py": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/markdown-it",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/xintao.lai/.local/pipx/venvs/twine/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "twine"
+                    ],
+                    "apps_of_dependencies": [
+                        "docutils",
+                        "rst2html",
+                        "rst2html4",
+                        "rst2html5",
+                        "rst2latex",
+                        "rst2man",
+                        "rst2odt",
+                        "rst2pseudoxml",
+                        "rst2s5",
+                        "rst2xetex",
+                        "rst2xml",
+                        "pygmentize",
+                        "normalizer",
+                        "keyring",
+                        "markdown-it"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "twine",
+                    "package_or_url": "twine",
+                    "package_version": "6.1.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "visidata": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/visidata/bin/vd",
+                            "__type__": "Path"
+                        },
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/visidata/bin/vd2to3.vdx",
+                            "__type__": "Path"
+                        },
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/visidata/bin/visidata",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "vd",
+                        "vd2to3.vdx",
+                        "visidata"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [
+                        "man1/vd.1",
+                        "man1/visidata.1"
+                    ],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/visidata/share/man/man1/vd.1",
+                            "__type__": "Path"
+                        },
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/visidata/share/man/man1/visidata.1",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "man_paths_of_dependencies": {},
+                    "package": "visidata",
+                    "package_or_url": "visidata",
+                    "package_version": "3.1.1",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "youtube-dl": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/youtube-dl/bin/youtube-dl",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {},
+                    "apps": [
+                        "youtube-dl"
+                    ],
+                    "apps_of_dependencies": [],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [
+                        "man1/youtube-dl.1"
+                    ],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [
+                        {
+                            "__Path__": "/Users/xintao.lai/.local/pipx/venvs/youtube-dl/share/man/man1/youtube-dl.1",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "man_paths_of_dependencies": {},
+                    "package": "youtube-dl",
+                    "package_or_url": "youtube-dl",
+                    "package_version": "2021.12.17",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.2",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        }
+    }
+}
