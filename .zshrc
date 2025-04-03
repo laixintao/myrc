@@ -120,7 +120,7 @@ DEFAULT_USER="laixintao"
 
 
 export GOPATH=$HOME/Go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/opt/homebrew/opt/go/libexec
 # GNU coreutils path
 # opam configuration
 test -r /Users/laixintao/.opam/opam-init/init.zsh && . /Users/laixintao/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -166,7 +166,7 @@ export EDITOR=vim
 # fzf settings
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # autin shell history search
 # eval "$(atuin init zsh)"
@@ -187,7 +187,6 @@ compctl -K _pip_completion pip
 export DISABLE_AUTO_TITLE='true'
 # bat conf
 export BAT_CONFIG_PATH="~/.bat.conf"
-export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
 
 # for compilers
 export ARCHFLAGS="-arch arm64"
@@ -207,8 +206,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/sqlite/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/libpcap/lib/pkgconfig"
-
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl@1.1/lib/pkgconfig
 
 # -------------------
 # My own functions
@@ -241,7 +238,6 @@ path=(
     /Users/xintao.lai/Library/Python/3.8/bin/ # in system
     /usr/local/var/pyenv/shims               # pyenv
     /usr/local/opt/sqlite/bin
-    /usr/local/opt/openssl@1.1/bin
     /usr/local/opt/curl/bin                  # curl in brew
     /usr/local/opt/ruby/bin                  # ruby
     /usr/local/opt/coreutils/libexec/gnubin  # Gnu coreutils
