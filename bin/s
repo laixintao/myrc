@@ -1,0 +1,15 @@
+#!/bin/bash
+input=$(pbpaste)
+
+SESSION_WINDOW_PANE=$(tmux display-message -p '#S:#I.#{pane_id}')
+SESSION_WINDOW=$(tmux display-message -p '#S:#I')
+
+iplist=$(echo ${input} | grep -oE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b' | sort | uniq )
+
+for ip in ${iplist}; do
+    echo "create a panel for $ip..."
+    tmux split-window -v -t $SESSION_WINDOW_PANE "ssh ${ip}"
+done
+
+tmux select-layout -t $SESSION_WINDOW tile
+tmux select-pane -t $SESSION_WINDOW_PANE
