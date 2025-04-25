@@ -8,7 +8,7 @@ iplist=$(echo ${input} | grep -oE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b' | sort | uni
 
 for ip in ${iplist}; do
     echo "create a panel for $ip..."
-    tmux split-window -v -t $SESSION_WINDOW_PANE "ssh ${ip}"
+    tmux split-window -v -t $SESSION_WINDOW_PANE "smc toc ${ip}"
 done
 
 tmux select-layout -t $SESSION_WINDOW tile
