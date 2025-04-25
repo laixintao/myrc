@@ -1,0 +1,26 @@
+session_name: corelink
+windows:
+- focus: 'true'
+  layout: cf20,262x77,0,0,3
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: 
+      - pyenv
+      - vim
+  start_directory: /Users/xintao.lai/Programs/shopee/corelink
+  window_name: zsh
+- layout: tile
+  options: {}
+  panes:
+  - shell_command:
+      - pyenv
+      - make runserver
+  - shell_command:
+      - cd web
+      - yarn vite
+  - zsh
+  - focus: 'true'
+    shell_command: zsh
+  start_directory: /Users/xintao.lai/Programs/shopee/corelink
+  window_name: running panel
