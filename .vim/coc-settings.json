@@ -13,6 +13,7 @@
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.parameterTypes": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "prettier.enable": true,
   "go.goplsOptions": {},
   "languageserver": {
     "golang": {
