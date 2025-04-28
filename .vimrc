@@ -135,6 +135,7 @@ colorscheme molokai
 
 let g:airline_theme='wombat'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_section_x = ''
 
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -735,11 +736,6 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 nmap <leader>i :CocCommand editor.action.organizeImport<cr>
-
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
