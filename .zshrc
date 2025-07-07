@@ -207,6 +207,11 @@ export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/sqlite/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/libpcap/lib/pkgconfig"
 
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+
+
 # -------------------
 # My own functions
 
@@ -249,6 +254,7 @@ path=(
     /usr/local/opt/bison/bin
     /usr/local/opt/llvm/bin
     /opt/homebrew/bin
+    /opt/homebrew/opt/mysql-client/bin
     $HOME/bin
     $HOME/shopee-bin
     $GOPATH/bin                              # golang
