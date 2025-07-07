@@ -28,7 +28,6 @@ alias cat="bat --plain --theme 'Monokai Extended' "
 alias a=ansible
 alias h=htop
 alias d=docker
-alias t=tmux
 alias v=vagrant
 alias ap=ansible-playbook
 
