@@ -1,0 +1,6 @@
+#!/opt/homebrew/bin/zsh
+
+session_name=$1
+tmux new -s ${session_name} -d
+tmux send-keys -t ${session_name}:1 "z ${session_name}" C-m
+tmux attach -t ${session_name}

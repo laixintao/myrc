@@ -13,6 +13,7 @@ bin/server-command filter=git-crypt diff=git-crypt
 bin/offline_spex_ip.py filter=git-crypt diff=git-crypt
 bin/tmux-connect-gns3 filter=git-crypt diff=git-crypt
 bin/connect-gns3-tmux filter=git-crypt diff=git-crypt
+bin/sk filter=git-crypt diff=git-crypt
 .my_alias filter=git-crypt diff=git-crypt
 .scrects_export filter=git-crypt diff=git-crypt
 .secret filter=git-crypt diff=git-crypt
