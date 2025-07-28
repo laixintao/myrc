@@ -69,6 +69,7 @@ noremap \ ,
 " use q to exit help window
 autocmd FileType help noremap <buffer> q :q<cr>
 
+
 " <Leader>[1-9] move to tab [1-9]
 " from: https://github.com/liuchengxu/dotfiles/blob/master/vimrc#L74
 for s:i in range(1, 9)
@@ -144,6 +145,8 @@ endif
 let g:airline_symbols.colnr = ' ㏇:'
 
 let g:gist_open_browser_after_post = 1
+
+highlight Visual ctermfg=white ctermbg=darkblue guifg=white guibg=#5f5f87
 
 " Vim WhichKey --------------------{{{
 nnoremap <silent> <leader> :WhichKey ','<CR>
