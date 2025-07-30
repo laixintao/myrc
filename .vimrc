@@ -766,7 +766,7 @@ vnoremap il :<C-U>normal ^vg_<CR>
 omap il :normal vil<CR>
 
 " copy the current file path
-nmap <leader>p :let @+ = expand("%:p")<cr>
+nmap <leader>p :let @+ = expand("%") . ":L" . line(".")<cr>
 
 nnoremap <F5> :bufdo! e <cr>
 
