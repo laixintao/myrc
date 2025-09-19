@@ -211,6 +211,8 @@ augroup end
 
 
 nnoremap <leader>b :Git blame<CR>
+" Git status
+nnoremap <leader>gs :Git <CR>
 
 nnoremap <F8> :TagbarToggle<CR>
 
