@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "coc-clangd": ">=0.29.3",
     "coc-go": ">=1.3.24",
     "coc-highlight": ">=2.0.4",
     "coc-json": ">=1.9.2",
@@ -8,11 +7,10 @@
     "coc-sh": ">=1.1.1",
     "coc-snippets": ">=3.1.9",
     "coc-tsserver": ">=2.1.3",
-    "coc-prettier": ">=11.0.0"
+    "coc-prettier": ">=11.0.0",
+    "coc-clangd": ">=0.32.0"
   },
-  "disabled": [
-    "coc-clangd"
-  ],
+  "disabled": [],
   "locked": [],
   "lastUpdate": 1721981926449
 }
