@@ -290,9 +290,33 @@ augroup END
 " }}}
 
 " Prompt for a command to run
+function! VimuxCompileAndRun()
+  write
+  let l:file = expand('%')
+  let l:ext  = expand('%:e')
+  let l:out  = '/tmp/' . expand('%:t:r')
+
+  if l:ext ==# 'c'
+    let l:cmd = 'gcc ' . l:file . ' -O2 -Wall -Wextra -o ' . l:out . ' && ' . l:out
+  elseif l:ext ==# 'cpp'
+    let l:cmd = 'g++ ' . l:file . ' -O2 -std=c++20 -Wall -Wextra -o ' . l:out . ' && ' . l:out
+  elseif l:ext ==# 'go'
+    let l:cmd = 'go run ' . l:file
+  elseif l:ext ==# 'py'
+    let l:cmd = 'python3 ' . l:file
+  else
+    echo "Unsupported filetype"
+    return
+  endif
+
+  call VimuxRunCommand(l:cmd)
+endfunction
+nnoremap <leader>r :call VimuxCompileAndRun()<CR>
+
+
 nnoremap <Leader>ri :VimuxPromptCommand<CR>
 " Close vim tmux runner opened by VimuxRunCommand
-nnoremap <Leader>rc :VimuxCloseRunner<CR>
+nnoremap <Leader>rx :VimuxCloseRunner<CR>
 nnoremap <Leader>rl :VimuxRunLastCommand<CR>
 "}}}
 
@@ -801,3 +825,4 @@ inoremap <silent><C-W>w <C-o>:MaximizerToggle<CR>
 nnoremap cp :let @+ = expand("%")<cr>
 
 nnoremap <leader>l G"+p:w<cr>
+
