@@ -196,20 +196,21 @@ export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/bin"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/sqlite/lib"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/libpcap/lib"
+export LDFLAGS="${LDFLAGS} -L/opt/homebrew/opt/mysql-client/lib"
+export LDFLAGS="${LDFLAGS} -L/opt/homebrew/opt/zlib/lib"
 
 export CPPFLAGS="-I/usr/local/opt/readline/include"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/sqlite/include"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/libpcap/include"
+export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/zlib/include"
+export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/mysql-client/include"
 
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/sqlite/lib/pkgconfig"
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/libpcap/lib/pkgconfig"
-
-export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /opt/homebrew/opt/mysql-client/lib/pkgconfig"
 
 
 # -------------------

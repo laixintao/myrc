@@ -65,3 +65,5 @@
 	insteadOf = https://git.garena.com
 [url "gitlab@git.garena.com:"]
 	insteadOf = http://git.garena.com
+[credential]
+	helper = store

@@ -592,7 +592,8 @@ augroup END
 
 " nginx --------------------{{{
 augroup nginx
-    autocmd BufRead,BufNewFile *nginx*.conf* set filetype=nginx
+    autocmd!
+    autocmd BufRead,BufNewFile *.conf.j2 set filetype=nginx
 augroup END
 " }}}
 
@@ -730,6 +731,7 @@ augroup mygroup
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  autocmd BufRead,BufNewFile *.json.j2 set filetype=json
 augroup end
 
 " Applying codeAction to the selected region.
