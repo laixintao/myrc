@@ -1,27 +1,28 @@
 {
-  "suggest.noselect": true,
-  "list.maxPreviewHeight": 20,
-  "list.height": 15,
-  "python.formatting.provider": "black",
-  "python.linting.flake8Enabled": true,
-  "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
-  "python.formatting.blackArgs": ["--preview"],
-  "coc.preferences.jumpCommand": "tabe",
-  "pyright.inlayHints.variableTypes": false,
-  "pyright.inlayHints.functionReturnTypes": false,
-  "pyright.inlayHints.parameterTypes": false,
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-  "prettier.enable": true,
-  "go.goplsOptions": {},
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "args": [],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
-  },
-  "snippets.ultisnips.pythonPrompt": false,
-  "clangd.arguments": ["--background-index", "--clang-tidy"],
-  "clangd.fallbackFlags": ["-std=c++23"]
+    "suggest.noselect": true,
+    "list.maxPreviewHeight": 20,
+    "list.height": 15,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.formatting.blackPath": "/Users/xintao.lai/.local/bin/black",
+    "python.formatting.blackArgs": ["--preview"],
+    "coc.preferences.jumpCommand": "tabe",
+    "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.functionReturnTypes": false,
+    "pyright.inlayHints.parameterTypes": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "prettier.enable": true,
+    "prettier.tabWidth": 4,
+    "go.goplsOptions": {},
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "args": [],
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"]
+        }
+    },
+    "snippets.ultisnips.pythonPrompt": false,
+    "clangd.arguments": ["--background-index", "--clang-tidy"],
+    "clangd.fallbackFlags": ["-std=c++23"]
 }
