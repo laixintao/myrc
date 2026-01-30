@@ -22,3 +22,4 @@ bin/* filter=git-crypt diff=git-crypt
 ssh_config  filter=git-crypt diff=git-crypt
 bin/spex-agent-blacklist.py filter=git-crypt diff=git-crypt
 bin/spex-agent-whitelist.py filter=git-crypt diff=git-crypt
+.config/pgcli/* filter=git-crypt diff=git-crypt
