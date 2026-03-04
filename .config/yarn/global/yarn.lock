@@ -40,9 +40,9 @@
     "@babel/runtime" "^7.21.5"
 
 "@hono/node-server@^1.3.3":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.13.1.tgz#0caf4b66e009d872dc745c9f76b71fb0b64b355d"
-  integrity sha512-TSxE6cT5RHnawbjnveexVN7H2Dpn1YaLxQrCOLCUwD+hFbqbFsnJBgdWcYtASqtWVjA+Qgi8uqFug39GsHjo5A==
+  version "1.19.10"
+  resolved "https://registry.yarnpkg.com/@hono/node-server/-/node-server-1.19.10.tgz#e230fbb7fb31891cafc653d01deee03f437dd66b"
+  integrity sha512-hZ7nOssGqRgyV3FVVQdfi+U4q02uB23bpnYpdvNXkYTRRyWx84b7yf1ans+dnJ/7h41sGL3CeQTfO+ZGxuO+Iw==
 
 "@iktakahiro/markdown-it-katex@^4.0.1":
   version "4.0.1"
