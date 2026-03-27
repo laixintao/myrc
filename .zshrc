@@ -58,6 +58,11 @@ ZSH_CUSTOM=~/Programs/myrc/zsh_custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git python z)
 
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+
+autoload -Uz compinit
+compinit
+
 
 # pyenv-virtualenv
 # https://github.com/pyenv/pyenv-virtualenv
@@ -296,3 +301,4 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 GPG_TTY=$(tty)
 export GPG_TTY
 
+export LESS="${LESS:+$LESS }-X -F"
