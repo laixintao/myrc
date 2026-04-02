@@ -41,3 +41,4 @@ bin/amtool
 .config/coc/extensions
 .secret
 ssh_config
+.config/gh/hosts.yml
