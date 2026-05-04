@@ -29,3 +29,4 @@ pip-wheel-metadata/*
 .yarnrc
 local_test/*
 chaoslab_agent/bin/*
+.claude/settings.local.json

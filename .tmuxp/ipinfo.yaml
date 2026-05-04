@@ -18,6 +18,6 @@ windows:
   - focus: 'true'
     shell_command: 
      - cd web
-     - yarn vite
+     - yarn vite --port 5375
   start_directory: /Users/xintao.lai/Programs/shopee/shopeeipinfo
   window_name: shell
