@@ -18,7 +18,7 @@ windows:
       - make runserver
   - shell_command:
       - cd web
-      - yarn vite
+      - yarn vite --port 5275
   - zsh
   - focus: 'true'
     shell_command: zsh

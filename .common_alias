@@ -129,5 +129,5 @@ alias sed="gsed"
 alias rgip="rg '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' -o"
 alias py="python3"
 
-alias ai="open -a cursor ."
+alias ai="open -a Codex ."
 alias disk_usage="ncdu --exclude 'Google Drive' --exclude 'GoogleDrive' --exclude '*CloudStorage*'"
