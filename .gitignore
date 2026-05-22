@@ -42,3 +42,5 @@ bin/amtool
 .secret
 ssh_config
 .config/gh/hosts.yml
+.config/.jira/
+bin/.claude/
