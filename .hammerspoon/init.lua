@@ -23,7 +23,7 @@ updateHotkey()
 
 
 hs.hotkey.bind({"cmd"}, "G", function()
-    hs.application.launchOrFocus("ChatGPT")
+    hs.application.launchOrFocus("ChatGPT Classic")
 end)
 
 hs.hotkey.bind({"cmd"}, "3", function()

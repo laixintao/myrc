@@ -1,0 +1,266 @@
+{
+  "providers" : [
+    {
+      "enabled" : true,
+      "id" : "codex"
+    },
+    {
+      "enabled" : false,
+      "id" : "openai"
+    },
+    {
+      "enabled" : false,
+      "id" : "azureopenai"
+    },
+    {
+      "enabled" : true,
+      "id" : "claude"
+    },
+    {
+      "enabled" : false,
+      "id" : "clinepass"
+    },
+    {
+      "enabled" : false,
+      "id" : "cursor"
+    },
+    {
+      "enabled" : false,
+      "id" : "opencode"
+    },
+    {
+      "enabled" : false,
+      "id" : "opencodego"
+    },
+    {
+      "enabled" : false,
+      "id" : "alibaba"
+    },
+    {
+      "enabled" : false,
+      "id" : "alibabatokenplan",
+      "region" : "intl"
+    },
+    {
+      "enabled" : false,
+      "id" : "qwencloud"
+    },
+    {
+      "enabled" : false,
+      "id" : "factory"
+    },
+    {
+      "enabled" : false,
+      "id" : "gemini"
+    },
+    {
+      "enabled" : false,
+      "id" : "antigravity"
+    },
+    {
+      "enabled" : false,
+      "id" : "copilot"
+    },
+    {
+      "enabled" : false,
+      "id" : "devin"
+    },
+    {
+      "enabled" : false,
+      "id" : "zai"
+    },
+    {
+      "enabled" : false,
+      "id" : "minimax"
+    },
+    {
+      "enabled" : false,
+      "id" : "manus"
+    },
+    {
+      "enabled" : false,
+      "id" : "kimi"
+    },
+    {
+      "enabled" : false,
+      "id" : "kilo"
+    },
+    {
+      "enabled" : false,
+      "id" : "kiro"
+    },
+    {
+      "enabled" : false,
+      "id" : "vertexai"
+    },
+    {
+      "enabled" : false,
+      "id" : "augment"
+    },
+    {
+      "enabled" : false,
+      "id" : "jetbrains"
+    },
+    {
+      "enabled" : false,
+      "id" : "moonshot"
+    },
+    {
+      "enabled" : false,
+      "id" : "amp"
+    },
+    {
+      "enabled" : false,
+      "id" : "t3chat"
+    },
+    {
+      "enabled" : false,
+      "id" : "ollama"
+    },
+    {
+      "enabled" : false,
+      "id" : "synthetic"
+    },
+    {
+      "enabled" : false,
+      "id" : "warp"
+    },
+    {
+      "enabled" : false,
+      "id" : "openrouter"
+    },
+    {
+      "enabled" : false,
+      "id" : "elevenlabs"
+    },
+    {
+      "enabled" : false,
+      "id" : "windsurf"
+    },
+    {
+      "enabled" : false,
+      "id" : "zed"
+    },
+    {
+      "enabled" : false,
+      "id" : "perplexity"
+    },
+    {
+      "enabled" : false,
+      "id" : "mimo"
+    },
+    {
+      "enabled" : false,
+      "id" : "doubao"
+    },
+    {
+      "enabled" : false,
+      "id" : "sakana"
+    },
+    {
+      "enabled" : false,
+      "id" : "abacus"
+    },
+    {
+      "enabled" : false,
+      "id" : "mistral"
+    },
+    {
+      "enabled" : false,
+      "id" : "deepseek"
+    },
+    {
+      "enabled" : false,
+      "id" : "deepinfra"
+    },
+    {
+      "enabled" : false,
+      "id" : "codebuff"
+    },
+    {
+      "enabled" : false,
+      "id" : "crof"
+    },
+    {
+      "enabled" : false,
+      "id" : "venice"
+    },
+    {
+      "enabled" : false,
+      "id" : "commandcode"
+    },
+    {
+      "enabled" : false,
+      "id" : "qoder"
+    },
+    {
+      "enabled" : false,
+      "id" : "stepfun"
+    },
+    {
+      "enabled" : false,
+      "id" : "bedrock"
+    },
+    {
+      "enabled" : false,
+      "id" : "grok"
+    },
+    {
+      "enabled" : false,
+      "id" : "groq"
+    },
+    {
+      "enabled" : false,
+      "id" : "llmproxy"
+    },
+    {
+      "enabled" : false,
+      "id" : "litellm"
+    },
+    {
+      "enabled" : false,
+      "id" : "deepgram"
+    },
+    {
+      "enabled" : false,
+      "id" : "poe"
+    },
+    {
+      "enabled" : false,
+      "id" : "chutes"
+    },
+    {
+      "enabled" : false,
+      "id" : "neuralwatt"
+    },
+    {
+      "enabled" : false,
+      "id" : "clawrouter"
+    },
+    {
+      "enabled" : false,
+      "id" : "longcat"
+    },
+    {
+      "enabled" : false,
+      "id" : "sub2api"
+    },
+    {
+      "enabled" : false,
+      "id" : "wayfinder"
+    },
+    {
+      "enabled" : false,
+      "id" : "zenmux"
+    },
+    {
+      "enabled" : false,
+      "id" : "aiand"
+    },
+    {
+      "enabled" : false,
+      "id" : "zoommate"
+    }
+  ],
+  "version" : 1
+}
