@@ -30,3 +30,5 @@ pip-wheel-metadata/*
 local_test/*
 chaoslab_agent/bin/*
 .claude/settings.local.json
+
+**/.claude/settings.local.json
