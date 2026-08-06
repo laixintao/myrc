@@ -14,7 +14,8 @@
     },
     {
       "enabled" : true,
-      "id" : "claude"
+      "id" : "claude",
+      "source" : "web"
     },
     {
       "enabled" : false,
@@ -260,6 +261,14 @@
     {
       "enabled" : false,
       "id" : "zoommate"
+    },
+    {
+      "enabled" : false,
+      "id" : "xai"
+    },
+    {
+      "enabled" : false,
+      "id" : "notion"
     }
   ],
   "version" : 1
