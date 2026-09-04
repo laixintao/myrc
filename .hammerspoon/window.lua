@@ -122,6 +122,52 @@ local function moveWindowToFraction(side, numerator, denominator)
     win:setFrame(newFrame)
 end
 
+local function tileAppWindows()
+    local win = hs.window.focusedWindow()
+    if not win then
+        return
+    end
+
+    local screen = win:screen()
+    local frame = screen:frame()
+
+    local windows = {}
+    for _, w in ipairs(win:application():allWindows()) do
+        if w:isStandard() and not w:isMinimized() and w:screen():id() == screen:id() then
+            table.insert(windows, w)
+        end
+    end
+
+    local count = #windows
+    if count == 0 then
+        return
+    end
+
+    table.sort(windows, function(a, b)
+        return a:id() < b:id()
+    end)
+
+    local cols = math.ceil(math.sqrt(count))
+    local rows = math.ceil(count / cols)
+    local cellW = frame.w / cols
+    local cellH = frame.h / rows
+
+    for i, w in ipairs(windows) do
+        local col = (i - 1) % cols
+        local row = math.floor((i - 1) / cols)
+        -- last row may have fewer windows; stretch them to fill the width
+        local isLastRow = row == rows - 1
+        local windowsInRow = isLastRow and (count - row * cols) or cols
+        local rowCellW = frame.w / windowsInRow
+        w:setFrame({
+            x = frame.x + col * rowCellW,
+            y = frame.y + row * cellH,
+            w = rowCellW,
+            h = cellH,
+        })
+    end
+end
+
 local mash = {"alt", "ctrl"}
 
 hs.hotkey.bind(mash, "1", function()
@@ -129,7 +175,7 @@ hs.hotkey.bind(mash, "1", function()
 end)
 
 hs.hotkey.bind(mash, "2", function()
-    moveWindowToQuarter("topRight")
+    tileAppWindows()
 end)
 
 hs.hotkey.bind(mash, "3", function()
