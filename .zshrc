@@ -259,6 +259,7 @@ path=(
     /usr/local/opt/texinfo/bin
     /usr/local/opt/bison/bin
     /usr/local/opt/llvm/bin
+    /Users/xintao.lai/Library/pnpm/bin
     /opt/homebrew/bin
     /opt/homebrew/opt/mysql-client/bin
     $HOME/bin
