@@ -56,7 +56,7 @@ ZSH_CUSTOM=~/Programs/myrc/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python z)
+plugins=(git python)
 
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 
@@ -172,6 +172,10 @@ export EDITOR=vim
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_DEFAULT_OPTS='--height 40% --reverse'
 source <(fzf --zsh)
+
+# zoxide - smarter cd, replaces oh-my-zsh's z plugin
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
 
 # autin shell history search
 # eval "$(atuin init zsh)"
