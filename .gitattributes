@@ -23,3 +23,5 @@ ssh_config  filter=git-crypt diff=git-crypt
 bin/spex-agent-blacklist.py filter=git-crypt diff=git-crypt
 bin/spex-agent-whitelist.py filter=git-crypt diff=git-crypt
 .config/pgcli/* filter=git-crypt diff=git-crypt
+bin/tmux-split-pane.py filter=git-crypt diff=git-crypt
+.config/eve/*  filter=git-crypt diff=git-crypt
