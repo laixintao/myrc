@@ -44,3 +44,4 @@ ssh_config
 .config/gh/hosts.yml
 .config/.jira/
 bin/.claude/
+.config/eve
