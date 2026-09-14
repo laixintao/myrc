@@ -168,11 +168,59 @@ local function tileAppWindows()
     end
 end
 
+local recentWindows = hs.window.filter.new():setOverrideFilter({
+    visible = true,
+    fullscreen = false,
+    currentSpace = true,
+})
+
+-- Keep focus tracking active between hotkey presses.
+recentWindows:subscribe(hs.window.filter.windowFocused, function() end)
+
+local function tileRecentWindows()
+    local win = hs.window.focusedWindow()
+    if not win or not win:isStandard() or win:isFullScreen() then
+        return
+    end
+
+    local previous
+    for _, candidate in ipairs(recentWindows:getWindows(hs.window.filter.sortByFocusedLast)) do
+        if candidate:id() ~= win:id() and candidate:isStandard() then
+            previous = candidate
+            break
+        end
+    end
+
+    if not previous then
+        hs.alert.show("当前桌面没有第二个可平铺的窗口")
+        return
+    end
+
+    local frame = win:screen():frame()
+    local leftWidth = math.floor(frame.w * 2 / 5)
+    local leftFrame = {x = frame.x, y = frame.y, w = leftWidth, h = frame.h}
+    local rightFrame = {
+        x = frame.x + leftWidth,
+        y = frame.y,
+        w = frame.w - leftWidth,
+        h = frame.h,
+    }
+
+    local leftWindow, rightWindow = win, previous
+    -- If already tiled, swap sides; a focused window on the right moves left by default.
+    if isSameFrame(win:frame(), leftFrame) and isSameFrame(previous:frame(), rightFrame) then
+        leftWindow, rightWindow = previous, win
+    end
+
+    leftWindow:setFrame(leftFrame, 0)
+    rightWindow:setFrame(rightFrame, 0)
+    previous:raise()
+    win:focus()
+end
+
 local mash = {"alt", "ctrl"}
 
-hs.hotkey.bind(mash, "1", function()
-    moveWindowToQuarter("topLeft")
-end)
+hs.hotkey.bind(mash, "1", tileRecentWindows)
 
 hs.hotkey.bind(mash, "2", function()
     tileAppWindows()
