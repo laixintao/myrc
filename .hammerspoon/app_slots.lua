@@ -1,10 +1,29 @@
+local M = {}
 local settingsKey = "appSlots"
 local slots = hs.settings.get(settingsKey) or {
-    -- Preserve the existing shortcuts until reassigned or cleared.
+    -- Keep the default apps until reassigned or cleared.
     ["3"] = {name = "SeaTalk", toggle = true},
     ["4"] = {name = "Roam Research", toggle = true},
 }
 local launchHotkeys = {}
+local controlHotkeys = {}
+local hotkeysEnabled = false
+
+function M.setEnabled(enabled)
+    if hotkeysEnabled == enabled then
+        return
+    end
+    hotkeysEnabled = enabled
+    for _, group in ipairs({launchHotkeys, controlHotkeys}) do
+        for _, hotkey in pairs(group) do
+            if enabled then
+                hotkey:enable()
+            else
+                hotkey:disable()
+            end
+        end
+    end
+end
 
 local function launchSlot(key)
     local slot = slots[key]
@@ -37,10 +56,10 @@ local function updateLaunchHotkey(key)
         launchHotkeys[key] = nil
     end
     if slots[key] then
-        launchHotkeys[key] = hs.hotkey.bind({"cmd"}, key, function()
+        launchHotkeys[key] = hs.hotkey.new({"cmd"}, key, function()
             launchSlot(key)
         end)
-        if not launchHotkeys[key] then
+        if not launchHotkeys[key] or (hotkeysEnabled and not launchHotkeys[key]:enable()) then
             hs.alert.show("无法启用 ⌘" .. key .. "，请检查快捷键冲突")
             return false
         end
@@ -53,7 +72,7 @@ for number = 1, 9 do
     updateLaunchHotkey(key)
 
     -- Control + Command + number assigns the frontmost app to that slot.
-    hs.hotkey.bind({"ctrl", "cmd"}, key, function()
+    controlHotkeys["assign" .. key] = hs.hotkey.new({"ctrl", "cmd"}, key, function()
         local app = hs.application.frontmostApplication()
         local bundleID = app and app:bundleID()
         if not bundleID then
@@ -69,10 +88,12 @@ for number = 1, 9 do
     end)
 
     -- Add Option to clear a slot and release Command + number to the app.
-    hs.hotkey.bind({"ctrl", "alt", "cmd"}, key, function()
+    controlHotkeys["clear" .. key] = hs.hotkey.new({"ctrl", "alt", "cmd"}, key, function()
         slots[key] = nil
         hs.settings.set(settingsKey, slots)
         updateLaunchHotkey(key)
         hs.alert.show("已清除 ⌘" .. key .. " 的应用绑定")
     end)
 end
+
+return M
