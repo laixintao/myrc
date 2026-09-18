@@ -1,5 +1,12 @@
 require("window")
 local appSlots = require("app_slots")
+
+-- Send the system media key to whichever player currently handles playback.
+hs.hotkey.bind({}, "F3", function()
+    hs.eventtap.event.newSystemKeyEvent("NEXT", true):post()
+    hs.eventtap.event.newSystemKeyEvent("NEXT", false):post()
+end)
+
 local hotkey = hs.hotkey.bind({"cmd"}, "escape", function()
     hs.application.launchOrFocus("Ghostty")
 end)

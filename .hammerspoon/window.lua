@@ -246,6 +246,11 @@ local shortcuts = {
         action = function() moveWindowToQuarter("bottomRight") end,
     },
     {
+        key = "5",
+        description = "Chrome 当前标签页独立成窗、收起标签栏，右下角宽 1/2、高 6/7",
+        action = require("chrome").detachToBottomRight,
+    },
+    {
         key = "H",
         description = "当前窗口靠左，宽 3/5、高度铺满",
         action = function() moveWindowToFraction("left", 3, 5) end,
