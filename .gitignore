@@ -45,3 +45,4 @@ ssh_config
 .config/.jira/
 bin/.claude/
 .config/eve
+.config/browser-harness/
