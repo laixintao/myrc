@@ -117,6 +117,9 @@ local function moveWindowToFraction(side, numerator, denominator)
     elseif side == "right" then
         newFrame.w = targetW
         newFrame.x = frame.x + frame.w - targetW
+    elseif side == "center" then
+        newFrame.w = targetW
+        newFrame.x = frame.x + (frame.w - targetW) / 2
     end
 
     win:setFrame(newFrame)
@@ -220,28 +223,78 @@ end
 
 local mash = {"alt", "ctrl"}
 
-hs.hotkey.bind(mash, "1", tileRecentWindows)
+-- Use the same definitions for the hotkeys and their on-screen help.
+local shortcuts = {
+    {
+        key = "1",
+        description = "最近两个窗口左右平铺（2/5 + 3/5，再按互换）",
+        action = tileRecentWindows,
+    },
+    {
+        key = "2",
+        description = "当前应用在当前屏幕的窗口网格平铺",
+        action = tileAppWindows,
+    },
+    {
+        key = "3",
+        description = "当前窗口居中，宽 2/3、高度铺满",
+        action = function() moveWindowToFraction("center", 2, 3) end,
+    },
+    {
+        key = "4",
+        description = "当前窗口放到右下角，占 1/4 屏幕",
+        action = function() moveWindowToQuarter("bottomRight") end,
+    },
+    {
+        key = "H",
+        description = "当前窗口靠左，宽 3/5、高度铺满",
+        action = function() moveWindowToFraction("left", 3, 5) end,
+    },
+    {
+        key = "L",
+        description = "当前窗口靠右，宽 2/5、高度铺满",
+        action = function() moveWindowToFraction("right", 2, 5) end,
+    },
+}
 
-hs.hotkey.bind(mash, "2", function()
-    tileAppWindows()
-end)
+local helpLines = {"⌥ Option + ⌃ Control", ""}
+for _, shortcut in ipairs(shortcuts) do
+    hs.hotkey.bind(mash, shortcut.key, shortcut.action)
+    table.insert(helpLines, shortcut.key .. "    " .. shortcut.description)
+end
+local helpText = table.concat(helpLines, "\n")
+local helpAlert
+local helpStyle = {
+    textSize = 18,
+    textStyle = {paragraphStyle = {alignment = "left"}},
+    padding = 20,
+    radius = 12,
+    strokeWidth = 0,
+    fillColor = {white = 0.1, alpha = 0.95},
+    fadeInDuration = 0,
+    fadeOutDuration = 0,
+}
 
-hs.hotkey.bind(mash, "3", function()
-    moveWindowToQuarter("bottomLeft")
-end)
+local shortcutHelpWatcher = hs.eventtap.new({hs.eventtap.event.types.flagsChanged}, function(event)
+    local flags = event:getFlags()
+    local showHelp = flags.alt and flags.ctrl and not flags.cmd and not flags.shift and not flags.fn
 
-hs.hotkey.bind(mash, "4", function()
-    moveWindowToQuarter("bottomRight")
+    if showHelp then
+        if not helpAlert then
+            helpAlert = hs.alert.show(helpText, helpStyle, true)
+        end
+    elseif helpAlert then
+        hs.alert.closeSpecific(helpAlert, 0)
+        helpAlert = nil
+    end
+
+    return false
 end)
+shortcutHelpWatcher:start()
 
 hs.hotkey.bind({"cmd", "shift"}, "return", function()
     toggleMaximize()
 end)
 
-hs.hotkey.bind(mash, "H", function()
-    moveWindowToFraction("left", 3, 5)
-end)
-
-hs.hotkey.bind(mash, "L", function()
-    moveWindowToFraction("right", 2, 5)
-end)
+-- Retain the event tap through require("window") for the configuration's lifetime.
+return {shortcutHelpWatcher = shortcutHelpWatcher}
