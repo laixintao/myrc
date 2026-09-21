@@ -242,13 +242,18 @@ local shortcuts = {
     },
     {
         key = "4",
-        description = "当前窗口放到右下角，占 1/4 屏幕",
-        action = function() moveWindowToQuarter("bottomRight") end,
+        description = "优先另一外接屏最大化（Chrome 拆出标签页并折叠标签栏）",
+        action = require("presentation").toExternalScreen,
     },
     {
         key = "5",
         description = "Chrome 当前标签页独立成窗、收起标签栏，右下角宽 1/2、高 6/7",
         action = require("chrome").detachToBottomRight,
+    },
+    {
+        key = "6",
+        description = "当前窗口放到右下角，占 1/4 屏幕",
+        action = function() moveWindowToQuarter("bottomRight") end,
     },
     {
         key = "H",
