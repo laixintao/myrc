@@ -23,7 +23,7 @@ local function findMenu(app, paths)
     end
 end
 
-local function placeWindow(app, win, screenFrame)
+function M.collapseTabs(app)
     local path, item = findMenu(app, collapseMenus)
     if item and item.enabled then
         -- Chrome uses a checked menu item: never expand an already collapsed strip.
@@ -33,6 +33,10 @@ local function placeWindow(app, win, screenFrame)
     else
         hs.alert.show("无法收起标签栏，请确认 Chrome 已启用垂直标签页")
     end
+end
+
+local function placeWindow(app, win, screenFrame)
+    M.collapseTabs(app)
 
     local width = math.floor(screenFrame.w / 2)
     local height = math.floor(screenFrame.h * 6 / 7)
@@ -55,29 +59,34 @@ local function placeWindow(app, win, screenFrame)
     end)
 end
 
-function M.detachToBottomRight()
-    if pendingTimer then return end
+-- Call onReady with the detached window, or nil when detaching fails/cancels.
+function M.detachCurrentTab(win, onReady)
+    if pendingTimer then
+        onReady(nil)
+        return
+    end
 
-    local win = hs.window.focusedWindow()
     local app = win and win:application()
     if not app or app:bundleID() ~= "com.google.Chrome" or not win:isStandard() then
         hs.alert.show("请先选中 Chrome 标签页")
+        onReady(nil)
         return
     end
     if win:isFullScreen() then
         hs.alert.show("请先退出 Chrome 全屏模式")
+        onReady(nil)
         return
     end
 
-    local screenFrame = win:screen():frame()
     local path, item = findMenu(app, detachMenus)
     if not item then
         hs.alert.show("找不到 Chrome 的“将标签页移至新窗口”菜单")
+        onReady(nil)
         return
     end
     if not item.enabled then
         -- Chrome disables detaching when the window already contains a single tab.
-        placeWindow(app, win, screenFrame)
+        onReady(win)
         return
     end
 
@@ -87,6 +96,7 @@ function M.detachToBottomRight()
     end
     if not app:selectMenuItem(path) then
         hs.alert.show("Chrome 标签页拆分失败")
+        onReady(nil)
         return
     end
 
@@ -97,17 +107,29 @@ function M.detachToBottomRight()
         if not app:isFrontmost() then
             pendingTimer:stop()
             pendingTimer = nil
+            onReady(nil)
             return
         end
         local newWindow = app:focusedWindow()
-        if newWindow and newWindow:isStandard() and not existingWindows[newWindow:id()] then
+        if newWindow and newWindow:id() and newWindow:isStandard() and not existingWindows[newWindow:id()] then
             pendingTimer:stop()
             pendingTimer = nil
-            placeWindow(app, newWindow, screenFrame)
+            onReady(newWindow)
         elseif attempts >= 30 then
             pendingTimer:stop()
             pendingTimer = nil
             hs.alert.show("等待 Chrome 新窗口超时，请重试")
+            onReady(nil)
+        end
+    end)
+end
+
+function M.detachToBottomRight()
+    local win = hs.window.focusedWindow()
+    local screenFrame = win and win:screen():frame()
+    M.detachCurrentTab(win, function(detached)
+        if detached then
+            placeWindow(detached:application(), detached, screenFrame)
         end
     end)
 end
