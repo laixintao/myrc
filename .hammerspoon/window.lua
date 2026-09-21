@@ -227,13 +227,13 @@ local mash = {"alt", "ctrl"}
 local shortcuts = {
     {
         key = "1",
-        description = "最近两个窗口左右平铺（2/5 + 3/5，再按互换）",
-        action = tileRecentWindows,
+        description = "当前应用在当前屏幕的窗口网格平铺",
+        action = tileAppWindows,
     },
     {
         key = "2",
-        description = "当前应用在当前屏幕的窗口网格平铺",
-        action = tileAppWindows,
+        description = "最近两个窗口左右平铺（2/5 + 3/5，再按互换）",
+        action = tileRecentWindows,
     },
     {
         key = "3",
