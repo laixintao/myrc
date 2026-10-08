@@ -131,3 +131,6 @@ alias py="python3"
 
 alias ai="open -a Codex ."
 alias disk_usage="ncdu --exclude 'Google Drive' --exclude 'GoogleDrive' --exclude '*CloudStorage*'"
+
+alias hermes-claude-high="hermes --provider claude-code --model claude-fable-5-1"
+alias hermes-claude-low="hermes --provider claude-code --model claude-sonnet-5 --reasoning medium"
