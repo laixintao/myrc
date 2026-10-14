@@ -150,7 +150,7 @@ local function tileAppWindows()
         return a:id() < b:id()
     end)
 
-    local cols = math.ceil(math.sqrt(count))
+    local cols = count == 3 and 3 or math.ceil(math.sqrt(count))
     local rows = math.ceil(count / cols)
     local cellW = frame.w / cols
     local cellH = frame.h / rows
@@ -227,7 +227,7 @@ local mash = {"alt", "ctrl"}
 local shortcuts = {
     {
         key = "1",
-        description = "当前应用在当前屏幕的窗口网格平铺",
+        description = "当前应用在当前屏幕的窗口网格平铺（3 个窗口时三列铺满）",
         action = tileAppWindows,
     },
     {
