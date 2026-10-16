@@ -23,6 +23,19 @@ Now support:
 - custom zsh theme
 - automatic load dev enviroment via tmux
 
+## macOS charging info
+
+Run `./bin/charging-info.py` to show battery status, battery power, charger
+details, USB PD profiles, and input power telemetry when available.
+Use `./bin/charging-info.py --watch 2` to refresh every two seconds.
+Key readings are highlighted in terminals: green for charging, yellow for
+discharging or battery levels of 21–40%, red for levels at or below 20%, and cyan
+for charger/input power readings. Use `--color always` or `--color never` to
+override automatic detection; auto mode respects `NO_COLOR` and `TERM=dumb`.
+Requires Python 3; no third-party packages or sudo needed. Charger power limits
+are separate from live input power and net battery charging power. Missing
+device details or telemetry are shown as unavailable.
+
 # Install COC
 
 Go to `myrc/.config/coc/extensions` run `npm install`.
