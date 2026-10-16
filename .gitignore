@@ -46,3 +46,6 @@ ssh_config
 bin/.claude/
 .config/eve
 .config/browser-harness/
+.config/coc/list_history.dat
+.config/coc/mru
+.config/gatsby/

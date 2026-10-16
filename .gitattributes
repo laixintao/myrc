@@ -25,3 +25,4 @@ bin/spex-agent-whitelist.py filter=git-crypt diff=git-crypt
 .config/pgcli/* filter=git-crypt diff=git-crypt
 bin/tmux-split-pane.py filter=git-crypt diff=git-crypt
 .config/eve/*  filter=git-crypt diff=git-crypt
+.tmuxp/** filter=git-crypt diff=git-crypt
