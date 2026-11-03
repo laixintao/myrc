@@ -32,7 +32,7 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
 [pager]
-    diff = diff-so-fancy | less --tabs=1,5 -RFX
+	diff = diffnav
     show = diff-so-fancy | less --tabs=1,5 -RFX
     branch = false
 [push]

@@ -39,7 +39,3 @@ end)
 appHotkeyWatcher:start()
 updateHotkeys()
 
-
-hs.hotkey.bind({"cmd"}, "G", function()
-    hs.application.launchOrFocus("ChatGPT Classic")
-end)

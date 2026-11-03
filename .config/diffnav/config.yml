@@ -1,0 +1,25 @@
+ui:
+  # Hide the header to get more screen space for diffs
+  hideHeader: false
+
+  # Hide the footer (keybindings help)
+  hideFooter: false
+
+  # Start with the file tree hidden (toggle with 'e')
+  showFileTree: true
+
+  # Customize the file tree width (default: 26)
+  fileTreeWidth: 30
+
+  # Customize the search panel width (default: 50)
+  searchTreeWidth: 60
+
+
+
+  # Use side-by-side diff view (default: true, set false for unified)
+  sideBySide: false
+
+  # How many levels of folders to open on start (-1 = all, 0 = none, 1 = first level, etc.)
+  startFoldersOpenDepth: -1
+
+  theme: monokai_pro

@@ -49,3 +49,4 @@ bin/.claude/
 .config/coc/list_history.dat
 .config/coc/mru
 .config/gatsby/
+.config/gws/

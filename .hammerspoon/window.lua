@@ -302,9 +302,27 @@ local shortcutHelpWatcher = hs.eventtap.new({hs.eventtap.event.types.flagsChange
 end)
 shortcutHelpWatcher:start()
 
-hs.hotkey.bind({"cmd", "shift"}, "return", function()
-    toggleMaximize()
-end)
+local maximizeHotkey = hs.hotkey.new({"cmd", "shift"}, "return", toggleMaximize)
 
--- Retain the event tap through require("window") for the configuration's lifetime.
-return {shortcutHelpWatcher = shortcutHelpWatcher}
+local function updateMaximizeHotkey(app)
+    app = app or hs.application.frontmostApplication()
+    if app and app:bundleID() == "com.roam-research.desktop-app" then
+        maximizeHotkey:disable()
+    else
+        maximizeHotkey:enable()
+    end
+end
+
+local maximizeHotkeyWatcher = hs.application.watcher.new(function(_, event, app)
+    if event == hs.application.watcher.activated then
+        updateMaximizeHotkey(app)
+    end
+end)
+maximizeHotkeyWatcher:start()
+updateMaximizeHotkey()
+
+-- Retain the watchers through require("window") for the configuration's lifetime.
+return {
+    shortcutHelpWatcher = shortcutHelpWatcher,
+    maximizeHotkeyWatcher = maximizeHotkeyWatcher,
+}
