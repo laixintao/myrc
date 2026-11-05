@@ -1,5 +1,6 @@
 local M = {}
 local pendingTimer
+local newWindowTimer
 
 -- Menu labels from Chrome's English, Simplified Chinese and Traditional Chinese UI.
 local detachMenus = {
@@ -130,6 +131,82 @@ function M.detachToBottomRight()
     M.detachCurrentTab(win, function(detached)
         if detached then
             placeWindow(detached:application(), detached, screenFrame)
+        end
+    end)
+end
+
+local function isBuiltIn(screen)
+    -- Match the built-in display names used by the existing presentation shortcut.
+    local name = (screen:name() or ""):lower()
+    return name == "color lcd"
+        or name:find("built-in", 1, true)
+        or name:find("内建", 1, true)
+        or name:find("內建", 1, true)
+        or name:find("内置", 1, true)
+        or name:find("內置", 1, true)
+end
+
+local function preferredScreen()
+    -- primaryScreen is the configured main display; mainScreen follows focus.
+    local primary = hs.screen.primaryScreen()
+    local externalPrimary
+    for _, screen in ipairs(hs.screen.allScreens()) do
+        if not isBuiltIn(screen) then
+            if screen:id() ~= primary:id() then return screen end
+            externalPrimary = screen
+        end
+    end
+    -- Keep using the external main display instead of moving to the laptop.
+    return externalPrimary or primary
+end
+
+function M.newWindowOnSecondaryScreen()
+    if newWindowTimer then return end
+
+    local existingWindows = {}
+    if not hs.application.launchOrFocusByBundleID("com.google.Chrome") then
+        hs.alert.show("无法打开 Chrome")
+        return
+    end
+
+    local requested = false
+    local attempts = 0
+    newWindowTimer = hs.timer.doEvery(0.1, function()
+        attempts = attempts + 1
+        local app = hs.application.get("com.google.Chrome")
+        local win = app and app:focusedWindow()
+        if app and app:isFrontmost() then
+            if not requested then
+                -- Snapshot after launch, so restored windows are never resized.
+                for _, existing in ipairs(app:allWindows()) do
+                    existingWindows[existing:id()] = true
+                end
+                requested = true
+                hs.eventtap.keyStroke({"cmd"}, "n", 0, app)
+            elseif win and win:id() and win:isStandard() and not existingWindows[win:id()] then
+                newWindowTimer:stop()
+                M.collapseTabs(app)
+                win:moveToScreen(preferredScreen(), false, true, 0)
+
+                -- Let Chrome's tab strip and the display move settle before sizing.
+                newWindowTimer = hs.timer.doAfter(0.2, function()
+                    newWindowTimer = nil
+                    if not win:id() then return end
+                    local frame = preferredScreen():frame()
+                    win:setFrame({
+                        x = frame.x + math.floor(frame.w * 0.1),
+                        y = frame.y,
+                        w = math.floor(frame.w * 0.6),
+                        h = frame.h,
+                    }, 0)
+                end)
+                return
+            end
+        end
+        if attempts >= 100 then
+            newWindowTimer:stop()
+            newWindowTimer = nil
+            hs.alert.show("等待 Chrome 新窗口超时，请重试")
         end
     end)
 end

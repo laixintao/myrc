@@ -256,6 +256,11 @@ local shortcuts = {
         action = function() moveWindowToQuarter("bottomRight") end,
     },
     {
+        key = "N",
+        description = "新建 Chrome 窗口并收起标签栏，外接副屏优先，宽 60%、高 100%、左距 10%",
+        action = require("chrome").newWindowOnSecondaryScreen,
+    },
+    {
         key = "H",
         description = "当前窗口靠左，宽 3/5、高度铺满",
         action = function() moveWindowToFraction("left", 3, 5) end,
