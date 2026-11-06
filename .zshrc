@@ -307,3 +307,6 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 export LESS="${LESS:+$LESS }-X -F"
+
+# Hermes Agent command
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
